@@ -1,0 +1,508 @@
+{
+  "meta": {
+    "source": "https://hunterxhunter.fandom.com/wiki/Category:Greed_Island_Players",
+    "license": "CC BY-SA (Hunter x Hunter Wiki / Fandom)",
+    "collectedAt": "2026-11-09",
+    "total": 11
+  },
+  "teams": [
+    {
+      "id": "gon",
+      "name": "Time do Gon",
+      "kind": "time",
+      "memberIds": ["gon-freecss", "killua-zoldyck", "biscuit-krueger"],
+      "summary": "Time formado por Gon, Killua e Biscuit, aprovados na seleção de Tsezguerra para jogar Greed Island por Battera. Biscuit passa a seguir os garotos, vira a instrutora de Nen deles e o trio interrompe o jogo para um longo treino. Depois, em um mês, o time reúne 50 cartas de slot designado, entra na aliança de Kazsule contra Genthru e, com Goreinu, Hisoka e o time de Tsezguerra, vence Razor e obtém \"Plot of Beach\". Por fim, derrota os três Bombers, recebe as cartas de Goreinu e do time de Tsezguerra e completa os 99 slots; Gon vence o quiz e recebe \"Ruler's Blessing\".",
+      "goal": "Jogar Greed Island como jogadores contratados por Battera; Gon quer seguir o conselho de Ging de aproveitar o jogo, e Biscuit quer a gema \"Blue Planet\".",
+      "outcome": "O trio zera o jogo e sai com \"Blue Planet\", \"Paladin's Necklace\" e \"Plot of Beach\"; Biscuit fica com a gema, e Gon e Killua usam \"Accompany\" para ir até Kite, em Kakin.",
+      "specifiedSlots": {
+        "count": 99,
+        "moment": "Depois de vencer os Bombers e receber as cartas de Goreinu e do time de Tsezguerra (cap. 182).",
+        "evidence": "Gon places all 99 specified slot cards in his binder. An announcement goes off that alerts every player of a quiz test",
+        "chapter": 182,
+        "source": "Gon Freecss"
+      },
+      "cards": [
+        {
+          "id": "002",
+          "relation": "obteve",
+          "evidence": "The NPC who started the quest takes the team to the top of the lighthouse and, at dawn, transforms into \"Plot of Beach\". Goreinu and Tsezguerra gladly let Gon's team take the original.",
+          "chapter": 169,
+          "source": "Killua Zoldyck"
+        },
+        {
+          "id": "007",
+          "relation": "obteve",
+          "evidence": "By giving the group information about Genthru's ability, they obtain two \"rare\" \"cards\".",
+          "chapter": 154,
+          "source": "Gon Freecss"
+        },
+        {
+          "id": "017",
+          "relation": "usou",
+          "evidence": "After beating the three Bombers, they use the \"\"Angel's Breath\"\" card to heal Gon, Killua, Bara, and Genthru.",
+          "chapter": 182,
+          "source": "Biscuit Krueger"
+        },
+        {
+          "id": "025",
+          "relation": "obteve",
+          "evidence": "On the way to Dorias, they collect \"\"Witch's Love Potion\"\", \"\"Risky Dice\"\", and \"\"Memory Helmet\"\".",
+          "chapter": 150,
+          "source": "Gon Freecss"
+        },
+        {
+          "id": "027",
+          "relation": "obteve",
+          "evidence": "Kazsule, who took \"Sword of Truth\" from them, contacts them for a trade. They exchange one \"Witch's Love Potion\" for one \"\"Book of V.I.P. Passes\"\".",
+          "chapter": 151,
+          "source": "Gon Freecss"
+        },
+        {
+          "id": "045",
+          "relation": "obteve",
+          "evidence": "By facing all manners of trials, over the course of one month they gather 50 specified slot cards in total, among which are \"\"Fledgling CEO\"\", \"\"Doyen's Growth Pills\"\", and \"\"Staff of Judgment\"\".",
+          "chapter": 151,
+          "source": "Gon Freecss"
+        },
+        {
+          "id": "046",
+          "relation": "obteve",
+          "evidence": "They acquire one \"\"Gold Dust Girl\"\" each and one \"\"Paladin's Necklace\"\" from the monthly tournament in Antokiba",
+          "chapter": 150,
+          "source": "Gon Freecss"
+        },
+        {
+          "id": "064",
+          "relation": "obteve",
+          "evidence": "On the way to Dorias, they collect \"\"Witch's Love Potion\"\", \"\"Risky Dice\"\", and \"\"Memory Helmet\"\".",
+          "chapter": 150,
+          "source": "Gon Freecss"
+        },
+        {
+          "id": "067",
+          "relation": "obteve",
+          "evidence": "By facing all manners of trials, over the course of one month they gather 50 specified slot cards in total, among which are \"\"Fledgling CEO\"\", \"\"Doyen's Growth Pills\"\", and \"\"Staff of Judgment\"\".",
+          "chapter": 151,
+          "source": "Gon Freecss"
+        },
+        {
+          "id": "075",
+          "relation": "obteve",
+          "evidence": "Their charity causes the villagers to trust them, and the necklace \"heals them\". In return, the villagers give them a \"\"Wild Luck Alexandrite\"\".",
+          "chapter": 153,
+          "source": "Gon Freecss"
+        },
+        {
+          "id": "081",
+          "relation": "obteve",
+          "evidence": "After a majestic party, Gon, Killua, and Biscuit pick the three cards. The next morning Gon presents them to Elena: \"\"Blue Planet\"\", \"Paladin's Necklace\", and \"Plot of Beach\".",
+          "chapter": 184,
+          "source": "Gon Freecss"
+        },
+        {
+          "id": "082",
+          "relation": "obteve",
+          "evidence": "By facing all manners of trials, over the course of one month they gather 50 specified slot cards in total, among which are \"\"Fledgling CEO\"\", \"\"Doyen's Growth Pills\"\", and \"\"Staff of Judgment\"\".",
+          "chapter": 151,
+          "source": "Gon Freecss"
+        },
+        {
+          "id": "084",
+          "relation": "obteve",
+          "evidence": "They acquire one \"\"Gold Dust Girl\"\" each and one \"\"Paladin's Necklace\"\" from the monthly tournament in Antokiba",
+          "chapter": 150,
+          "source": "Gon Freecss"
+        },
+        {
+          "id": "087",
+          "relation": "obteve",
+          "evidence": "By giving the group information about Genthru's ability, they obtain two \"rare\" \"cards\".",
+          "chapter": 154,
+          "source": "Gon Freecss"
+        },
+        {
+          "id": "090",
+          "relation": "obteve",
+          "evidence": "On the way to Dorias, they collect \"\"Witch's Love Potion\"\", \"\"Risky Dice\"\", and \"\"Memory Helmet\"\".",
+          "chapter": 150,
+          "source": "Gon Freecss"
+        },
+        {
+          "id": "1015",
+          "relation": "usou",
+          "evidence": "He then proposes finding out who \"Chrollo\" is since an alias would not make sense if it were simply a Spider seeking to clear the game, which they \"determine\" not to be the case.",
+          "chapter": 158,
+          "source": "Gon Freecss"
+        },
+        {
+          "id": "1037",
+          "relation": "usou",
+          "evidence": "one \"\"Paladin's Necklace\"\" from the monthly tournament in Antokiba, which they \"duplicate\" before converting it so Gon can wear it.",
+          "chapter": 150,
+          "source": "Gon Freecss"
+        },
+        {
+          "id": "1039",
+          "relation": "usou",
+          "evidence": "Despite Killua's objections, Gon insists on finding out who it is. They \"teleport\" to him and find out \"Chrollo\" is Hisoka",
+          "chapter": 158,
+          "source": "Gon Freecss"
+        }
+      ]
+    },
+    {
+      "id": "bombers",
+      "name": "Bombers",
+      "kind": "time",
+      "memberIds": ["genthru", "bara", "sub"],
+      "summary": "Trio formado por Genthru, Bara e Sub, contratados por Battera, que não hesita em matar ou chantagear outros jogadores para conseguir cartas. Genthru se infiltra na aliança de Nickes e, quando ela reúne 90 cartas de slot designado, revela ser o \"Bomber\", recebe as cartas em troca de desarmar as bombas e as detona, matando quase todos os membros. O trio monopoliza \"Angel's Breath\" e \"Night Jade\", rouba oito cartas do time de Tsezguerra e chega a 97 cartas de slot designado. Depois de perseguir o time de Tsezguerra pela ilha, tenta tomar as cartas do time de Gon e perde as três lutas individuais.",
+      "goal": "Completar Greed Island para ficar com a recompensa oferecida por Battera.",
+      "outcome": "Derrotados pelo time de Gon: Genthru aceita entregar suas cartas, o trio é curado com \"Angel's Breath\" e tem a vida poupada.",
+      "specifiedSlots": {
+        "count": 97,
+        "moment": "Pouco depois do golpe contra o time de Tsezguerra, faltando só \"Wild Luck Alexandrite\" e \"Plot of Beach\".",
+        "evidence": "Shortly afterwards, the Bombers reach a total of 97 specified slot cards and kill six members of the alliance",
+        "chapter": 160,
+        "source": "Genthru"
+      },
+      "cards": [
+        {
+          "id": "001",
+          "relation": "obteve",
+          "evidence": "One day, they are \"contacted\" by the Single-Star Hunter, who offers them three cards—\"\"Patch of Forest\"\", \"\"Spirited Away Hollow\"\", and \"\"Miniature Dragon\"\"—in return for \"Night Jade\" alone.",
+          "chapter": 152,
+          "source": "Bomber"
+        },
+        {
+          "id": "005",
+          "relation": "obteve",
+          "evidence": "One day, they are \"contacted\" by the Single-Star Hunter, who offers them three cards—\"\"Patch of Forest\"\", \"\"Spirited Away Hollow\"\", and \"\"Miniature Dragon\"\"—in return for \"Night Jade\" alone.",
+          "chapter": 152,
+          "source": "Bomber"
+        },
+        {
+          "id": "017",
+          "relation": "obteve",
+          "evidence": "Genthru, Bara, and Sub continue to amass specified slot cards and successfully establish a monopoly on \"\"Angel's Breath\"\" and \"\"Night Jade\"\", the former through \"\"Clone\"\".",
+          "chapter": 152,
+          "source": "Bomber"
+        },
+        {
+          "id": "051",
+          "relation": "obteve",
+          "evidence": "One day, they are \"contacted\" by the Single-Star Hunter, who offers them three cards—\"\"Patch of Forest\"\", \"\"Spirited Away Hollow\"\", and \"\"Miniature Dragon\"\"—in return for \"Night Jade\" alone.",
+          "chapter": 152,
+          "source": "Bomber"
+        },
+        {
+          "id": "072",
+          "relation": "usou",
+          "evidence": "The Bombers \"alter the faces\" of their two captives to make them look like Sub and Bara.",
+          "chapter": 153,
+          "source": "Bomber"
+        },
+        {
+          "id": "073",
+          "relation": "obteve",
+          "evidence": "Genthru, Bara, and Sub continue to amass specified slot cards and successfully establish a monopoly on \"\"Angel's Breath\"\" and \"\"Night Jade\"\", the former through \"\"Clone\"\".",
+          "chapter": 152,
+          "source": "Bomber"
+        },
+        {
+          "id": "1009",
+          "relation": "usou",
+          "evidence": "The Bombers then \"return\" to Masadora and celebrate the success of their plan.",
+          "chapter": 153,
+          "source": "Bomber"
+        },
+        {
+          "id": "1011",
+          "relation": "usou",
+          "evidence": "Genthru, Bara, and Sub continue to amass specified slot cards and successfully establish a monopoly on \"\"Angel's Breath\"\" and \"\"Night Jade\"\", the former through \"\"Clone\"\".",
+          "chapter": 152,
+          "source": "Bomber"
+        },
+        {
+          "id": "1030",
+          "relation": "usou",
+          "evidence": "They also attempt to find out how to obtain \"\"Wild Luck Alexandrite\"\" and \"\"Plot of Beach\"\" with \"\"Guidepost\"\", but to no avail.",
+          "chapter": 152,
+          "source": "Sub"
+        },
+        {
+          "id": "1038",
+          "relation": "usou",
+          "evidence": "By casting \"\"List\"\", the Bombers discover that Tsezguerra has obtained the latter card, which they guess to be in his possession.",
+          "chapter": 169,
+          "source": "Bara"
+        },
+        {
+          "id": "1039",
+          "relation": "usou",
+          "evidence": "Unable to find them, the trio goes to the spell card shop first and then track them down using their last \"\"Accompany\"\" card.",
+          "chapter": 175,
+          "source": "Genthru"
+        }
+      ]
+    },
+    {
+      "id": "tsezguerra",
+      "name": "Equipe de Tsezguerra",
+      "kind": "time",
+      "memberIds": ["tsezguerra", "barry", "kess", "rodriot"],
+      "summary": "Equipe do Hunter profissional Tsezguerra, que trabalha para Battera, com Barry, Kess e Rodriot. Chegou a 95 cartas de slot designado, mas teve cartas roubadas pelos Bombers numa troca com Genthru, e Tsezguerra deduziu que Genthru era o Bomber. Aliada a Gon e Goreinu contra Razor e seus piratas, venceu as três primeiras provas (boxe, boliche e lances livres) e ficou com uma cópia de \"Plot of Beach\". Depois, em troca de \"Wild Luck Alexandrite\", atrasou os Bombers por três semanas com táticas de guerrilha e cartas de transporte, até sair do jogo.",
+      "goal": "Completar o jogo e receber a recompensa oferecida por Battera.",
+      "outcome": "Sem cartas de transporte, saiu do jogo com \"Leave\" e não voltou, pois Battera cancelou o contrato.",
+      "specifiedSlots": {
+        "count": 95,
+        "moment": "Antes da troca com Genthru, que terminou no roubo dos Bombers.",
+        "evidence": "While on Greed Island, the team collects as many as 95 different specified slot cards before \"contacting\" the Bomber to trade.",
+        "chapter": 152,
+        "source": "Barry"
+      },
+      "cards": [
+        {
+          "id": "002",
+          "relation": "obteve",
+          "evidence": "After their victory, Gon takes the original \"Plot of Beach\" while Tsezguerra's team settles for \"a copy\".",
+          "chapter": 169,
+          "source": "Barry"
+        },
+        {
+          "id": "065",
+          "relation": "possuía",
+          "evidence": "Tsezguerra learns that Genthru's comrades broke their monopoly on \"\"Levitation Stone\"\" and \"\"Witch's Rejuvenation Potion\"\".",
+          "chapter": 153,
+          "source": "Tsezguerra"
+        },
+        {
+          "id": "080",
+          "relation": "possuía",
+          "evidence": "Tsezguerra learns that Genthru's comrades broke their monopoly on \"\"Levitation Stone\"\" and \"\"Witch's Rejuvenation Potion\"\".",
+          "chapter": 153,
+          "source": "Tsezguerra"
+        },
+        {
+          "id": "1007",
+          "relation": "usou",
+          "evidence": "Tsezguerra and his teammates confront Genthru. Immediately, they each use a \"\"Thief\"\" card and escape to Masadora with an \"Accompany\" card.",
+          "chapter": 171,
+          "source": "Tsezguerra"
+        },
+        {
+          "id": "1009",
+          "relation": "usou",
+          "evidence": "Tsezguerra and his comrades manage to delay the Bombers until they run out of \"Accompany\" cards, using a \"Return\" card to travel back to Aiai",
+          "chapter": 173,
+          "source": "Tsezguerra"
+        },
+        {
+          "id": "1014",
+          "relation": "usou",
+          "evidence": "When they exhaust their transportation spells, they \"leave\" the game, only to find Battera's mansion empty",
+          "chapter": 173,
+          "source": "Barry"
+        },
+        {
+          "id": "1020",
+          "relation": "usou",
+          "evidence": "Before doing so, they give Goreinu all their specified slot cards after creating \"fakes\" for themselves.",
+          "chapter": 174,
+          "source": "Goreinu"
+        },
+        {
+          "id": "1039",
+          "relation": "usou",
+          "evidence": "Now with Goreinu, Tsezguerra and his group use an \"Accompany\" card to return to Masadora to devise a plan to stall Genthru for three weeks.",
+          "chapter": 170,
+          "source": "Tsezguerra"
+        },
+        {
+          "id": "1040",
+          "relation": "usou",
+          "evidence": "While on Greed Island, the team collects as many as 95 different specified slot cards before \"contacting\" the Bomber to trade.",
+          "chapter": 152,
+          "source": "Barry"
+        }
+      ]
+    },
+    {
+      "id": "asta",
+      "name": "Equipe de Asta",
+      "kind": "time",
+      "memberIds": ["asta", "amana", "manheim"],
+      "summary": "Equipe liderada por Asta, com Amana e Manheim, presente na reunião de Kazsule contra os Bombers. Asta tentou barrar o grupo de Gon e discutiu com Killua; a briga terminou quando a equipe pagou duas cartas S (\"Pregnancy Stones\" e \"Shield of Faith\") pela informação sobre as habilidades de Genthru. Depois Asta ensinou truques do jogo, e Amana usou \"Guidepost\" para descobrir que \"Plot of Beach\" estava em Soufrabi. Após o fracasso contra os piratas, Asta convenceu a maioria a desfazer a aliança.",
+      "goal": "Na aliança de Kazsule, impedir que os Bombers completassem o jogo.",
+      "outcome": "Deixou a aliança após o fracasso no farol, e todos os membros foram mortos pelos Bombers.",
+      "specifiedSlots": {
+        "count": 50,
+        "moment": "Mínimo exigido de cada equipe presente na reunião de Kazsule; o número exato não é informado.",
+        "evidence": "she thinks that Gon's group isn't qualified to join as they haven't collected a minimum of 50 specified slot cards like everyone else at the meeting",
+        "chapter": 154,
+        "source": "Asta"
+      },
+      "cards": [
+        {
+          "id": "007",
+          "relation": "possuía",
+          "evidence": "the two briefly argue with each other until Asta's teammates tell her to accept the deal, giving them \"\"Pregnancy Stones\"\" and \"\"Shield of Faith\"\".",
+          "chapter": 154,
+          "source": "Asta"
+        },
+        {
+          "id": "087",
+          "relation": "possuía",
+          "evidence": "the two briefly argue with each other until Asta's teammates tell her to accept the deal, giving them \"\"Pregnancy Stones\"\" and \"\"Shield of Faith\"\".",
+          "chapter": 154,
+          "source": "Asta"
+        }
+      ]
+    },
+    {
+      "id": "hanse",
+      "name": "Equipe de Hanse",
+      "kind": "time",
+      "memberIds": ["hanse", "wong-li", "zeho"],
+      "summary": "Equipe liderada por Hanse, com Wong Li e Zeho, convidada por Kazsule para a reunião contra os Bombers. Na reunião, Hanse e Wong Li perceberam que já tinham sido tocados por Genthru. Hanse usou \"List\" e viu que \"Tree of Plenty\" não podia ser monopolizada; Wong Li, cuja equipe já conhecia Soufrabi, levou a aliança até lá com \"Accompany\". Em Soufrabi, Zeho perdeu a luta de sumô contra o pirata Bopobo.",
+      "goal": "Na aliança de Kazsule, impedir que os Bombers completassem o jogo.",
+      "outcome": "Deixou o farol com a aliança desfeita e foi morta pelos Bombers pouco depois.",
+      "specifiedSlots": {
+        "count": 50,
+        "moment": "Mínimo exigido de cada equipe presente na reunião de Kazsule; o número exato não é informado.",
+        "evidence": "she thinks that Gon's group isn't qualified to join as they haven't collected a minimum of 50 specified slot cards like everyone else at the meeting",
+        "chapter": 154,
+        "source": "Asta"
+      },
+      "cards": []
+    },
+    {
+      "id": "kazsule",
+      "name": "Equipe de Kazsule",
+      "kind": "time",
+      "memberIds": ["kazsule", "nick-cue", "souheil"],
+      "summary": "Equipe liderada por Kazsule, com Nick Cue e Souheil. Perto de Dorias, trocou com o grupo de Gon \"Book of V.I.P. Passes\" por \"Witch's Love Potion\". Depois contatou outros jogadores e organizou a reunião que formou a aliança contra os Bombers. Em Soufrabi, Kazsule encontrou a NPC que revelou a pista sobre Razor e seus piratas, mas a aliança perdeu as provas e se desfez.",
+      "goal": "Impedir que os Bombers completassem o jogo, por meio da aliança organizada por Kazsule.",
+      "outcome": "Após a dissolução da aliança, os três foram mortos pelos Bombers.",
+      "specifiedSlots": {
+        "count": 50,
+        "moment": "Mínimo exigido de cada equipe presente na reunião de Kazsule; o número exato não é informado.",
+        "evidence": "she thinks that Gon's group isn't qualified to join as they haven't collected a minimum of 50 specified slot cards like everyone else at the meeting",
+        "chapter": 154,
+        "source": "Asta"
+      },
+      "cards": [
+        {
+          "id": "027",
+          "relation": "possuía",
+          "evidence": "Nick Cue and Souheil are present when Gon trades his \"\"Witch's Love Potion\"\" to Kazsule for their \"\"Book of V.I.P. Passes\"\".",
+          "chapter": 151,
+          "source": "Nick Cue"
+        },
+        {
+          "id": "1040",
+          "relation": "usou",
+          "evidence": "Souheil and his team get in \"contact\" with other Greed Island players, including Gon's team, to exchange information on how to stop Genthru's team",
+          "chapter": 154,
+          "source": "Souheil"
+        }
+      ]
+    },
+    {
+      "id": "yabibi",
+      "name": "Equipe de Yabibi",
+      "kind": "time",
+      "memberIds": ["yabibi", "montreux"],
+      "summary": "Dupla formada por Yabibi, o líder, e Montreux, que juntou mais de 50 cartas de slot designado e participou da reunião de Kazsule. Yabibi se opôs a atacar os Bombers sem conhecer suas habilidades e explicou como usar cartas como \"Mimic\" em cartas S. Montreux ofereceu três cartas S pelo segredo de \"Wild Luck Alexandrite\" e lançou \"List\", descobrindo que ninguém tinha \"Plot of Beach\". No farol, Montreux perdeu a luta de boxe para o pirata que teleportava o punho.",
+      "goal": "Na aliança de Kazsule, impedir que os Bombers completassem o jogo.",
+      "outcome": "Deixou o farol com a aliança desfeita, e os dois foram mortos pelos Bombers.",
+      "specifiedSlots": {
+        "count": 50,
+        "moment": "Mais de 50, antes da reunião de Kazsule.",
+        "evidence": "Montreux and his team leader Yabibi manage to acquire more than 50 specified slot cards.",
+        "chapter": 154,
+        "source": "Montreux"
+      },
+      "cards": []
+    },
+    {
+      "id": "bellam",
+      "name": "Irmãos Bellam",
+      "kind": "time",
+      "memberIds": ["gashta-bellam", "zetsk-bellam"],
+      "summary": "Dupla de irmãos formada por Gashta e Zetsk Bellam, aprovada no teste de Ren de Tsezguerra para jogar Greed Island. O Bomber os inclui entre os jogadores que merecem vigilância, e Goreinu os descreve como uma dupla forte e famosa que nunca trabalha com outros. Acompanham o anúncio do quiz que dá a carta \"Ruler's Blessing\" e, depois que Gon vence, desafiam o time dele para uma disputa em que o vencedor leva tudo. São derrotados com facilidade por Gon e Killua.",
+      "goal": null,
+      "outcome": "Derrotados com facilidade por Gon e Killua após o quiz final.",
+      "specifiedSlots": null,
+      "cards": []
+    },
+    {
+      "id": "trupe",
+      "name": "Trupe Fantasma",
+      "kind": "time",
+      "memberIds": ["phinks-magcub", "feitan-portor", "shalnark", "kortopi", "shizuku-murasaki", "machi-komacine", "franklin-bordeau", "kalluto-zoldyck", "nobunaga-hazama", "bonolenov-ndongo"],
+      "summary": "Membros da Trupe Fantasma que foram a Greed Island. Phinks e Feitan roubaram uma cópia do jogo de um carro de Battera e entraram primeiro; Shalnark, Shizuku e Kortopi entraram depois. Shalnark concluiu que a ilha existe no mundo real e o grupo foi até ela de barco, mas o Game Master Razor os expulsou com \"Eliminate\" para seis pontos do Continente de Azia. De volta pelo caminho certo, buscaram um exorcista para remover a Corrente do Julgamento de Kurapika do coração de Chrollo e foram obrigados a cooperar com Hisoka. Com a ajuda do novo membro Kalluto, localizaram o exorcista Abengane e deixaram a negociação com Hisoka.",
+      "goal": "Encontrar na ilha um exorcista que removesse a Corrente do Julgamento de Kurapika do coração de Chrollo.",
+      "outcome": "Localizam o exorcista Abengane com a ajuda de Kalluto e encarregam Hisoka de negociar o exorcismo.",
+      "specifiedSlots": null,
+      "cards": []
+    },
+    {
+      "id": "kazsule-alliance",
+      "name": "Aliança de Kazsule",
+      "kind": "alianca",
+      "memberIds": ["kazsule", "nick-cue", "souheil", "asta", "amana", "manheim", "hanse", "wong-li", "zeho", "yabibi", "montreux", "goreinu", "gon-freecss", "killua-zoldyck", "biscuit-krueger"],
+      "summary": "Aliança de 15 jogadores formada por Kazsule, que contatou jogadores já conhecidos com pelo menos 50 cartas de slot designado para impedir que os Bombers completassem o jogo. Reunia as equipes de Kazsule, Asta, Hanse, Yabibi e Gon, além de Goreinu. Após trocar informações, o grupo decidiu monopolizar \"Plot of Beach\" e viajou a Soufrabi com \"Accompany\". Lá, desafiada por Razor e seus piratas, a aliança perdeu as provas esportivas e se desfez; só Gon, Killua, Biscuit e Goreinu continuaram atrás da carta.",
+      "goal": "Impedir que os Bombers completassem o jogo, monopolizando uma carta que eles ainda não tinham (\"Plot of Beach\").",
+      "outcome": "Dissolvida após perder as provas dos piratas; os membros que deixaram o farol foram caçados e mortos pelos Bombers.",
+      "specifiedSlots": null,
+      "cards": [
+        {
+          "id": "1039",
+          "relation": "usou",
+          "evidence": "discovering that no player is currently in possession of it. The alliance then uses \"\"Accompany\"\" to head to Soufrabi.",
+          "chapter": 154,
+          "source": "Montreux"
+        }
+      ]
+    },
+    {
+      "id": "nickes-alliance",
+      "name": "Aliança de Nickes",
+      "kind": "alianca",
+      "memberIds": ["nickes", "abengane", "assam", "contarch", "cuzco", "genthru", "isaac", "jispa", "kosofftro", "mikli", "nomdieu", "pisac", "puhat", "redwood", "shihael"],
+      "summary": "Aliança de 63 jogadores contratados por Battera, com dez fundadores e liderada por Nickes. Sua estratégia era monopolizar cerca de 1.900 cartas de feitiço de ataque e defesa para tomar as cartas de slot designado dos outros jogadores sem que eles pudessem se defender. Recrutou Abengane, Puhat e mais oito novatos trazidos por Contarch; os novos membros eram levados com \"Accompany\" até Kosofftro, perto da base secreta. Meses depois, com 90 das 100 cartas de slot designado, o fundador Genthru revelou ser o Bomber e disse ter implantado bombas em todos os membros. Os membros entregaram as cartas para salvar suas vidas, mas os Bombers detonaram as bombas.",
+      "goal": "Zerar o jogo para Battera e dividir o prêmio de 50 bilhões, usando o monopólio das cartas de feitiço para tomar as cartas de slot designado.",
+      "outcome": "Quase todos os membros morrem na detonação das bombas dos Bombers; só Abengane e Cuzco sobrevivem.",
+      "specifiedSlots": {
+        "count": 90,
+        "moment": "Meses após o recrutamento, no anúncio de Nickes logo antes de Genthru revelar ser o Bomber.",
+        "evidence": "After a couple of months pass, Nickes announces to alliance members that they have managed to finally accumulate 90 of the 100 specified slot cards.",
+        "chapter": 142,
+        "source": "Nickes Alliance"
+      },
+      "cards": [
+        {
+          "id": "1014",
+          "relation": "possuía",
+          "evidence": "After requesting a \"Leave\" card, not being given one, and then disclosing that he is also a Bomber member and telling them how to disarm the bombers, he is given one of the cards",
+          "chapter": 144,
+          "source": "Nickes Alliance"
+        },
+        {
+          "id": "1035",
+          "relation": "obteve",
+          "evidence": "Even though they had collected all 40 spell cards at one point, the founding members held off on exchanging them for the SS-rank \"\"Angel's Breath\"\" as they still needed a spare for the spell card \"\"Fortress\"\"",
+          "chapter": 132,
+          "source": "Nickes Alliance"
+        },
+        {
+          "id": "1039",
+          "relation": "usou",
+          "evidence": "New members were escorted using the spell card \"\"Accompany\"\" to Kosofftro rather than traveling directly to the hideout location in order to keep it a secret.",
+          "chapter": 132,
+          "source": "Nickes Alliance"
+        }
+      ]
+    }
+  ]
+}

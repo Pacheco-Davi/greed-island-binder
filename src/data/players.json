@@ -1,657 +1,1545 @@
 {
-  "TODO": "specifiedSlots e cardIds ainda não foram preenchidos. A wiki só informa contagens por EQUIPE e em momentos da história (ver docs/pesquisa-jogadores.md). Preencher só com dados conferidos.",
   "meta": {
     "source": "https://hunterxhunter.fandom.com/wiki/Category:Greed_Island_Players",
     "license": "CC BY-SA (Hunter x Hunter Wiki / Fandom)",
     "collectedAt": "2026-11-09",
     "total": 75
   },
-  "groups": [
-    {
-      "id": "battera",
-      "label": "Contratados por Battera",
-      "labelEn": "Battera's Players"
-    },
-    {
-      "id": "nickes-alliance",
-      "label": "Aliança de Nickes",
-      "labelEn": "Nickes' Alliance"
-    },
-    {
-      "id": "kazsule-alliance",
-      "label": "Aliança de Kazsule",
-      "labelEn": "Kazsule's Alliance"
-    },
-    {
-      "id": "bombers",
-      "label": "Bombers",
-      "labelEn": "Bomber"
-    },
-    {
-      "id": "team-asta",
-      "label": "Equipe de Asta",
-      "labelEn": "Team Asta"
-    },
-    {
-      "id": "team-hanse",
-      "label": "Equipe de Hanse",
-      "labelEn": "Team Hanse"
-    },
-    {
-      "id": "team-kazsule",
-      "label": "Equipe de Kazsule",
-      "labelEn": "Team Kazsule"
-    },
-    {
-      "id": "team-tsezguerra",
-      "label": "Equipe de Tsezguerra",
-      "labelEn": "Team Tsezguerra"
-    },
-    {
-      "id": "team-yabibi",
-      "label": "Equipe de Yabibi",
-      "labelEn": "Team Yabibi"
-    }
-  ],
   "players": [
     {
-      "id": 1,
+      "id": "abengane",
       "name": "Abengane",
-      "groups": ["battera", "nickes-alliance"],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["nickes-alliance"],
+      "hiredByBattera": true,
+      "role": "recruta; exorcista",
+      "summary": "Um dos aprovados no teste de Tsezguerra, entrou na Aliança de Nickes junto com Puhat, atraído pelo bônus de 500 milhões por carta SS, e passou na prova sobre a lista de feitiços. Quando Genthru revelou ser o Bomber, deduziu como a Countdown funcionava e depois foi contar tudo a Gon e Biscuit. Em seguida removeu a própria bomba com seu Nen e se escondeu sob uma capa. No Quiz de Greed Island, tocou Genthru e disse \"I caught the Bomber\", desfazendo o Nen restante.",
+      "nen": "Conjurador e exorcista: invoca uma criatura em forma de serpente que devora o Nen alheio, usada para comer a bomba de Genthru presa ao seu corpo.",
+      "fate": "Sobrevive ao massacre e deixa a ilha com Hisoka, planejando lucrar com exorcismos no mundo real.",
+      "cards": [
+        {
+          "id": "1005",
+          "relation": "usou",
+          "evidence": "After Killua leaves Greed Island to retake the Hunter Exam, Abengane uses a \"\"Magnetic Force\"\" to travel to Gon and Biscuit.",
+          "chapter": 146,
+          "source": "Abengane"
+        },
+        {
+          "id": "1009",
+          "relation": "usou",
+          "evidence": "After using a \"\"Return\"\" to travel back to Bunzen, he confesses that Gon and Biscuit were the only ones he came in contact with",
+          "chapter": 147,
+          "source": "Abengane"
+        }
+      ],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Abengane"
     },
     {
-      "id": 2,
+      "id": "amana",
       "name": "Amana",
-      "groups": ["kazsule-alliance", "team-asta"],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["asta", "kazsule-alliance"],
+      "hiredByBattera": false,
+      "role": "membro",
+      "summary": "Membro da equipe de Asta. Na reunião de Kazsule, ajudou a encerrar a discussão entre Asta e Killua oferecendo duas cartas S pela informação sobre o Bomber. Usou \"Guidepost\" para descobrir que \"Plot of Beach\" estava em Soufrabi e deduziu que a pista da NPC dependia de 15 jogadores chegarem juntos com \"Accompany\".",
+      "nen": null,
+      "fate": "Morta pelos Bombers depois de deixar a aliança.",
+      "cards": [
+        {
+          "id": "1030",
+          "relation": "usou",
+          "evidence": "Amana uses a \"\"Guidepost\"\" card to learn that it's in Soufrabi.",
+          "chapter": 154,
+          "source": "Amana"
+        }
+      ],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Amana"
     },
     {
-      "id": 3,
+      "id": "arka",
       "name": "Arka",
-      "groups": [],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": [],
+      "hiredByBattera": false,
+      "role": "jogador",
+      "summary": "Tenta roubar a \"Sword of Truth\" de Gon e Killua logo depois da falha de Motaricke. Usa duas \"Pickpocket\", mas, pelas precauções dos meninos, só consegue uma \"Rock\"; então desiste e foge.",
+      "nen": null,
+      "fate": null,
+      "cards": [
+        {
+          "id": "21449",
+          "relation": "obteve",
+          "evidence": "However, due to the boy's precautionary actions to protect their cards, Arka only manages to steal a single \"\"Rock\"\" card.",
+          "chapter": 133,
+          "source": "Arka"
+        },
+        {
+          "id": "1006",
+          "relation": "usou",
+          "evidence": "Arka uses two \"\"Pickpocket\"\" cards to randomly steal cards the boys have gathered.",
+          "chapter": 133,
+          "source": "Arka"
+        }
+      ],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Arka"
     },
     {
-      "id": 4,
+      "id": "assam",
       "name": "Assam",
-      "groups": ["battera", "nickes-alliance"],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["nickes-alliance"],
+      "hiredByBattera": true,
+      "role": "fundador",
+      "summary": "Fundador da aliança, ajudou a recrutar Abengane e Puhat explicando as três formas de obter cartas: achar, trocar e roubar. Interrompeu a discussão entre Nickes e Genthru sobre o prêmio para que Nomdieu e Isaac não ouvissem. Após a revelação de Genthru, lamentou perder sua parte dos 20 bilhões dos fundadores e brigou com um membro júnior.",
+      "nen": null,
+      "fate": "Morto na detonação simultânea das bombas pelos Bombers.",
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Assam"
     },
     {
-      "id": 5,
+      "id": "asta",
       "name": "Asta",
-      "groups": ["kazsule-alliance", "team-asta"],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["asta", "kazsule-alliance"],
+      "hiredByBattera": false,
+      "role": "líder da equipe",
+      "summary": "Esteve entre os jogadores que confrontaram Gon e Killua depois que eles ganharam \"Sword of Truth\" no torneio de Antokiba. Na reunião de Kazsule, menosprezou o grupo de Gon e discutiu com Killua, até sua equipe pagar duas cartas S pela informação sobre Genthru, que já tinha usado a habilidade nela. Arrependida, ensinou a reutilizar spells, a juntar cartas B nas trade shops e a obter cartas S com \"X-Ray Goggles\". Após o fracasso no farol, convenceu a maioria a deixar a aliança.",
+      "nen": null,
+      "fate": "Morta pelos Bombers depois de deixar a aliança.",
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Asta"
     },
     {
-      "id": 6,
+      "id": "bara",
       "name": "Bara",
-      "groups": ["battera", "bombers"],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["bombers"],
+      "hiredByBattera": true,
+      "role": "membro (um dos \"wingmen\" de Genthru)",
+      "summary": "Leva a cabeça de Puhat à aliança de Nickes, exige uma carta \"Leave\" e participa da detonação das bombas de Countdown. Com Sub, propõe o plano com Risky Dice e Tax Collector's Gauntlet e rouba quatro cartas do time de Tsezguerra. Durante a perseguição a Tsezguerra, mata Sabazushi com Genthru; na luta contra o time de Gon, enfrenta Biscuit e é nocauteado por ela.",
+      "nen": "Aparenta ser um usuário capaz de Intensificação, resistente aos golpes de Biscuit, e é hábil em Zetsu.",
+      "fate": "Derrotado por Biscuit, é curado com \"Angel's Breath\" a pedido de Genthru e poupado pelo time de Gon.",
+      "cards": [
+        {
+          "id": "025",
+          "relation": "usou",
+          "evidence": "Sub and Bara roll their Risky Dice",
+          "chapter": 153,
+          "source": "Bomber"
+        },
+        {
+          "id": "1014",
+          "relation": "obteve",
+          "evidence": "Bara brings Puhat's severed head to Nickes' Alliance as a threat and demands a \"\"Leave\"\" card. Assam refuses, so Bara explains to them that all three Bombers are needed to defuse Countdown. Another player gives him the card,",
+          "chapter": 144,
+          "source": "Bara"
+        },
+        {
+          "id": "1018",
+          "relation": "usou",
+          "evidence": "Their dice roll is successful, so they run towards the group and, when all four are within range, \"steal\" four cards each before \"returning\" to Masadora,",
+          "chapter": 153,
+          "source": "Bara"
+        }
+      ],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Bara"
     },
     {
-      "id": 7,
+      "id": "barry",
       "name": "Barry",
-      "groups": ["battera", "team-tsezguerra"],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["tsezguerra"],
+      "hiredByBattera": true,
+      "role": "membro (venceu a prova de boxe)",
+      "summary": "Membro da equipe de Tsezguerra; teve duplicatas de \"Fledgling Novelist\" e \"King White Stag Beetle\" roubadas pelos Bombers na troca com Genthru. Usou \"Accompany\" para levar o grupo a Soufrabi. Contra os piratas de Razor, venceu o boxe com seu estilo in-boxing, que impediu o adversário de usar suas habilidades de Emissão. Depois participou dos ataques de bate e foge contra os Bombers e assumiu o \"Accompany\" quando as cartas de Tsezguerra acabaram.",
+      "nen": null,
+      "fate": "Saiu do jogo com a equipe e fugiu com Battera, abandonando o jogo de vez.",
+      "cards": [
+        {
+          "id": "042",
+          "relation": "possuía",
+          "evidence": "Sub and Bara steal two cards from each of them, breaking their monopolies and acquiring rare cards, among which were Barry's duplicates of \"\"Fledgling Novelist\"\" and \"\"King White Stag Beetle\"\".",
+          "chapter": 153,
+          "source": "Barry"
+        },
+        {
+          "id": "053",
+          "relation": "possuía",
+          "evidence": "Sub and Bara steal two cards from each of them, breaking their monopolies and acquiring rare cards, among which were Barry's duplicates of \"\"Fledgling Novelist\"\" and \"\"King White Stag Beetle\"\".",
+          "chapter": 153,
+          "source": "Barry"
+        },
+        {
+          "id": "1007",
+          "relation": "usou",
+          "evidence": "Tsezguerra and his teammates confront Genthru. Immediately, they each use a \"\"Thief\"\" card and escape to Masadora with an \"Accompany\" card.",
+          "chapter": 171,
+          "source": "Tsezguerra"
+        },
+        {
+          "id": "1039",
+          "relation": "usou",
+          "evidence": "Barry then uses an \"\"Accompany\"\" card to transport the group to the card's location, Soufrabi.",
+          "chapter": 153,
+          "source": "Tsezguerra"
+        }
+      ],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Barry"
     },
     {
-      "id": 8,
+      "id": "binolt",
       "name": "Binolt",
-      "groups": [],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": [],
+      "hiredByBattera": false,
+      "role": "criminoso procurado; adversário de treino de Gon e Killua",
+      "summary": "Espiona Biscuit, Gon e Killua nas Badlands, ataca Biscuit e corta um de seus rabos de cavalo, mas é derrotado por ela com um único golpe e entrega suas cartas. Biscuit o obriga a enfrentar Gon e Killua por duas semanas num cercado de rochas, sob ameaça de morte. Após dez dias, Gon para o soco diante dele e lhe agradece; Binolt promete se entregar e é liberado.",
+      "nen": "Scissor Hands: ativada ao comer o cabelo da vítima, permite aprender tudo sobre ela, como a idade real e o treino de Biscuit.",
+      "fate": "Liberado após prometer se entregar; no binder de Gon, um ponto preto indica que morreu ou saiu do jogo.",
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Binolt"
     },
     {
-      "id": 9,
+      "id": "biscuit-krueger",
       "name": "Biscuit Krueger",
-      "groups": ["battera", "kazsule-alliance"],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["gon", "kazsule-alliance"],
+      "hiredByBattera": true,
+      "role": "instrutora de Nen",
+      "summary": "Aprovada na seleção de Tsezguerra, Biscuit segue Gon e Killua, de início para arruinar a amizade deles, e vira instrutora de Nen dos dois após o encontro com o Radio Rat. Derrota Binolt, conduz o longo treino dos garotos e participa da aliança de Kazsule e da queimada contra Razor. Na luta final, leva Bara com \"Accompany\" para uma praia perto de Soufrabi e o vence ao voltar à sua forma verdadeira.",
+      "nen": "Transmutadora que domina todas as técnicas básicas e avançadas (só o En nunca foi mostrado) e usa isso para treinar Gon e Killua em Shu, Ko, Ken, Ryu e nos tipos de Nen.",
+      "fate": "Sai do jogo com \"Blue Planet\", obtém a gema (que chama de Plu-chan) e se despede de Gon e Killua, recusando seguir com eles atrás de Ging.",
+      "cards": [
+        {
+          "id": "081",
+          "relation": "usou",
+          "evidence": "she sticks with her dream of getting \"\"Blue Planet\"\". When they are outside the game, she uses \"gain\" to get the gem and names it Plu-chan.",
+          "chapter": 185,
+          "source": "Biscuit Krueger"
+        },
+        {
+          "id": "1035",
+          "relation": "obteve",
+          "evidence": "They go to Masadora and buy 60 spell cards, finding the rare \"\"Fortress\"\", which causes them to become agitated since they do not know what to do with it.",
+          "chapter": 147,
+          "source": "Biscuit Krueger"
+        },
+        {
+          "id": "1039",
+          "relation": "usou",
+          "evidence": "She uses \"\"Accompany\"\" to transport the both of them to a beach outside Soufrabi.",
+          "chapter": 175,
+          "source": "Biscuit Krueger"
+        }
+      ],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Biscuit_Krueger"
     },
     {
-      "id": 10,
+      "id": "bonolenov-ndongo",
       "name": "Bonolenov Ndongo",
-      "groups": [],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["trupe"],
+      "hiredByBattera": false,
+      "role": "membro",
+      "summary": "Conversava com Machi perto do túmulo de Pakunoda enquanto Shalnark convencia Shizuku e Kortopi a entrar no jogo. Depois aparece com os outros membros em Greed Island quando localizam Abengane e pedem a Hisoka que negocie com ele.",
+      "nen": null,
+      "fate": null,
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Bonolenov_Ndongo"
     },
     {
-      "id": 11,
+      "id": "contarch",
       "name": "Contarch",
-      "groups": ["battera", "nickes-alliance"],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["nickes-alliance"],
+      "hiredByBattera": true,
+      "role": "fundador; recrutador",
+      "summary": "Fundador da aliança, recrutou oito novos jogadores, entre eles Mikli, Redwood, Pisac, Cuzco e Shihael. Na base, explicou a mecânica dos feitiços e testou Abengane e Puhat sobre a lista de cartas, mandando Puhat estudá-la de novo. Após a fuga de Genthru, defendeu não persegui-lo, pois a maioria dos membros não tinha habilidades de combate. Depois entregou uma carta \"Leave\" a Bara, que o socou por não ter cedido antes.",
+      "nen": null,
+      "fate": "Morto na detonação simultânea das bombas pelos Bombers.",
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Contarch"
     },
     {
-      "id": 12,
+      "id": "cuzco",
       "name": "Cuzco",
-      "groups": ["battera", "nickes-alliance"],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["nickes-alliance"],
+      "hiredByBattera": true,
+      "role": "recruta",
+      "summary": "Esteve no leilão de Southernpiece e, já no jogo, foi recrutado para a aliança, provavelmente por Contarch. Foi levado com os outros novatos por Jispa até Kosofftro e instruído a memorizar a lista de feitiços. Ficou atônito, junto com Redwood, quando Genthru revelou ser o Bomber e fugiu.",
+      "nen": "Nenhuma habilidade é mostrada; o texto apenas especula que ele talvez tenha uma forma de remover a Countdown de Genthru.",
+      "fate": "Sobrevive ao massacre: seu nome aparece aceso no fichário de Gon, sem explicação de como escapou.",
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Cuzco"
     },
     {
-      "id": 13,
+      "id": "degiro",
       "name": "Degiro",
-      "groups": [],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": [],
+      "hiredByBattera": false,
+      "role": "jogador",
+      "summary": "Segue Gon e Killua para tentar roubar a \"Sword of Truth\" e se gaba de ter usado um feitiço para se informar antes e de que tomaria a carta com \"Mug\". Gon arranca o \"Mug\" da mão dele antes do uso, devolve e o adverte; Killua o chama de amador dependente de cartas.",
+      "nen": null,
+      "fate": null,
+      "cards": [
+        {
+          "id": "1015",
+          "relation": "usou",
+          "evidence": "Degiro appears and brags about how he used \"a spell card\" to gather information beforehand which would allow him to take the \"Sword of Truth\" card with his \"\"Mug\"\" card.",
+          "chapter": 133,
+          "source": "Degiro"
+        },
+        {
+          "id": "1021",
+          "relation": "possuía",
+          "evidence": "Degiro appears and brags about how he used \"a spell card\" to gather information beforehand which would allow him to take the \"Sword of Truth\" card with his \"\"Mug\"\" card.",
+          "chapter": 133,
+          "source": "Degiro"
+        }
+      ],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Degiro"
     },
     {
-      "id": 14,
+      "id": "doster",
       "name": "Doster",
-      "groups": ["battera"],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": [],
+      "hiredByBattera": true,
+      "role": "jogador contratado por Battera",
+      "summary": "Um dos 21 usuários de Nen, entre eles Gon e Killua, contratados por Battera para completar Greed Island. Mais tarde, um ponto cinza no binder de Gon indica que ele saiu do jogo ou morreu.",
+      "nen": null,
+      "fate": "Ponto cinza no binder de Gon: saiu do jogo ou morreu.",
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Doster"
     },
     {
-      "id": 15,
+      "id": "erbier-mano",
       "name": "Erbier Mano",
-      "groups": [],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": [],
+      "hiredByBattera": false,
+      "role": "jogador experiente",
+      "summary": "Está entre os jogadores experientes que surgem em Antokiba para tentar roubar a \"Sword of Truth\" de Gon e Killua, decidindo a ordem dos feitiços no pedra-papel-tesoura; a carta acaba com Kazsule. Antes do quiz final, com Linn, oferece vender \"Ruler's Blessing\" ao time de Gon por 5% da recompensa de Battera caso vença. Perde o quiz para Gon e o parabeniza.",
+      "nen": null,
+      "fate": "Vivo e no jogo; perde o quiz final para Gon.",
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Erbier_Mano"
     },
     {
-      "id": 16,
+      "id": "feitan-portor",
       "name": "Feitan Portor",
-      "groups": [],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["trupe"],
+      "hiredByBattera": false,
+      "role": "membro",
+      "summary": "Com Phinks, descobriu no leilão de Southernpiece que Battera comprava cópias de Greed Island; os dois roubaram uma cópia de um carro e entraram no jogo. No jogo, mataram Latarza e tomaram suas cartas; aceitou a disputa de quem matava mais jogadores, lembrando de pegar as cartas antes. Seu estilo hostil preocupava até os Bombers, e ele foi expulso da ilha real por Razor com \"Eliminate\" junto com os outros.",
+      "nen": null,
+      "fate": null,
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Feitan_Portor"
     },
     {
-      "id": 17,
+      "id": "franklin-bordeau",
       "name": "Franklin Bordeau",
-      "groups": [],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["trupe"],
+      "hiredByBattera": false,
+      "role": "membro",
+      "summary": "Disse que talvez jogasse quando Phinks o convidou e alertou Machi de que o jogo podia matar seus jogadores. Foi de barco com outros cinco membros até a ilha real, onde Razor os expulsou com \"Eliminate\". Depois sugeriu entregar o exorcista a \"Chrollo\", momento em que Hisoka se revelou.",
+      "nen": null,
+      "fate": null,
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Franklin_Bordeau"
     },
     {
-      "id": 18,
+      "id": "gashta-bellam",
       "name": "Gashta Bellam",
-      "groups": ["battera"],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["bellam"],
+      "hiredByBattera": true,
+      "role": "membro (irmão de Zetsk)",
+      "summary": "Passa com o irmão Zetsk no teste de Ren de Tsezguerra e, ao entrar no jogo, percebe que estão sendo observados, mas decide ignorar os espiões. O Bomber o cita entre os jogadores a vigiar, e Goreinu descreve os irmãos como uma dupla forte e famosa. Depois que Gon vence o quiz final, desafia o time de Gon com o irmão, mas os dois são derrotados com facilidade por Gon e Killua.",
+      "nen": null,
+      "fate": "Derrotado por Gon e Killua após o quiz final.",
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Gashta_Bellam"
     },
     {
-      "id": 19,
+      "id": "genthru",
       "name": "Genthru",
-      "groups": ["battera", "nickes-alliance", "bombers"],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["bombers", "nickes-alliance"],
+      "hiredByBattera": true,
+      "role": "líder e porta-voz",
+      "summary": "Membro fundador da aliança de Nickes que, em segredo, é o \"Bomber\": mata Jeet logo após a chegada dos novos jogadores e planta bombas nos aliados. Quando a aliança reúne 90 cartas de slot designado, revela sua identidade, mata Jispa e Puhat e detona as bombas depois de receber as cartas. Lidera o trio no golpe contra o time de Tsezguerra e, por fim, enfrenta Gon numa luta individual, sendo derrotado.",
+      "nen": "Conjurador; usa Little Flower (explosão ao agarrar o alvo) e Countdown (bomba plantada pelo toque, que combina Conjuração, Emissão e Manipulação).",
+      "fate": "Derrotado por Gon, aceita entregar suas cartas, é curado com \"Angel's Breath\" e tem o Nen residual desfeito por Abengane, que ele não reconhece.",
+      "cards": [
+        {
+          "id": "025",
+          "relation": "usou",
+          "evidence": "Since his two friends would have to roll a Risky Dice each, Genthru, to share the same risks, rolls one himself.",
+          "chapter": 152,
+          "source": "Genthru"
+        },
+        {
+          "id": "1014",
+          "relation": "usou",
+          "evidence": "He claims that he will wait at Battera's castle and escapes the base with a \"\"Leave\"\" card.",
+          "chapter": 143,
+          "source": "Genthru"
+        }
+      ],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Genthru"
     },
     {
-      "id": 20,
+      "id": "gon-freecss",
       "name": "Gon Freecss",
-      "groups": ["battera", "kazsule-alliance"],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["gon", "kazsule-alliance"],
+      "hiredByBattera": true,
+      "role": "líder do time",
+      "summary": "Gon é aprovado na seleção de Tsezguerra mostrando seu Ko e entra no jogo com o save file deixado por Ging. Treina com Biscuit, cria a técnica Rock e é peça-chave na queimada contra Razor, que o reconhece como filho de Ging. Derrota Genthru sozinho, perdendo a mão esquerda, com cartas que se revertem em gasolina (\"Gasoline\") e numa grande rocha (\"Large Rock\"); depois coloca as 99 cartas no fichário e vence o quiz que dá \"Ruler's Blessing\".",
+      "nen": "Reforçador; no arco descobre sozinho o Ko e o Shu e cria uma habilidade baseada em pedra-papel-tesoura, em que Rock (Reforço) funciona, mas Paper (Emissão) e Scissors (Transmutação) ficam como protótipos.",
+      "fate": "Sai do jogo com Killua e Biscuit, recebe 1 bilhão de Battera e usa \"Accompany\" com Killua para chegar até Kite, em Kakin.",
+      "cards": [
+        {
+          "id": "000",
+          "relation": "obteve",
+          "evidence": "The Game Master shares anecdotes of his past with Ging and gives Gon \"Ruler's Blessing\" as well as the container in which to transport three cards to the outside world.",
+          "chapter": 184,
+          "source": "Gon Freecss"
+        },
+        {
+          "id": "002",
+          "relation": "obteve",
+          "evidence": "Biscuit only barely manages to prevent him from revealing he has the original \"Plot of Beach\", which Genthru believes to be in Tsezguerra's possession.",
+          "chapter": 170,
+          "source": "Gon Freecss"
+        },
+        {
+          "id": "017",
+          "relation": "usou",
+          "evidence": "Gon decides to respect their deal and activate the original \"Angel's Breath\" on Genthru, apologizing to Killua.",
+          "chapter": 182,
+          "source": "Killua Zoldyck"
+        },
+        {
+          "id": "030",
+          "relation": "obteve",
+          "evidence": "Thanks to the Paladin's Necklace, Gon discovers a \"fake\" \"\"Favor Cushion\"\" and receives the real one.",
+          "chapter": 153,
+          "source": "Gon Freecss"
+        },
+        {
+          "id": "081",
+          "relation": "possuía",
+          "evidence": "The next morning Gon presents them to Elena: \"\"Blue Planet\"\", \"Paladin's Necklace\", and \"Plot of Beach\".",
+          "chapter": 184,
+          "source": "Gon Freecss"
+        },
+        {
+          "id": "083",
+          "relation": "possuía",
+          "evidence": "They notice they are being followed, but their tactics manage to thwart the attempts of the first two players who try to take their \"Sword of Truth\"",
+          "chapter": 133,
+          "source": "Gon Freecss"
+        },
+        {
+          "id": "084",
+          "relation": "usou",
+          "evidence": "one \"\"Paladin's Necklace\"\" from the monthly tournament in Antokiba, which they \"duplicate\" before converting it so Gon can wear it.",
+          "chapter": 150,
+          "source": "Gon Freecss"
+        },
+        {
+          "id": "100",
+          "relation": "obteve",
+          "evidence": "They exchange their cards for money and buy a \"sketch map of the island\". They are excited to learn that monsters and bandits lurk on the way to Masadora.",
+          "chapter": 134,
+          "source": "Gon Freecss"
+        },
+        {
+          "id": "110",
+          "relation": "obteve",
+          "evidence": "Gon gives the most exact responses and receives \"\"Ruler's Invitation\"\".",
+          "chapter": 183,
+          "source": "Gon Freecss"
+        },
+        {
+          "id": "711",
+          "relation": "obteve",
+          "evidence": "Biscuit impatiently tells them to use Gyo, which allows them to find the Radio Rat controlling it and turn it into \"a card\".",
+          "chapter": 136,
+          "source": "Gon Freecss"
+        },
+        {
+          "id": "14170",
+          "relation": "usou",
+          "evidence": "He pulls a card out of his binder, which the Paladin's Necklace reverts to \"its true form\", and warns Genthru he might die if he converts it.",
+          "chapter": 180,
+          "source": "Gon Freecss"
+        },
+        {
+          "id": "25008",
+          "relation": "usou",
+          "evidence": "the boy pulls \"a second card\" out of the binder and strikes the ground with Rock, revealing a pitfall underneath. Both he and Genthru fall into it.",
+          "chapter": 181,
+          "source": "Gon Freecss"
+        },
+        {
+          "id": "1011",
+          "relation": "usou",
+          "evidence": "Gon converts \"Paladin's Necklace\" to revert \"Plot of Beach\" into \"\"Accompany\"\", which he had previously transformed with \"Clone\", after finding out that the first contact on his list was not Goreinu",
+          "chapter": 185,
+          "source": "Gon Freecss"
+        },
+        {
+          "id": "1035",
+          "relation": "obteve",
+          "evidence": "They head to Masadora and buy spell cards, deducing from the new shipment that the alliance members are dead. They find the rare \"\"Fortress\"\" and agonize over what to do with it",
+          "chapter": 147,
+          "source": "Gon Freecss"
+        },
+        {
+          "id": "1039",
+          "relation": "usou",
+          "evidence": "They greet her before casting \"Accompany\", which takes Gon and Killua to Kite in Kakin.",
+          "chapter": 185,
+          "source": "Gon Freecss"
+        },
+        {
+          "id": "1040",
+          "relation": "usou",
+          "evidence": "To get used to casting spells, he has Gon try \"\"Contact\"\".",
+          "chapter": 149,
+          "source": "Gon Freecss"
+        }
+      ],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Gon_Freecss"
     },
     {
-      "id": 21,
+      "id": "goreinu",
       "name": "Goreinu",
-      "groups": ["battera", "kazsule-alliance"],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["kazsule-alliance"],
+      "hiredByBattera": true,
+      "role": "jogador solo; aliado de Gon e de Tsezguerra",
+      "summary": "Contratado por Battera, entrou no jogo logo depois de Gon e jogava sozinho; após a aliança de Kazsule se desfazer, ficou com Gon, Killua e Biscuit atrás de \"Plot of Beach\". Negociou a entrada de Tsezguerra e, na queimada contra Razor, usou seus gorilas de Nen até ser nocauteado. Recebeu uma cópia de \"Plot of Beach\" e, contra os Bombers, espionou e forneceu cartas de transporte à equipe de Tsezguerra, guardando as cartas dela. No fim, entregou tudo ao grupo de Gon e foi com eles a Limeiro.",
+      "nen": "Invoca as bestas de Nen White Goreinu e Black Goreinu (gorilas) e as usa para trocar de lugar durante o jogo.",
+      "fate": "Após a vitória de Gon sobre os Bombers, entregou suas cartas e as da equipe de Tsezguerra ao grupo de Gon e o acompanhou até Limeiro.",
+      "cards": [
+        {
+          "id": "002",
+          "relation": "obteve",
+          "evidence": "At the top of the lighthouse, Gon receives the \"Plot of Beach\" card while Tsezguerra and Goreinu receive a \"copy\" of the card.",
+          "chapter": 169,
+          "source": "Tsezguerra"
+        },
+        {
+          "id": "017",
+          "relation": "possuía",
+          "evidence": "Goreinu discovers that they won and heads over to them, but refuses to hand over the two copies of \"Angel's Breath\" in his possession",
+          "chapter": 182,
+          "source": "Goreinu"
+        }
+      ],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Goreinu"
     },
     {
-      "id": 22,
+      "id": "hagakushi",
       "name": "Hagakushi",
-      "groups": [],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": [],
+      "hiredByBattera": false,
+      "role": "jogador com time próprio",
+      "summary": "O Bomber cita Hagakushi e seu time entre os jogadores que devem ser vigiados. Bara volta a mencioná-lo, junto com Tokharone, ao falar das cartas \"Risky Dice\".",
+      "nen": null,
+      "fate": null,
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Hagakushi"
     },
     {
-      "id": 23,
+      "id": "hanse",
       "name": "Hanse",
-      "groups": ["kazsule-alliance", "team-hanse"],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["hanse", "kazsule-alliance"],
+      "hiredByBattera": false,
+      "role": "líder da equipe",
+      "summary": "Líder da equipe formada com Wong Li e Zeho, que foi convidada por Kazsule. Na reunião, percebeu que tinha sido tocado por Genthru e achou difícil conseguir as 19 cartas \"Clone\" necessárias para monopolizar \"Wild Luck Alexandrite\". Usou \"List\" e viu que \"Tree of Plenty\" já tinha três donos. No farol, reclamou da regra do boxe que permitia objetos conjurados com Nen.",
+      "nen": null,
+      "fate": "Morto pelos Bombers com seus companheiros pouco depois de deixar o farol.",
+      "cards": [
+        {
+          "id": "1038",
+          "relation": "usou",
+          "evidence": "So Hanse then uses a \"\"List\"\" card to figure out if anyone owns the \"\"Tree of Plenty\"\" card",
+          "chapter": 154,
+          "source": "Hanse"
+        }
+      ],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Hanse"
     },
     {
-      "id": 24,
+      "id": "hisoka-morow",
       "name": "Hisoka Morow",
-      "groups": [],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": [],
+      "hiredByBattera": false,
+      "role": "busca o exorcista para Chrollo; aliado temporário de Gon",
+      "summary": "Foi a Greed Island buscar um exorcista para Chrollo e entrou no jogo com o nome de Chrollo, como sinal para a Trupe. Juntou-se a Gon, Killua, Biscuit, Goreinu e Tsezguerra contra Razor e foi decisivo na queimada, ao custo de dez dedos quebrados. Depois que a Trupe localizou Abengane, ficou encarregado de negociar o exorcismo.",
+      "nen": "Usa o Bungee Gum na queimada para pegar e devolver a bola, inclusive colando-a nas mãos de Razor; também usa Texture Surprise para esconder os nomes da Trupe em sua lista de contatos.",
+      "fate": "Deixa a ilha com Abengane depois que este desfaz a Countdown de Genthru.",
+      "cards": [
+        {
+          "id": "1040",
+          "relation": "usou",
+          "evidence": "When Gon asks him to check his contacts to know if he has met Tsezguerra, Hisoka conceals the names of the Spiders with Texture Surprise. He \"contacts\" the Single-Star Hunter for the group.",
+          "chapter": 159,
+          "source": "Hisoka Morow"
+        }
+      ],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Hisoka_Morow"
     },
     {
-      "id": 25,
+      "id": "isaac",
       "name": "Isaac",
-      "groups": ["battera", "nickes-alliance"],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["nickes-alliance"],
+      "hiredByBattera": true,
+      "role": "fundador (suposto)",
+      "summary": "Apresentado como membro fundador, participou da tentativa de recrutar Abengane, Puhat, Biscuit, Gon e Killua, dizendo que a aliança tinha um lugar seguro para guardar as cartas. Foi deixado de fora da conversa entre Genthru, Assam e Nickes sobre o prêmio. Não se sabe se estava na base quando Genthru se revelou o Bomber.",
+      "nen": null,
+      "fate": "Morre quando as bombas de Genthru são detonadas simultaneamente.",
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Isaac"
     },
     {
-      "id": 26,
+      "id": "ivona-kawski",
       "name": "Ivona Kawski",
-      "groups": [],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": [],
+      "hiredByBattera": false,
+      "role": "jogador",
+      "summary": "Desesperado para sair do jogo, troca uma carta rara com Gon por uma \"Leave\" em frente à loja de feitiços de Masadora. Seu nome aparece depois no binder de Gon.",
+      "nen": null,
+      "fate": null,
+      "cards": [
+        {
+          "id": "1014",
+          "relation": "obteve",
+          "evidence": "Desperate to get out of the game, he exchanges a rare card with Gon for a \"\"Leave\"\" card in front of the spell card shop in Masadora.",
+          "chapter": 151,
+          "source": "Ivona Kawski"
+        }
+      ],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Ivona_Kawski"
     },
     {
-      "id": 27,
+      "id": "jeet",
       "name": "Jeet",
-      "groups": ["battera"],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": [],
+      "hiredByBattera": true,
+      "role": "jogador contratado por Battera",
+      "summary": "Primeiro candidato a mostrar seu Ren a Tsezguerra e um dos 21 contratados por Battera para completar o jogo. Pouco depois de entrar no jogo, é encontrado morto no centro de Antokiba, vítima de uma explosão no abdômen causada pelo \"Bomber\".",
+      "nen": null,
+      "fate": "Morto pelo Bomber (Genthru) em Antokiba, logo após entrar no jogo.",
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Jeet"
     },
     {
-      "id": 28,
+      "id": "jeitsari",
       "name": "Jeitsari",
-      "groups": [],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": [],
+      "hiredByBattera": false,
+      "role": "dono de cópias do jogo",
+      "summary": "Possuía sete cópias de Greed Island, avaliadas em 5,8 bilhões no total. Deixou com seu advogado um contrato determinando que, se ninguém completasse o jogo até 1º de janeiro de 2000, as cópias e os consoles iriam para o leilão Southernpiece.",
+      "nen": null,
+      "fate": null,
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Jeitsari"
     },
     {
-      "id": 29,
+      "id": "jikono",
       "name": "Jikono",
-      "groups": [],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": [],
+      "hiredByBattera": false,
+      "role": "jogador",
+      "summary": "Um dos jogadores que querem roubar a \"Sword of Truth\" de Gon e Killua em Antokiba. Mais tarde, um ponto cinza no binder de Gon indica que ele saiu do jogo ou morreu.",
+      "nen": null,
+      "fate": "Ponto cinza no binder de Gon: saiu do jogo ou morreu.",
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Jikono"
     },
     {
-      "id": 30,
+      "id": "jispa",
       "name": "Jispa",
-      "groups": ["battera", "nickes-alliance"],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["nickes-alliance"],
+      "hiredByBattera": true,
+      "role": "membro sênior",
+      "summary": "Usou \"Leave\" para tirar Abengane e Puhat do jogo e informou que Contarch recrutara mais oito jogadores, totalizando 63 membros. Levou os novatos com \"Accompany\" até Kosofftro e explicou o plano de obter \"Angel's Breath\", algo que havia verificado com \"List\". Quando Genthru revelou ser o Bomber, tentou atacá-lo por trás, mas teve o rosto destruído pelo Little Flower.",
+      "nen": null,
+      "fate": "Morre dos ferimentos causados por Genthru; Nickes confirma a morte ao Bomber.",
+      "cards": [
+        {
+          "id": "1014",
+          "relation": "usou",
+          "evidence": "Soon after Puhat and Abengane join Nickes' Alliance, Jispa arrives and explains the functions of the \"\"Leave\"\" and \"\"Magnetic Force\"\" cards. He then uses the \"Leave\" card on the two.",
+          "chapter": 131,
+          "source": "Jispa"
+        },
+        {
+          "id": "1038",
+          "relation": "usou",
+          "evidence": "Abengane asks how Jispa knows that, and he replies that he used a \"\"List\"\" and details its use.",
+          "chapter": 132,
+          "source": "Abengane"
+        },
+        {
+          "id": "1039",
+          "relation": "usou",
+          "evidence": "At the Shiso Tree, Jispa meets up with the new recruits and uses an \"\"Accompany\"\" card to travel with them to Kosofftro.",
+          "chapter": 132,
+          "source": "Jispa"
+        }
+      ],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Jispa"
     },
     {
-      "id": 31,
+      "id": "kalluto-zoldyck",
       "name": "Kalluto Zoldyck",
-      "groups": [],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["trupe"],
+      "hiredByBattera": false,
+      "role": "novo membro (substituto de Hisoka)",
+      "summary": "Entrou na Trupe como substituto de Hisoka enquanto o grupo estava em Greed Island. Segundo ele, sua habilidade permitiu à Trupe localizar o exorcista Abengane. Apesar de seu Zetsu perfeito, foi detectado por Hisoka, que elogiou seu potencial.",
+      "nen": "Manipulador; usou uma habilidade (talvez seus bonecos de papel) para localizar o exorcista na ilha.",
+      "fate": null,
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Kalluto_Zoldyck"
     },
     {
-      "id": 32,
+      "id": "kazsule",
       "name": "Kazsule",
-      "groups": ["kazsule-alliance", "team-kazsule"],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["kazsule", "kazsule-alliance"],
+      "hiredByBattera": false,
+      "role": "líder da equipe e organizador da aliança",
+      "summary": "Esteve entre os envolvidos no roubo da primeira carta de slot designado de Gon e Killua, em Antokiba. Depois trocou \"Book of V.I.P. Passes\" por \"Witch's Love Potion\" com o grupo de Gon. Organizou a reunião de 15 jogadores e propôs a aliança para monopolizar uma carta que faltava aos Bombers. Em Soufrabi, encontrou a NPC que revelou a pista sobre Razor e seus piratas.",
+      "nen": null,
+      "fate": "Morto pelos Bombers depois que a aliança se desfez.",
+      "cards": [
+        {
+          "id": "027",
+          "relation": "possuía",
+          "evidence": "Kazsule understands and offers to trade either his \"\"Witch's Diet Pills\"\" or his \"\"Book of V.I.P. Passes\"\" with them.",
+          "chapter": 151,
+          "source": "Kazsule"
+        },
+        {
+          "id": "064",
+          "relation": "obteve",
+          "evidence": "Later, accompanied by his teammates, Souheil and Nick Cue, he trades his \"Book of V.I.P. Passes\" for Gon's \"Witch's Love Potion\".",
+          "chapter": 151,
+          "source": "Kazsule"
+        },
+        {
+          "id": "066",
+          "relation": "possuía",
+          "evidence": "Kazsule understands and offers to trade either his \"\"Witch's Diet Pills\"\" or his \"\"Book of V.I.P. Passes\"\" with them.",
+          "chapter": 151,
+          "source": "Kazsule"
+        },
+        {
+          "id": "1040",
+          "relation": "usou",
+          "evidence": "Sometime later, after accumulating more cards, Kazsule \"contacts\" Gon and his group from Dorias.",
+          "chapter": 151,
+          "source": "Kazsule"
+        }
+      ],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Kazsule"
     },
     {
-      "id": 33,
+      "id": "kess",
       "name": "Kess",
-      "groups": ["battera", "team-tsezguerra"],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["tsezguerra"],
+      "hiredByBattera": true,
+      "role": "membro (venceu a prova de lances livres)",
+      "summary": "Membro da equipe de Tsezguerra. Contra os piratas de Razor, venceu a terceira prova, os lances livres, e saiu com Rodriot atrás de jogadores para completar o time. Na guerrilha contra os Bombers, usou seu radar de Nen para rastreá-los, armar emboscadas e dar o alarme quando eles se aproximaram.",
+      "nen": "Materializa um radar com Nen, usado para seguir os Bombers e apoiar as táticas de guerrilha de Tsezguerra.",
+      "fate": "Saiu do jogo com a equipe e fugiu com Battera, abandonando o jogo de vez.",
+      "cards": [
+        {
+          "id": "1007",
+          "relation": "usou",
+          "evidence": "Tsezguerra and his teammates confront Genthru. Immediately, they each use a \"\"Thief\"\" card and escape to Masadora with an \"Accompany\" card.",
+          "chapter": 171,
+          "source": "Tsezguerra"
+        }
+      ],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Kess"
     },
     {
-      "id": 34,
+      "id": "killua-zoldyck",
       "name": "Killua Zoldyck",
-      "groups": ["battera", "kazsule-alliance"],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["gon", "kazsule-alliance"],
+      "hiredByBattera": true,
+      "role": "estrategista; cuida da distribuição das cartas",
+      "summary": "Killua passa na seleção de Tsezguerra mostrando sua habilidade elétrica e entra no jogo com Gon. Após o treino com Biscuit, sai do jogo com \"Transport Ticket\" para fazer o Exame Hunter, é aprovado e volta com dois ioiôs. No jogo, ganha cartas com \"Risky Dice\", troca cartas \"Leave\" por cartas raras, segura a bola para Gon contra Razor mesmo com as mãos destroçadas e planeja a estratégia contra os Bombers, derrotando Sub.",
+      "nen": "Transmutador que dá à aura propriedades de eletricidade, inspirado nos choques que recebe desde bebê; contra Sub usa Lightning Palm e canaliza a aura pelos ioiôs.",
+      "fate": "Tem as mãos curadas com \"Angel's Breath\", recebe 1 bilhão de Battera, sai do jogo e vai com Gon até Kite usando \"Accompany\".",
+      "cards": [
+        {
+          "id": "025",
+          "relation": "usou",
+          "evidence": "Killua wins a \"\"Rainbow Diamond\"\" and a \"\"Fledgling Gambler\"\" with the help of the Risky Dice, until Biscuit is forced to knock him out to halt his budding gambling addiction.",
+          "chapter": 151,
+          "source": "Killua Zoldyck"
+        },
+        {
+          "id": "043",
+          "relation": "obteve",
+          "evidence": "Killua wins a \"\"Rainbow Diamond\"\" and a \"\"Fledgling Gambler\"\" with the help of the Risky Dice, until Biscuit is forced to knock him out to halt his budding gambling addiction.",
+          "chapter": 151,
+          "source": "Killua Zoldyck"
+        },
+        {
+          "id": "079",
+          "relation": "obteve",
+          "evidence": "Killua wins a \"\"Rainbow Diamond\"\" and a \"\"Fledgling Gambler\"\" with the help of the Risky Dice, until Biscuit is forced to knock him out to halt his budding gambling addiction.",
+          "chapter": 151,
+          "source": "Killua Zoldyck"
+        },
+        {
+          "id": "083",
+          "relation": "obteve",
+          "evidence": "He is awarded the Sword of Truth, which he \"\"converts into a card\"\".",
+          "chapter": 132,
+          "source": "Killua Zoldyck"
+        },
+        {
+          "id": "084",
+          "relation": "usou",
+          "evidence": "he opens his binder and reverts a card to an \"Accompany\" with the Paladin's Necklace hidden under his clothes, teleporting himself and his opponent away.",
+          "chapter": 177,
+          "source": "Killua Zoldyck"
+        },
+        {
+          "id": "100",
+          "relation": "obteve",
+          "evidence": "They exchange their cards for money and buy a \"sketch map of the island\". They are excited to learn that monsters and bandits lurk on the way to Masadora.",
+          "chapter": 134,
+          "source": "Killua Zoldyck"
+        },
+        {
+          "id": "266",
+          "relation": "usou",
+          "evidence": "After using the \"\"Transport Ticket\"\" card, Killua is taken to a room similar to the game's entrance, but he can tell Elena is different from Eta",
+          "chapter": 146,
+          "source": "Killua Zoldyck"
+        },
+        {
+          "id": "711",
+          "relation": "obteve",
+          "evidence": "Biscuit impatiently tells them to use Gyo, which allows them to find the Radio Rat controlling it and turn it into \"a card\".",
+          "chapter": 136,
+          "source": "Killua Zoldyck"
+        },
+        {
+          "id": "1011",
+          "relation": "obteve",
+          "evidence": "Gon's words inspire Killua into getting into the business of trading \"\"Leave\"\" cards to weak players in return for \"rare\" \"cards\", raising their total number to 57",
+          "chapter": 151,
+          "source": "Killua Zoldyck"
+        },
+        {
+          "id": "1014",
+          "relation": "possuía",
+          "evidence": "Gon's words inspire Killua into getting into the business of trading \"\"Leave\"\" cards to weak players in return for \"rare\" \"cards\", raising their total number to 57",
+          "chapter": 151,
+          "source": "Killua Zoldyck"
+        },
+        {
+          "id": "1016",
+          "relation": "usou",
+          "evidence": "Killua then \"drifts\" to Limeiro so Gon and Biscuit can fly there too.",
+          "chapter": 183,
+          "source": "Killua Zoldyck"
+        },
+        {
+          "id": "1026",
+          "relation": "obteve",
+          "evidence": "Gon's words inspire Killua into getting into the business of trading \"\"Leave\"\" cards to weak players in return for \"rare\" \"cards\", raising their total number to 57",
+          "chapter": 151,
+          "source": "Killua Zoldyck"
+        },
+        {
+          "id": "1039",
+          "relation": "usou",
+          "evidence": "he opens his binder and reverts a card to an \"Accompany\" with the Paladin's Necklace hidden under his clothes, teleporting himself and his opponent away.",
+          "chapter": 177,
+          "source": "Killua Zoldyck"
+        }
+      ],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Killua_Zoldyck"
     },
     {
-      "id": 35,
+      "id": "kite",
       "name": "Kite",
-      "groups": [],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": [],
+      "hiredByBattera": false,
+      "role": null,
+      "summary": null,
+      "nen": null,
+      "fate": null,
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Kite"
     },
     {
-      "id": 36,
+      "id": "kortopi",
       "name": "Kortopi",
-      "groups": [],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["trupe"],
+      "hiredByBattera": false,
+      "role": "membro",
+      "summary": "Entrou no jogo com Shalnark e Shizuku; o trio torturou um jogador para obter informações. As cartas que ele copiava não viravam objetos, um dos indícios de que o jogo funciona com Nen. Lembrou Shizuku de que o prêmio por zerar o jogo é levar três cartas de slot designado e foi expulso da ilha real por Razor com \"Eliminate\".",
+      "nen": "Conjurador que materializa cópias do que toca; no jogo, suas cópias de cartas não podiam ser transformadas em objetos.",
+      "fate": null,
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Kortopi"
     },
     {
-      "id": 37,
+      "id": "kosofftro",
       "name": "Kosofftro",
-      "groups": ["battera", "nickes-alliance"],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["nickes-alliance"],
+      "hiredByBattera": true,
+      "role": "ponto de referência da base",
+      "summary": "Ficava o dia todo numa floresta perto da base, servindo de ponto de chegada para quem usasse \"Magnetic Force\" ou \"Accompany\" com seu nome. Recebeu os novatos trazidos por Jispa e explicou que precisavam lembrar seu nome para voltar à base.",
+      "nen": null,
+      "fate": "Presume-se que morreu na detonação das bombas pelos Bombers.",
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Kosofftro"
     },
     {
-      "id": 38,
+      "id": "latarza",
       "name": "Latarza",
-      "groups": [],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": [],
+      "hiredByBattera": false,
+      "role": "jogador",
+      "summary": "Primeiro jogador que Gon e Killua encontram ao entrar no jogo; chega por meio de um feitiço, lança \"Peek\" em Killua e usa \"Trace\" nele para acompanhar suas cartas. Assustado com a sede de sangue de Killua, foge para Masadora com \"Return\". Mais tarde é morto por Feitan, e Phinks examina seu binder.",
+      "nen": null,
+      "fate": "Morto por Feitan com um único golpe.",
+      "cards": [
+        {
+          "id": "100",
+          "relation": "possuía",
+          "evidence": "While Phinks is disappointed to find that, like the other players they killed, Latarza had a \"cheap map\", Feitan points out that he had a lot of good spell cards",
+          "chapter": 134,
+          "source": "Latarza"
+        },
+        {
+          "id": "1001",
+          "relation": "usou",
+          "evidence": "Latarza confirms it by casting \"\"Peek\"\" on Killua, who in fact has no cards in his free slots.",
+          "chapter": 128,
+          "source": "Latarza"
+        },
+        {
+          "id": "1009",
+          "relation": "usou",
+          "evidence": "Sensing his power, Latarza becomes frightened and uses \"\"Return\"\" to flee to Masadora.",
+          "chapter": 128,
+          "source": "Latarza"
+        },
+        {
+          "id": "1017",
+          "relation": "usou",
+          "evidence": "Latarza is the first player Gon and Killua encounter upon entering Greed Island. He teleports to them using \"a spell\" and immediately takes control of the situation.",
+          "chapter": 128,
+          "source": "Latarza"
+        },
+        {
+          "id": "1027",
+          "relation": "usou",
+          "evidence": "unwilling to waste \"\"Cling\"\" on a kid, he uses \"\"Trace\"\" on Killua and becomes amused as Killua tries to outrun the spell.",
+          "chapter": 128,
+          "source": "Latarza"
+        }
+      ],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Latarza"
     },
     {
-      "id": 39,
+      "id": "linn",
       "name": "Linn",
-      "groups": [],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": [],
+      "hiredByBattera": false,
+      "role": "jogador veterano",
+      "summary": "Está entre os jogadores veteranos que surgem em Antokiba para tentar roubar a \"Sword of Truth\" de Gon e Killua; a ordem é decidida no pedra-papel-tesoura, e a carta acaba com Kazsule. Antes do quiz final, com Erbier Mano, oferece vender \"Ruler's Blessing\" ao time de Gon por 5% da recompensa de Battera caso vença. Perde o quiz para Gon e o parabeniza.",
+      "nen": null,
+      "fate": "Vivo e no jogo; perde o quiz final para Gon.",
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Linn"
     },
     {
-      "id": 40,
+      "id": "luciart",
       "name": "Luciart",
-      "groups": [],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": [],
+      "hiredByBattera": false,
+      "role": "jogador veterano",
+      "summary": "Aparece em Antokiba com outros jogadores veteranos para tentar roubar a \"Sword of Truth\" de Gon e Killua; como vários querem a mesma carta, a vez é decidida no pedra-papel-tesoura. Mais tarde, o binder de Gon mostra que ele continua vivo.",
+      "nen": null,
+      "fate": "Ainda vivo no jogo na consulta ao binder de Gon.",
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Luciart"
     },
     {
-      "id": 41,
+      "id": "machi-komacine",
       "name": "Machi Komacine",
-      "groups": [],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["trupe"],
+      "hiredByBattera": false,
+      "role": "membro",
+      "summary": "De início recusou o convite de Phinks para jogar. Entrou no jogo com outros membros depois que Shalnark descobriu que a ilha é real e que há um exorcista nela, e teve de cooperar com Hisoka. Seguiu o exorcista com Nobunaga e disse a Hisoka que o caçaria até o fim do mundo se ele matasse Chrollo.",
+      "nen": "Transmutadora; no arco, Hisoka segue o fio de Machi para encontrá-la junto ao exorcista.",
+      "fate": null,
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Machi_Komacine"
     },
     {
-      "id": 42,
+      "id": "manheim",
       "name": "Manheim",
-      "groups": ["kazsule-alliance", "team-asta"],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["asta", "kazsule-alliance"],
+      "hiredByBattera": false,
+      "role": "membro",
+      "summary": "Membro da equipe de Asta. Com Amana, encerrou a discussão entre Asta e Killua oferecendo duas cartas S pela informação sobre o Bomber. Em Soufrabi, buscou informações com Nick Cue e Souheil e apontou que a pista sobre \"Plot of Beach\" podia depender de certas condições.",
+      "nen": null,
+      "fate": "Morto pelos Bombers depois de deixar a aliança.",
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Manheim"
     },
     {
-      "id": 43,
+      "id": "michiro",
       "name": "Michiro",
-      "groups": [],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": [],
+      "hiredByBattera": false,
+      "role": "jogador",
+      "summary": "Troca com Gon uma \"Favor Cushion\" falsa, desmascarada pelo Paladin's Necklace de Gon, e então lhe entrega uma \"Favor Cushion\" verdadeira. Seu nome aparece depois no binder de Gon.",
+      "nen": null,
+      "fate": null,
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Michiro"
     },
     {
-      "id": 44,
+      "id": "mikli",
       "name": "Mikli",
-      "groups": ["battera", "nickes-alliance"],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["nickes-alliance"],
+      "hiredByBattera": true,
+      "role": "recruta",
+      "summary": "Uma dos 21 aprovados no teste de Tsezguerra, foi recrutada para a aliança, provavelmente por Contarch. Foi levada por Jispa até Kosofftro e instruída a memorizar a lista de feitiços. Após a fuga de Genthru, percebeu que os contadores das bombas caíam em ritmos diferentes, o que levou Abengane a ligá-los aos batimentos cardíacos.",
+      "nen": null,
+      "fate": "Morta na detonação simultânea das bombas pelos Bombers.",
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Mikli"
     },
     {
-      "id": 45,
+      "id": "montreux",
       "name": "Montreux",
-      "groups": ["kazsule-alliance", "team-yabibi"],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["yabibi", "kazsule-alliance"],
+      "hiredByBattera": false,
+      "role": "membro (lutou na prova de boxe)",
+      "summary": "Membro da equipe de Yabibi. Na reunião, explicou a Gon quais cartas anulam \"Levy\" e ofereceu três cartas S para saber como obter \"Wild Luck Alexandrite\". Lançou \"List\" e descobriu que ninguém tinha \"Plot of Beach\". No farol, enfrentou o pirata boxeador e foi nocauteado por um gancho de punho teleportado.",
+      "nen": "Emissor (Emitter) com habilidade própria: dispara projéteis de aura com os punhos.",
+      "fate": "Morto pelos Bombers com Yabibi pouco depois de deixar o farol.",
+      "cards": [
+        {
+          "id": "1038",
+          "relation": "usou",
+          "evidence": "Montreux casts \"\"List\"\" on \"\"Plot of Beach\"\", discovering that no player is currently in possession of it.",
+          "chapter": 154,
+          "source": "Montreux"
+        }
+      ],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Montreux"
     },
     {
-      "id": 46,
+      "id": "motaricke",
       "name": "Motaricke",
-      "groups": [],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": [],
+      "hiredByBattera": false,
+      "role": "jogador veterano; depois cativo do Bomber",
+      "summary": "Jogador há anos no jogo, segue Gon e Killua e tenta roubar a primeira carta de slot designado deles com \"Thief\", mas a carta é destruída pelas precauções dos meninos. Meses depois, é capturado pelo Bomber e forçado a rolar Risky Dice e usar \"Lottery\" para tentar obter \"Wild Luck Alexandrite\", sem sucesso. Em seguida, é disfarçado de Sub ou Bara para o golpe contra o time de Tsezguerra e continua como sósia ao lado de Genthru.",
+      "nen": null,
+      "fate": null,
+      "cards": [
+        {
+          "id": "025",
+          "relation": "usou",
+          "evidence": "Genthru forces Motaricke to roll the Risky Dice a couple of times",
+          "chapter": 152,
+          "source": "Motaricke"
+        },
+        {
+          "id": "1007",
+          "relation": "usou",
+          "evidence": "Ultimately, he decides to steal it with his \"\"Thief\"\" card; he rationalizes that if he doesn't, other players will.",
+          "chapter": 133,
+          "source": "Motaricke"
+        },
+        {
+          "id": "1032",
+          "relation": "usou",
+          "evidence": "Genthru forces Motaricke to roll the Risky Dice a couple of times and then subsequently use a \"\"Lottery\"\" card to help them obtain the \"\"Wild Luck Alexandrite\"\" card.",
+          "chapter": 152,
+          "source": "Motaricke"
+        }
+      ],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Motaricke"
     },
     {
-      "id": 47,
+      "id": "mukanaki",
       "name": "Mukanaki",
-      "groups": [],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": [],
+      "hiredByBattera": false,
+      "role": "jogador",
+      "summary": "Um dos jogadores que confrontam Gon e Killua em Antokiba para tentar roubar a \"Sword of Truth\". Mais tarde, o binder de Gon mostra que ele continua vivo no jogo.",
+      "nen": null,
+      "fate": "Ainda vivo no jogo na consulta ao binder de Gon.",
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Mukanaki"
     },
     {
-      "id": 48,
+      "id": "nick-cue",
       "name": "Nick Cue",
-      "groups": ["kazsule-alliance", "team-kazsule"],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["kazsule", "kazsule-alliance"],
+      "hiredByBattera": false,
+      "role": "membro",
+      "summary": "Membro da equipe de Kazsule; estava presente na troca com Gon perto de Dorias. Na reunião, observou que faltavam só quatro cartas aos Bombers e explicou truques para descobrir quais cartas eles tinham. Em Soufrabi, com Souheil e Manheim, achou NPCs que tinham ouvido falar da carta e sugeriu continuar perguntando.",
+      "nen": null,
+      "fate": "Morto pelos Bombers depois que a aliança se desfez.",
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Nick_Cue"
     },
     {
-      "id": 49,
+      "id": "nickes",
       "name": "Nickes",
-      "groups": ["battera", "nickes-alliance"],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["nickes-alliance"],
+      "hiredByBattera": true,
+      "role": "líder",
+      "summary": "Líder da aliança, abordou Gon e Killua em Antokiba após uma morte causada pelo Bomber e os levou para ouvir a proposta de recrutamento. Explicou o plano de monopolizar as cartas de feitiço e a divisão do prêmio de Battera; Puhat e Abengane aceitaram. Meses depois anunciou 133 cartas de slot designado de 90 tipos, pouco antes de Genthru revelar ser o Bomber. Para salvar Jispa, convenceu os membros a entregar as cartas e deu seu anel a Genthru.",
+      "nen": null,
+      "fate": "Morto na detonação simultânea das bombas pelos Bombers.",
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Nickes"
     },
     {
-      "id": 50,
+      "id": "nobunaga-hazama",
       "name": "Nobunaga Hazama",
-      "groups": [],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["trupe"],
+      "hiredByBattera": false,
+      "role": "membro",
+      "summary": "Seguiu o exorcista com Machi até Hisoka chegar. Avisou Kalluto para tomar cuidado com Hisoka e, sério, cobrou de Hisoka que fizesse a negociação dar certo.",
+      "nen": null,
+      "fate": null,
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Nobunaga_Hazama"
     },
     {
-      "id": 51,
+      "id": "nomdieu",
       "name": "Nomdieu",
-      "groups": ["battera", "nickes-alliance"],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["nickes-alliance"],
+      "hiredByBattera": true,
+      "role": "fundador (suposto)",
+      "summary": "Participou do recrutamento de Abengane e Puhat, explicando que todos na aliança também tinham sido contratados por Battera. Assam interrompeu uma discussão sobre o prêmio para que ele e Isaac não ouvissem. Após a revelação de Genthru, estava entre os membros que receberam Bara com a cabeça de Puhat na Árvore Shiso.",
+      "nen": null,
+      "fate": "Morto na detonação simultânea das bombas pelos Bombers.",
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Nomdieu"
     },
     {
-      "id": 52,
+      "id": "ogyu",
       "name": "Ogyu",
-      "groups": [],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": [],
+      "hiredByBattera": false,
+      "role": null,
+      "summary": null,
+      "nen": null,
+      "fate": null,
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Ogyu"
     },
     {
-      "id": 53,
+      "id": "phinks-magcub",
       "name": "Phinks Magcub",
-      "groups": [],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["trupe"],
+      "hiredByBattera": false,
+      "role": "membro",
+      "summary": "Com Feitan, descobriu no leilão de Southernpiece que Battera comprava cópias de Greed Island; os dois roubaram uma cópia de um carro e entraram no jogo. No jogo, mataram Latarza, tomaram suas cartas e combinaram uma disputa para ver quem matava mais jogadores. Foi com os outros membros até a ilha real, onde Razor os expulsou com \"Eliminate\". Depois que a Trupe achou o exorcista Abengane, pediu a Hisoka que fechasse o acordo, dizendo que pagariam o que o exorcista pedisse.",
+      "nen": null,
+      "fate": null,
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Phinks_Magcub"
     },
     {
-      "id": 54,
+      "id": "pisac",
       "name": "Pisac",
-      "groups": ["battera", "nickes-alliance"],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["nickes-alliance"],
+      "hiredByBattera": true,
+      "role": "recruta",
+      "summary": "Novato recrutado para a aliança, provavelmente por Contarch. Foi levado por Jispa até Kosofftro e instruído a memorizar a lista de feitiços. Estava entre os membros que receberam bombas de Genthru e entregaram as cartas de slot designado aos Bombers.",
+      "nen": null,
+      "fate": "Morto na detonação simultânea das bombas pelos Bombers.",
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Pisac"
     },
     {
-      "id": 55,
+      "id": "pongo",
       "name": "Pongo",
-      "groups": [],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": [],
+      "hiredByBattera": false,
+      "role": "jogador experiente",
+      "summary": "Aparece em Antokiba com outros jogadores experientes, como Asta e Kazsule, para tentar roubar a \"Sword of Truth\" de Gon e Killua. Mais tarde, o binder de Gon mostra que ele continua vivo no jogo.",
+      "nen": null,
+      "fate": "Ainda vivo no jogo na consulta ao binder de Gon.",
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Pongo"
     },
     {
-      "id": 56,
+      "id": "puhat",
       "name": "Puhat",
-      "groups": ["battera", "nickes-alliance"],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["nickes-alliance"],
+      "hiredByBattera": true,
+      "role": "recruta",
+      "summary": "Um dos 21 aprovados no teste de Tsezguerra, aceitou entrar na aliança para zerar o jogo em três meses, mesmo recebendo só cerca de 200 milhões. Na base, errou a pergunta sobre a lista de feitiços e teve de estudá-la de novo. Após a revelação de Genthru, foi sozinho à mansão de Battera tentar negociar como mediador, mas Genthru o matou com o Little Flower.",
+      "nen": null,
+      "fate": "Morto por Genthru na mansão de Battera, fora do jogo; Bara usa sua cabeça para ameaçar a aliança.",
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Puhat"
     },
     {
-      "id": 57,
+      "id": "redwood",
       "name": "Redwood",
-      "groups": ["battera", "nickes-alliance"],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["nickes-alliance"],
+      "hiredByBattera": true,
+      "role": "recruta",
+      "summary": "Novato recrutado para a aliança, provavelmente por Contarch. Foi levado por Jispa até Kosofftro e instruído a memorizar a lista de feitiços. Teve uma bomba implantada por Genthru e, como os demais, entregou as cartas aos Bombers.",
+      "nen": null,
+      "fate": "Morto na detonação simultânea das bombas pelos Bombers.",
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Redwood"
     },
     {
-      "id": 58,
+      "id": "richard-hackett",
       "name": "Richard Hackett",
-      "groups": [],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": [],
+      "hiredByBattera": false,
+      "role": "jogador",
+      "summary": "Desesperado para sair do jogo, troca uma carta rara com Biscuit por uma \"Leave\" em frente à loja de feitiços de Masadora. Seu nome aparece depois no binder de Gon.",
+      "nen": null,
+      "fate": null,
+      "cards": [
+        {
+          "id": "1014",
+          "relation": "obteve",
+          "evidence": "Desperate to get out of the game, he exchanges a rare card with Biscuit for a \"\"Leave\"\" card in front of the spell card shop in Masadora.",
+          "chapter": 151,
+          "source": "Richard Hackett"
+        }
+      ],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Richard_Hackett"
     },
     {
-      "id": 59,
+      "id": "rodriot",
       "name": "Rodriot",
-      "groups": ["battera", "team-tsezguerra"],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["tsezguerra"],
+      "hiredByBattera": true,
+      "role": "membro (venceu a prova de boliche)",
+      "summary": "Membro da equipe de Tsezguerra; teve \"Pre-Order Vouchers\" e \"Hypothetical T.V.\" roubadas pelos Bombers na troca com Genthru. Acompanhou Tsezguerra na negociação com Goreinu, venceu a segunda prova contra os piratas (boliche) e buscou jogadores para completar o time com Kess. Na guerrilha contra os Bombers, usou \"Clairvoyant Snake\" para saber quantas cartas de transporte eles tinham.",
+      "nen": "Deu a entender que tinha uma habilidade própria adequada ao boliche, mas ela não é mostrada.",
+      "fate": "Saiu do jogo com a equipe e fugiu com Battera, abandonando o jogo de vez.",
+      "cards": [
+        {
+          "id": "024",
+          "relation": "possuía",
+          "evidence": "Sub and Bara steal two cards from each of them, breaking their monopolies and acquiring rare cards, among which are Rodriot's \"\"Pre-Order Vouchers\"\" and \"\"Hypothetical T.V.\"\".",
+          "chapter": 153,
+          "source": "Rodriot"
+        },
+        {
+          "id": "029",
+          "relation": "possuía",
+          "evidence": "Sub and Bara steal two cards from each of them, breaking their monopolies and acquiring rare cards, among which are Rodriot's \"\"Pre-Order Vouchers\"\" and \"\"Hypothetical T.V.\"\".",
+          "chapter": 153,
+          "source": "Rodriot"
+        },
+        {
+          "id": "096",
+          "relation": "usou",
+          "evidence": "Rodriot checks the number of transportation spells in the Bombers' possession by feeding a \"Chidon\" card to a \"\"Clairvoyant Snake\"\".",
+          "chapter": 172,
+          "source": "Rodriot"
+        },
+        {
+          "id": "1007",
+          "relation": "usou",
+          "evidence": "Tsezguerra and his teammates confront Genthru. Immediately, they each use a \"\"Thief\"\" card and escape to Masadora with an \"Accompany\" card.",
+          "chapter": 171,
+          "source": "Tsezguerra"
+        }
+      ],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Rodriot"
     },
     {
-      "id": 60,
+      "id": "sakisuke-njiji",
       "name": "Sakisuke Njiji",
-      "groups": ["battera"],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": [],
+      "hiredByBattera": true,
+      "role": "jogador contratado por Battera",
+      "summary": "Contratado por Battera no mesmo dia que Gon, Killua e Biscuit; fica espantado, com Zenju e Puhat, quando Gon entra no jogo. Goreinu o considera muito capaz em combate, mas ganancioso.",
+      "nen": null,
+      "fate": "Ainda vivo no jogo na consulta ao binder de Gon.",
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Sakisuke_Njiji"
     },
     {
-      "id": 61,
+      "id": "shalnark",
       "name": "Shalnark",
-      "groups": [],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["trupe"],
+      "hiredByBattera": false,
+      "role": "membro; analista do grupo",
+      "summary": "Entrou no jogo com Kortopi e Shizuku depois de pesquisar sobre Greed Island. Ao perceber que o jogo funciona com Nen, concluiu que a ilha existe no mundo real e planejou usar \"Toraemon\" para levar todos os itens especiais. Analisou rochas da ilha, achou sua localização e guiou a Trupe de barco até lá, mas Razor os expulsou com \"Eliminate\". Depois deduziu que Chrollo contratara alguém para jogar por ele e que o exorcista estava na ilha.",
+      "nen": null,
+      "fate": null,
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Shalnark"
     },
     {
-      "id": 62,
+      "id": "shihael",
       "name": "Shihael",
-      "groups": ["battera", "nickes-alliance"],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["nickes-alliance"],
+      "hiredByBattera": true,
+      "role": "recruta",
+      "summary": "Novato recrutado para a aliança, provavelmente por Contarch. Foi levado por Jispa até Kosofftro e, ao estudar a lista de feitiços na base, fez uma pergunta sobre a carta \"Fortress\". Teve uma bomba implantada por Genthru e, como os demais, entregou as cartas aos Bombers.",
+      "nen": null,
+      "fate": "Morto na detonação simultânea das bombas pelos Bombers.",
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Shihael"
     },
     {
-      "id": 63,
+      "id": "shizuku-murasaki",
       "name": "Shizuku Murasaki",
-      "groups": [],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["trupe"],
+      "hiredByBattera": false,
+      "role": "membro",
+      "summary": "Entrou no jogo com Shalnark e Kortopi. Seu aspirador Blinky não conseguia sugar os itens especiais do jogo, um dos indícios de que ele funciona com Nen. Foi expulsa da ilha real por Razor com \"Eliminate\" e depois ficou decepcionada ao saber que Hisoka era quem Chrollo havia contratado.",
+      "nen": "Conjuradora: materializa o aspirador Blinky, que não conseguiu sugar os itens especiais do jogo.",
+      "fate": null,
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Shizuku_Murasaki"
     },
     {
-      "id": 64,
+      "id": "soffman",
       "name": "Soffman",
-      "groups": [],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": [],
+      "hiredByBattera": false,
+      "role": "jogador experiente",
+      "summary": "Está entre os jogadores experientes que tentam roubar a \"Sword of Truth\" de Gon e Killua em Antokiba. Antes do quiz final, aparece machucado diante do time de Gon e, inquieto, dá a entender a Killua que venderia a última carta se vencesse. Após a vitória de Gon, os irmãos Bellam chegam e lhe agradecem por ter ficado ali por eles.",
+      "nen": null,
+      "fate": "Vivo e no jogo ao fim do quiz final.",
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Soffman"
     },
     {
-      "id": 65,
+      "id": "souheil",
       "name": "Souheil",
-      "groups": ["kazsule-alliance", "team-kazsule"],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["kazsule", "kazsule-alliance"],
+      "hiredByBattera": false,
+      "role": "membro",
+      "summary": "Membro da equipe de Kazsule; estava presente na troca com Gon perto de Dorias. Na reunião, defendeu, contra Asta, que o grupo de Gon podia ter informações úteis. Em Soufrabi, questionou como uma NPC saberia que eram 15 jogadores, e Killua deduziu que era pelo uso de \"Accompany\".",
+      "nen": null,
+      "fate": "Morto pelos Bombers depois que a aliança se desfez.",
+      "cards": [
+        {
+          "id": "1040",
+          "relation": "usou",
+          "evidence": "Souheil and his team get in \"contact\" with other Greed Island players, including Gon's team, to exchange information on how to stop Genthru's team",
+          "chapter": 154,
+          "source": "Souheil"
+        }
+      ],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Souheil"
     },
     {
-      "id": 66,
+      "id": "sub",
       "name": "Sub",
-      "groups": ["battera", "bombers"],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["bombers"],
+      "hiredByBattera": true,
+      "role": "membro (um dos \"wingmen\" de Genthru)",
+      "summary": "Espera em Zetsu com Bara na mansão de Battera e participa da detonação das bombas na aliança de Nickes. Desconfia da troca proposta por Tsezguerra, mas aceita; com Bara, propõe o plano com Risky Dice e Tax Collector's Gauntlet e rouba quatro cartas do time de Tsezguerra. Na luta contra o time de Gon, enfrenta Killua e é nocauteado por ele.",
+      "nen": "Não tem habilidade própria conhecida; tem mais aura que Killua, aparenta ser bom em Intensificação e é hábil em Zetsu.",
+      "fate": "Derrotado por Killua, pede que a última \"Angel's Breath\" seja usada em Genthru, e o trio é poupado.",
+      "cards": [
+        {
+          "id": "025",
+          "relation": "usou",
+          "evidence": "Sub and Bara roll their Risky Dice",
+          "chapter": 153,
+          "source": "Bomber"
+        },
+        {
+          "id": "1018",
+          "relation": "usou",
+          "evidence": "Their dice roll is successful, so they run towards the group and, when all four are within range, \"steal\" four cards each before \"returning\" to Masadora,",
+          "chapter": 153,
+          "source": "Sub"
+        }
+      ],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Sub"
     },
     {
-      "id": 67,
+      "id": "tokharone",
       "name": "Tokharone",
-      "groups": [],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": [],
+      "hiredByBattera": false,
+      "role": "jogador com time próprio",
+      "summary": "O Bomber cita Tokharone e seu time entre os jogadores que devem ser vigiados. Bara volta a mencioná-lo, junto com Hagakushi, ao falar das cartas \"Risky Dice\".",
+      "nen": null,
+      "fate": null,
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Tokharone"
     },
     {
-      "id": 68,
+      "id": "tsezguerra",
       "name": "Tsezguerra",
-      "groups": ["battera", "team-tsezguerra"],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["tsezguerra"],
+      "hiredByBattera": true,
+      "role": "líder da equipe; Hunter profissional (Single-Star Hunter)",
+      "summary": "Hunter profissional a serviço de Battera, já tinha completado cerca de 80% do jogo e aplicou o teste de Ren aos candidatos, inclusive Gon e Killua. Com sua equipe, foi roubado pelos Bombers numa troca com Genthru e deduziu que ele era o Bomber. Aliado a Gon e Goreinu contra os piratas de Razor, foi ferido nas costas na queimada e recebeu uma cópia de \"Plot of Beach\". Depois atrasou os Bombers por três semanas, em troca de \"Wild Luck Alexandrite\", e saiu do jogo.",
+      "nen": "Tipo e habilidade não revelados; avalia o Nen dos outros e concentra aura num ponto, como nos pés (salto de 16,80 m) ou nas costas para resistir a um arremesso.",
+      "fate": "Saiu do jogo com \"Leave\" e não voltou, pois Battera cancelou o contrato.",
+      "cards": [
+        {
+          "id": "002",
+          "relation": "obteve",
+          "evidence": "At the top of the lighthouse, Gon receives the \"Plot of Beach\" card while Tsezguerra and Goreinu receive a \"copy\" of the card.",
+          "chapter": 169,
+          "source": "Tsezguerra"
+        },
+        {
+          "id": "1007",
+          "relation": "usou",
+          "evidence": "Tsezguerra and his teammates confront Genthru. Immediately, they each use a \"\"Thief\"\" card and escape to Masadora with an \"Accompany\" card.",
+          "chapter": 171,
+          "source": "Tsezguerra"
+        },
+        {
+          "id": "1009",
+          "relation": "usou",
+          "evidence": "Tsezguerra and his comrades manage to delay the Bombers until they run out of \"Accompany\" cards, using a \"Return\" card to travel back to Aiai",
+          "chapter": 173,
+          "source": "Tsezguerra"
+        },
+        {
+          "id": "1014",
+          "relation": "usou",
+          "evidence": "using a \"Return\" card to travel back to Aiai and a \"\"Leave\"\" card to exit the game and return to Battera's mansion.",
+          "chapter": 173,
+          "source": "Tsezguerra"
+        },
+        {
+          "id": "1038",
+          "relation": "usou",
+          "evidence": "An anxious Barry states that the group may have their hands on the \"\"Plot of Beach\"\" card, so Tsezguerra uses a \"\"List\"\" card to find out.",
+          "chapter": 153,
+          "source": "Tsezguerra"
+        },
+        {
+          "id": "1039",
+          "relation": "usou",
+          "evidence": "Now with Goreinu, Tsezguerra and his group use an \"Accompany\" card to return to Masadora to devise a plan to stall Genthru for three weeks.",
+          "chapter": 170,
+          "source": "Tsezguerra"
+        },
+        {
+          "id": "1040",
+          "relation": "usou",
+          "evidence": "Inside the game with his team, Tsezguerra \"contacts\" Genthru to negotiate \"a trade\" for his \"\"Patch of Forest\"\".",
+          "chapter": 152,
+          "source": "Tsezguerra"
+        }
+      ],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Tsezguerra"
     },
     {
-      "id": 69,
+      "id": "vice",
       "name": "Vice",
-      "groups": [],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": [],
+      "hiredByBattera": false,
+      "role": "jogador experiente",
+      "summary": "Aparece em Antokiba com outros jogadores experientes, como Asta e Kazsule, para tentar roubar a \"Sword of Truth\" de Gon e Killua. Mais tarde, o binder de Gon mostra que ele continua vivo no jogo.",
+      "nen": null,
+      "fate": "Ainda vivo no jogo na consulta ao binder de Gon.",
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Vice"
     },
     {
-      "id": 70,
+      "id": "wong-ho",
       "name": "Wong Ho",
-      "groups": [],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": [],
+      "hiredByBattera": false,
+      "role": "jogador",
+      "summary": "Desesperado para sair do jogo, troca uma carta rara com Gon por uma \"Leave\" em frente à loja de feitiços de Masadora. Seu nome aparece depois no binder de Gon.",
+      "nen": null,
+      "fate": null,
+      "cards": [
+        {
+          "id": "1014",
+          "relation": "obteve",
+          "evidence": "Desperate to get out of the game, he exchanges a rare card with Gon for a \"\"Leave\"\" card in front of the spell card shop in Masadora.",
+          "chapter": 151,
+          "source": "Wong Ho"
+        }
+      ],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Wong_Ho"
     },
     {
-      "id": 71,
+      "id": "wong-li",
       "name": "Wong Li",
-      "groups": ["kazsule-alliance", "team-hanse"],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["hanse", "kazsule-alliance"],
+      "hiredByBattera": false,
+      "role": "membro",
+      "summary": "Membro da equipe de Hanse. Na reunião de Kazsule, percebeu que tinha sido tocado por Genthru. Como sua equipe já tinha estado em Soufrabi, usou \"Accompany\" para levar toda a aliança até lá. No farol, temeu que a regra do boxe permitisse armas conjuradas.",
+      "nen": null,
+      "fate": "Morto pelos Bombers pouco depois de deixar o farol.",
+      "cards": [
+        {
+          "id": "1039",
+          "relation": "usou",
+          "evidence": "Wong Li then claims that his team has been there before, so he uses an \"\"Accompany\"\" card to transport all of the alliance members.",
+          "chapter": 154,
+          "source": "Wong Li"
+        }
+      ],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Wong_Li"
     },
     {
-      "id": 72,
+      "id": "yabibi",
       "name": "Yabibi",
-      "groups": ["kazsule-alliance", "team-yabibi"],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["yabibi", "kazsule-alliance"],
+      "hiredByBattera": false,
+      "role": "líder da equipe",
+      "summary": "Líder da dupla com Montreux. Na reunião de Kazsule, objetou ao uso de força contra os Bombers sem conhecer suas habilidades e explicou que é preciso usar cartas como \"Mimic\" nas cartas S. Também sugeriu usar \"List\" para ver quais cartas podiam ser monopolizadas. Em Soufrabi, concordou com Amana que a pista dependia de uma condição prévia.",
+      "nen": null,
+      "fate": "Morto pelos Bombers com Montreux depois de deixar o farol.",
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Yabibi"
     },
     {
-      "id": 73,
+      "id": "zeho",
       "name": "Zeho",
-      "groups": ["kazsule-alliance", "team-hanse"],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["hanse", "kazsule-alliance"],
+      "hiredByBattera": false,
+      "role": "membro",
+      "summary": "Membro da equipe de Hanse. Em Soufrabi, acompanhou Kazsule quando ele achou a NPC com a pista de \"Plot of Beach\". Confiante por ser Intensificador, aceitou o sumô contra o pirata Bopobo, mas não o moveu nem um passo e precisou ser salvo por Gon.",
+      "nen": "Intensificador (Enhancer) pouco treinado, que demorava para produzir um Ren fraco.",
+      "fate": "Morto pelos Bombers com sua equipe depois de deixar o farol.",
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Zeho"
     },
     {
-      "id": 74,
+      "id": "zenju",
       "name": "Zenju",
-      "groups": ["battera"],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": [],
+      "hiredByBattera": true,
+      "role": "jogador contratado por Battera",
+      "summary": "Contratado por Battera no mesmo dia que Gon, Killua e Biscuit; fica espantado, com Sakisuke e Puhat, quando Gon entra no jogo. Mais tarde, o binder de Gon mostra que ele continua vivo no jogo.",
+      "nen": null,
+      "fate": "Ainda vivo no jogo na consulta ao binder de Gon.",
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Zenju"
     },
     {
-      "id": 75,
+      "id": "zetsk-bellam",
       "name": "Zetsk Bellam",
-      "groups": ["battera"],
-      "specifiedSlots": null,
-      "cardIds": [],
+      "teamIds": ["bellam"],
+      "hiredByBattera": true,
+      "role": "membro (irmão de Gashta)",
+      "summary": "Passa com o irmão Gashta no teste de Ren de Tsezguerra, espera por ele em frente à Shiso Tree e confirma que vários jogadores os espionam. O Bomber cita os irmãos entre os jogadores a vigiar, e Goreinu os descreve como uma dupla forte e famosa que nunca trabalha com outros. Após a vitória de Gon no quiz, dispensa um homem que trabalhava para os irmãos e desafia o time de Gon para uma disputa em que o vencedor leva tudo, mas é derrotado com facilidade por Gon e Killua.",
+      "nen": null,
+      "fate": "Derrotado por Gon e Killua após o quiz final.",
+      "cards": [],
       "wiki": "https://hunterxhunter.fandom.com/wiki/Zetsk_Bellam"
     }
   ]
