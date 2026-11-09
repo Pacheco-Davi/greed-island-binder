@@ -1,0 +1,658 @@
+{
+  "TODO": "specifiedSlots e cardIds ainda não foram preenchidos. A wiki só informa contagens por EQUIPE e em momentos da história (ver docs/pesquisa-jogadores.md). Preencher só com dados conferidos.",
+  "meta": {
+    "source": "https://hunterxhunter.fandom.com/wiki/Category:Greed_Island_Players",
+    "license": "CC BY-SA (Hunter x Hunter Wiki / Fandom)",
+    "collectedAt": "2026-11-09",
+    "total": 75
+  },
+  "groups": [
+    {
+      "id": "battera",
+      "label": "Contratados por Battera",
+      "labelEn": "Battera's Players"
+    },
+    {
+      "id": "nickes-alliance",
+      "label": "Aliança de Nickes",
+      "labelEn": "Nickes' Alliance"
+    },
+    {
+      "id": "kazsule-alliance",
+      "label": "Aliança de Kazsule",
+      "labelEn": "Kazsule's Alliance"
+    },
+    {
+      "id": "bombers",
+      "label": "Bombers",
+      "labelEn": "Bomber"
+    },
+    {
+      "id": "team-asta",
+      "label": "Equipe de Asta",
+      "labelEn": "Team Asta"
+    },
+    {
+      "id": "team-hanse",
+      "label": "Equipe de Hanse",
+      "labelEn": "Team Hanse"
+    },
+    {
+      "id": "team-kazsule",
+      "label": "Equipe de Kazsule",
+      "labelEn": "Team Kazsule"
+    },
+    {
+      "id": "team-tsezguerra",
+      "label": "Equipe de Tsezguerra",
+      "labelEn": "Team Tsezguerra"
+    },
+    {
+      "id": "team-yabibi",
+      "label": "Equipe de Yabibi",
+      "labelEn": "Team Yabibi"
+    }
+  ],
+  "players": [
+    {
+      "id": 1,
+      "name": "Abengane",
+      "groups": ["battera", "nickes-alliance"],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Abengane"
+    },
+    {
+      "id": 2,
+      "name": "Amana",
+      "groups": ["kazsule-alliance", "team-asta"],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Amana"
+    },
+    {
+      "id": 3,
+      "name": "Arka",
+      "groups": [],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Arka"
+    },
+    {
+      "id": 4,
+      "name": "Assam",
+      "groups": ["battera", "nickes-alliance"],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Assam"
+    },
+    {
+      "id": 5,
+      "name": "Asta",
+      "groups": ["kazsule-alliance", "team-asta"],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Asta"
+    },
+    {
+      "id": 6,
+      "name": "Bara",
+      "groups": ["battera", "bombers"],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Bara"
+    },
+    {
+      "id": 7,
+      "name": "Barry",
+      "groups": ["battera", "team-tsezguerra"],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Barry"
+    },
+    {
+      "id": 8,
+      "name": "Binolt",
+      "groups": [],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Binolt"
+    },
+    {
+      "id": 9,
+      "name": "Biscuit Krueger",
+      "groups": ["battera", "kazsule-alliance"],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Biscuit_Krueger"
+    },
+    {
+      "id": 10,
+      "name": "Bonolenov Ndongo",
+      "groups": [],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Bonolenov_Ndongo"
+    },
+    {
+      "id": 11,
+      "name": "Contarch",
+      "groups": ["battera", "nickes-alliance"],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Contarch"
+    },
+    {
+      "id": 12,
+      "name": "Cuzco",
+      "groups": ["battera", "nickes-alliance"],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Cuzco"
+    },
+    {
+      "id": 13,
+      "name": "Degiro",
+      "groups": [],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Degiro"
+    },
+    {
+      "id": 14,
+      "name": "Doster",
+      "groups": ["battera"],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Doster"
+    },
+    {
+      "id": 15,
+      "name": "Erbier Mano",
+      "groups": [],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Erbier_Mano"
+    },
+    {
+      "id": 16,
+      "name": "Feitan Portor",
+      "groups": [],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Feitan_Portor"
+    },
+    {
+      "id": 17,
+      "name": "Franklin Bordeau",
+      "groups": [],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Franklin_Bordeau"
+    },
+    {
+      "id": 18,
+      "name": "Gashta Bellam",
+      "groups": ["battera"],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Gashta_Bellam"
+    },
+    {
+      "id": 19,
+      "name": "Genthru",
+      "groups": ["battera", "nickes-alliance", "bombers"],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Genthru"
+    },
+    {
+      "id": 20,
+      "name": "Gon Freecss",
+      "groups": ["battera", "kazsule-alliance"],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Gon_Freecss"
+    },
+    {
+      "id": 21,
+      "name": "Goreinu",
+      "groups": ["battera", "kazsule-alliance"],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Goreinu"
+    },
+    {
+      "id": 22,
+      "name": "Hagakushi",
+      "groups": [],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Hagakushi"
+    },
+    {
+      "id": 23,
+      "name": "Hanse",
+      "groups": ["kazsule-alliance", "team-hanse"],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Hanse"
+    },
+    {
+      "id": 24,
+      "name": "Hisoka Morow",
+      "groups": [],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Hisoka_Morow"
+    },
+    {
+      "id": 25,
+      "name": "Isaac",
+      "groups": ["battera", "nickes-alliance"],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Isaac"
+    },
+    {
+      "id": 26,
+      "name": "Ivona Kawski",
+      "groups": [],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Ivona_Kawski"
+    },
+    {
+      "id": 27,
+      "name": "Jeet",
+      "groups": ["battera"],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Jeet"
+    },
+    {
+      "id": 28,
+      "name": "Jeitsari",
+      "groups": [],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Jeitsari"
+    },
+    {
+      "id": 29,
+      "name": "Jikono",
+      "groups": [],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Jikono"
+    },
+    {
+      "id": 30,
+      "name": "Jispa",
+      "groups": ["battera", "nickes-alliance"],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Jispa"
+    },
+    {
+      "id": 31,
+      "name": "Kalluto Zoldyck",
+      "groups": [],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Kalluto_Zoldyck"
+    },
+    {
+      "id": 32,
+      "name": "Kazsule",
+      "groups": ["kazsule-alliance", "team-kazsule"],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Kazsule"
+    },
+    {
+      "id": 33,
+      "name": "Kess",
+      "groups": ["battera", "team-tsezguerra"],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Kess"
+    },
+    {
+      "id": 34,
+      "name": "Killua Zoldyck",
+      "groups": ["battera", "kazsule-alliance"],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Killua_Zoldyck"
+    },
+    {
+      "id": 35,
+      "name": "Kite",
+      "groups": [],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Kite"
+    },
+    {
+      "id": 36,
+      "name": "Kortopi",
+      "groups": [],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Kortopi"
+    },
+    {
+      "id": 37,
+      "name": "Kosofftro",
+      "groups": ["battera", "nickes-alliance"],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Kosofftro"
+    },
+    {
+      "id": 38,
+      "name": "Latarza",
+      "groups": [],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Latarza"
+    },
+    {
+      "id": 39,
+      "name": "Linn",
+      "groups": [],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Linn"
+    },
+    {
+      "id": 40,
+      "name": "Luciart",
+      "groups": [],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Luciart"
+    },
+    {
+      "id": 41,
+      "name": "Machi Komacine",
+      "groups": [],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Machi_Komacine"
+    },
+    {
+      "id": 42,
+      "name": "Manheim",
+      "groups": ["kazsule-alliance", "team-asta"],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Manheim"
+    },
+    {
+      "id": 43,
+      "name": "Michiro",
+      "groups": [],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Michiro"
+    },
+    {
+      "id": 44,
+      "name": "Mikli",
+      "groups": ["battera", "nickes-alliance"],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Mikli"
+    },
+    {
+      "id": 45,
+      "name": "Montreux",
+      "groups": ["kazsule-alliance", "team-yabibi"],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Montreux"
+    },
+    {
+      "id": 46,
+      "name": "Motaricke",
+      "groups": [],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Motaricke"
+    },
+    {
+      "id": 47,
+      "name": "Mukanaki",
+      "groups": [],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Mukanaki"
+    },
+    {
+      "id": 48,
+      "name": "Nick Cue",
+      "groups": ["kazsule-alliance", "team-kazsule"],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Nick_Cue"
+    },
+    {
+      "id": 49,
+      "name": "Nickes",
+      "groups": ["battera", "nickes-alliance"],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Nickes"
+    },
+    {
+      "id": 50,
+      "name": "Nobunaga Hazama",
+      "groups": [],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Nobunaga_Hazama"
+    },
+    {
+      "id": 51,
+      "name": "Nomdieu",
+      "groups": ["battera", "nickes-alliance"],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Nomdieu"
+    },
+    {
+      "id": 52,
+      "name": "Ogyu",
+      "groups": [],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Ogyu"
+    },
+    {
+      "id": 53,
+      "name": "Phinks Magcub",
+      "groups": [],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Phinks_Magcub"
+    },
+    {
+      "id": 54,
+      "name": "Pisac",
+      "groups": ["battera", "nickes-alliance"],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Pisac"
+    },
+    {
+      "id": 55,
+      "name": "Pongo",
+      "groups": [],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Pongo"
+    },
+    {
+      "id": 56,
+      "name": "Puhat",
+      "groups": ["battera", "nickes-alliance"],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Puhat"
+    },
+    {
+      "id": 57,
+      "name": "Redwood",
+      "groups": ["battera", "nickes-alliance"],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Redwood"
+    },
+    {
+      "id": 58,
+      "name": "Richard Hackett",
+      "groups": [],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Richard_Hackett"
+    },
+    {
+      "id": 59,
+      "name": "Rodriot",
+      "groups": ["battera", "team-tsezguerra"],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Rodriot"
+    },
+    {
+      "id": 60,
+      "name": "Sakisuke Njiji",
+      "groups": ["battera"],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Sakisuke_Njiji"
+    },
+    {
+      "id": 61,
+      "name": "Shalnark",
+      "groups": [],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Shalnark"
+    },
+    {
+      "id": 62,
+      "name": "Shihael",
+      "groups": ["battera", "nickes-alliance"],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Shihael"
+    },
+    {
+      "id": 63,
+      "name": "Shizuku Murasaki",
+      "groups": [],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Shizuku_Murasaki"
+    },
+    {
+      "id": 64,
+      "name": "Soffman",
+      "groups": [],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Soffman"
+    },
+    {
+      "id": 65,
+      "name": "Souheil",
+      "groups": ["kazsule-alliance", "team-kazsule"],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Souheil"
+    },
+    {
+      "id": 66,
+      "name": "Sub",
+      "groups": ["battera", "bombers"],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Sub"
+    },
+    {
+      "id": 67,
+      "name": "Tokharone",
+      "groups": [],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Tokharone"
+    },
+    {
+      "id": 68,
+      "name": "Tsezguerra",
+      "groups": ["battera", "team-tsezguerra"],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Tsezguerra"
+    },
+    {
+      "id": 69,
+      "name": "Vice",
+      "groups": [],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Vice"
+    },
+    {
+      "id": 70,
+      "name": "Wong Ho",
+      "groups": [],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Wong_Ho"
+    },
+    {
+      "id": 71,
+      "name": "Wong Li",
+      "groups": ["kazsule-alliance", "team-hanse"],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Wong_Li"
+    },
+    {
+      "id": 72,
+      "name": "Yabibi",
+      "groups": ["kazsule-alliance", "team-yabibi"],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Yabibi"
+    },
+    {
+      "id": 73,
+      "name": "Zeho",
+      "groups": ["kazsule-alliance", "team-hanse"],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Zeho"
+    },
+    {
+      "id": 74,
+      "name": "Zenju",
+      "groups": ["battera"],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Zenju"
+    },
+    {
+      "id": 75,
+      "name": "Zetsk Bellam",
+      "groups": ["battera"],
+      "specifiedSlots": null,
+      "cardIds": [],
+      "wiki": "https://hunterxhunter.fandom.com/wiki/Zetsk_Bellam"
+    }
+  ]
+}
