@@ -10,7 +10,7 @@
 
 - Executar **uma etapa por vez**. No fim de cada etapa: rodar `npm run dev` e `npm run build`, conferir os critérios de aceite, fazer commit e **parar para revisão**.
 - Ao terminar cada etapa, explicar em português o que foi feito, quais conceitos de React aparecem ali e por que cada decisão foi tomada (o Davi quer aprender, não só receber o código).
-- **Pair programming:** trocar quem pilota (driver) a cada etapa e registrar isso nas mensagens de commit (`etapa 3 — driver: Fulano`).
+- **Pair programming:** dupla **Davi** ([Pacheco-Davi](https://github.com/Pacheco-Davi)) e **Kelvin Mendes** ([md1o1](https://github.com/md1o1)). Trocar quem pilota (driver) a cada etapa e registrar isso nas mensagens de commit (`etapa 3 — <resumo> — driver: Kelvin`).
 - Nomes de componentes em inglês (como no enunciado) e textos da interface em português.
 
 ---
@@ -25,7 +25,8 @@
 | Tipo(s) | **Categoria** (+ **classe**, nas cartas de feitiço) | O filtro por tipo vira filtro por categoria e por rank |
 | Atributos (HP, Ataque…) | **Rank** (SS → H) e **limite de conversão** | Exibidos como medidores, no lugar das barras de status |
 | Detalhes | Carta ampliada que **vira** (frente = arte, verso = dados) | |
-| Treinadores + insígnias | **Jogadores** + quantidade de slots designados conquistados (de 100) | Dados escritos à mão em `players.json` |
+| Treinadores + insígnias | **Times**: página do time (resumo, integrantes, slots designados) e página resumida de cada integrante (só o arco Greed Island + cartas) | Dados da Hunter x Hunter Wiki em `teams.json` e `players.json`; cada carta atribuída traz o trecho e o capítulo como fonte |
+| (novo) | **Filtro "cartas do time"** no fichário | Mostra só as cartas que o time escolhido teve |
 | Busca por nome/ID | Busca por nome ou número | |
 | Favoritos (opcional) | Favoritos em `localStorage` | |
 | Aleatório (opcional) | "Sortear carta" | |
@@ -52,17 +53,18 @@ greed-island-binder/
 │   ├── components/
 │   │   ├── book/                # Book, BookCover, BookSpine, BookPage
 │   │   ├── cards/               # Card, CardSlot, CardGrid, CardDetails, RankBadge, LimitMeter
-│   │   ├── controls/            # Tabs, SearchBar, CategoryFilter, RankFilter, SortControl
-│   │   ├── players/             # PlayerList, PlayerCard
+│   │   ├── controls/            # Tabs, SearchBar, CategoryFilter, RankFilter, TeamFilter, SortControl
+│   │   ├── teams/               # TeamList, TeamCard, TeamPage, MemberPage
 │   │   └── feedback/            # EmptyState, Icon
 │   ├── css/                     # um .css por componente (sugestão do enunciado)
 │   ├── data/
 │   │   ├── greed-island-cards.json
+│   │   ├── teams.json
 │   │   └── players.json
 │   ├── domain/
 │   │   ├── cards.js             # normalização, busca, filtro, ordenação, ranks
 │   │   └── images.js            # mapa número → URL da imagem (import.meta.glob)
-│   ├── hooks/                   # useCardFilters, useFavorites, useTheme, useBookState
+│   ├── hooks/                   # useCardFilters, useFavorites, useTheme, useBookState, useHashRoute
 │   ├── App.jsx
 │   ├── main.jsx
 │   └── index.css                # tokens de design (variáveis CSS)
@@ -127,10 +129,13 @@ Regras de parsing (casos difíceis, explicar cada um ao Davi):
 - Cartas sem número recebem `id` gerado (`"free-sem-numero-1"`) e `number: null`.
 - Categoria deduzida pela faixa do número quando o CSV não trouxer a coluna.
 
-Criar também `src/data/players.json` só com a **estrutura** e um exemplo marcado `"TODO"`. O Davi preenche com dados que conferir na wiki ou no anime. **Não inventar dados de personagens.**
+Criar também os dados dos **Times** (decisão do Davi: a aba Jogadores virou Times), pesquisados na Hunter x Hunter Wiki. **Não inventar dados de personagens:** cada carta atribuída a um time ou jogador guarda o trecho da wiki e o capítulo que provam a informação; o que a wiki não diz fica `null`.
+
+- `src/data/teams.json`: times (equipes pequenas) e alianças, com resumo do arco, objetivo, desfecho, integrantes, maior contagem de slots designados conhecida (com o momento) e cartas do grupo.
+- `src/data/players.json`: todos os jogadores da categoria da wiki, com times, função, resumo só do arco Greed Island, Nen relevante, desfecho e cartas.
 
 ```json
-{ "players": [ { "id": 1, "name": "TODO", "specifiedSlots": 0, "cardIds": [] } ] }
+{ "teams": [ { "id": "gon", "name": "Time do Gon", "kind": "time", "memberIds": ["gon-freecss"], "specifiedSlots": { "count": 99, "moment": "…", "chapter": 183 }, "cards": [ { "id": "1035", "relation": "usou", "evidence": "…", "chapter": 160 } ] } ] }
 ```
 
 **Conceitos:** fonte de dados em JSON, normalização, tipos de dado (string × number).
@@ -147,6 +152,7 @@ Em `src/domain/cards.js`:
 - `filterCards(cards, { query, category, rank })`.
 - `sortCards(cards, { field, direction })`, com `Intl.Collator('pt-BR')` para nomes e desempate pelo número.
 - `getRarityPosition(card, cards)`: posição da carta entre as mais raras (menor limite = mais rara).
+- `getTeamCardIds(team, players)`: cartas do time = cartas do grupo + cartas de cada integrante (sem repetir). O `filterCards` ganha a opção `teamId`.
 
 Em `src/domain/images.js`:
 
@@ -169,11 +175,13 @@ const files = import.meta.glob('../assets/cards/*.{webp,png,jpg}', { eager: true
 
 Componentes com props bem definidas, renderizando dados reais:
 
-- `App`, com 3 abas: **Fichário**, **Favoritos** e **Jogadores** (`Tabs` com teclado: setas, Home e End).
-- `SearchBar` (input controlado, Esc limpa), `CategoryFilter` (chips com contagem por categoria), `RankFilter` e `SortControl`.
+- `App`, com 3 abas: **Fichário**, **Favoritos** e **Times** (`Tabs` com teclado: setas, Home e End).
+- `SearchBar` (input controlado, Esc limpa), `CategoryFilter` (chips com contagem por categoria), `RankFilter`, `TeamFilter` ("cartas do time") e `SortControl`.
 - `CardGrid` → `CardSlot` com `map()` e `key` estável (`card.id`).
 - `CardDetails`: visualização ampliada com número, nome, categoria, classe, rank, limite e descrição.
-- `PlayerList` → `PlayerCard`: nome, slots conquistados (x/100) e as cartas do jogador.
+- `TeamList` → `TeamCard`: nome do time, integrantes, slots designados (x/100) e quantas cartas o time teve.
+- `TeamPage`: resumo, objetivo, desfecho, link para cada integrante e a grade com as cartas do time (com botão "ver no fichário", que aplica o filtro do time).
+- `MemberPage`: página resumida do integrante — função, resumo do arco, Nen, desfecho, link de volta para o(s) time(s) e as cartas dele, cada uma com a fonte (capítulo).
 - `EmptyState` para "nenhuma carta encontrada", com botão "Limpar busca e filtros".
 
 **Conceitos:** componentização, props, listas, eventos, renderização condicional.
@@ -188,6 +196,7 @@ Componentes com props bem definidas, renderizando dados reais:
 - `useTheme()`: claro ou noturno, salvo em `gi:theme`, respeitando `prefers-color-scheme` na primeira visita.
 - Navegação do detalhe: guardar `{ ids, index }` da **lista que estava na tela**, para "anterior/próximo" seguir a busca e os filtros atuais.
 - "Sortear carta": não repetir a carta que já está aberta.
+- `useHashRoute()`: navegação entre páginas sem biblioteca, lendo `window.location.hash` e ouvindo o evento `hashchange` (`#/times`, `#/times/gon`, `#/jogadores/killua-zoldyck`). O botão Voltar do navegador funciona.
 
 **Conceitos:** `useState`, `useEffect`, `useMemo`, `useCallback`, hooks customizados.
 **Aceite:**
@@ -296,7 +305,7 @@ Checklist do enunciado, apontando **onde** cada item está implementado:
 - [ ] Busca por nome ou número, atualizando enquanto digita
 - [ ] Filtro por categoria (equivalente ao filtro por tipo) e por rank
 - [ ] Detalhe com número, nome, categoria e atributos
-- [ ] Área de Jogadores (equivalente aos Treinadores)
+- [ ] Área de Times (equivalente aos Treinadores), com página de cada time e de cada integrante, e filtro "cartas do time"
 - [ ] Tratamento de "nenhuma carta encontrada"
 - [ ] Responsivo (desktop, tablet e celular)
 - [ ] Identidade visual própria
