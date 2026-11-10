@@ -48,7 +48,7 @@ greed-island-binder/
 ├── src/
 │   ├── assets/
 │   │   ├── cards/               # 000.webp, 001.webp, 1001.webp, -000.webp …
-│   │   └── ui/                  # verso padrão da carta, carta "sem imagem", texturas
+│   │   └── ui/                  # sem-imagem.svg, verso padrão da carta, texturas
 │   ├── components/
 │   │   ├── book/                # Book, BookCover, BookSpine, BookPage
 │   │   ├── cards/               # Card, CardSlot, CardGrid, CardDetails, RankBadge, LimitMeter
@@ -61,8 +61,10 @@ greed-island-binder/
 │   │   ├── teams.json
 │   │   └── players.json
 │   ├── domain/
-│   │   ├── cards.js             # normalização, busca, filtro, ordenação, ranks
-│   │   └── images.js            # mapa número → URL da imagem (import.meta.glob)
+│   │   ├── cards.js             # normalização, busca, filtro, ordenação, ranks (+ cards.test.js)
+│   │   ├── teams.js             # integrantes, cartas do time e suas fontes (+ teams.test.js)
+│   │   ├── images.js            # mapa id → URL da imagem (import.meta.glob)
+│   │   └── catalog.js           # único lugar que lê os JSON; entrega tudo normalizado
 │   ├── hooks/                   # useCardFilters, useFavorites, useTheme, useBookState, useHashRoute
 │   ├── App.jsx
 │   ├── main.jsx
@@ -157,11 +159,13 @@ Em `src/domain/images.js`:
 
 ```js
 const files = import.meta.glob('../assets/cards/*.{webp,png,jpg}', { eager: true, import: 'default' });
-// monta um Map: "000" -> URL. Carta sem imagem -> assets/ui/sem-imagem.webp
+// monta um Map: "000" -> URL. Carta sem imagem -> null (a interface usa assets/ui/sem-imagem.svg ou mostra só o número)
 ```
 
 **Conceitos:** separar lógica de interface, funções puras, `import.meta.glob` do Vite (as imagens vêm de uma pasta do código, como o professor pede).
-**Aceite (testar no console ou com Vitest, opcional):**
+Em `src/domain/catalog.js`: lê os três JSON uma vez, normaliza as cartas e exporta `CARDS`, `CARDS_BY_ID`, `TEAMS`, `PLAYERS` e afins.
+
+**Aceite (`npm test`, com o executor de testes nativo do Node — sem dependência nova):**
 - `"bulba"` não encontra nada;
 - `"25"` encontra a carta 025;
 - `"1001"` encontra a 1001;

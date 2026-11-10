@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560" role="img" aria-label="Carta sem imagem">
+  <rect x="4" y="4" width="392" height="552" rx="22" fill="#ece5d3" stroke="#8a7d62" stroke-width="8"/>
+  <rect x="28" y="28" width="344" height="504" rx="12" fill="none" stroke="#8a7d62" stroke-width="2" stroke-dasharray="10 8"/>
+  <circle cx="200" cy="250" r="92" fill="none" stroke="#b3a789" stroke-width="10"/>
+  <circle cx="200" cy="250" r="56" fill="none" stroke="#b3a789" stroke-width="10"/>
+  <text x="200" y="282" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="96" font-weight="700" fill="#6f6249">?</text>
+  <text x="200" y="420" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="30" letter-spacing="6" fill="#6f6249">SEM IMAGEM</text>
+</svg>
