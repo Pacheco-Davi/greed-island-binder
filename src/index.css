@@ -223,6 +223,15 @@ button {
   cursor: pointer;
 }
 
+/* Hover consistente: todo botão habilitado dá um retorno visual leve. */
+button:not(:disabled):hover {
+  filter: brightness(0.95);
+}
+
+:root[data-theme='dark'] button:not(:disabled):hover {
+  filter: brightness(1.12);
+}
+
 button:disabled {
   cursor: not-allowed;
   opacity: 0.5;

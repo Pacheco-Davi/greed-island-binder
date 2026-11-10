@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { memo, useState } from 'react';
 import RankBadge from './RankBadge.jsx';
 import { formatNumber } from '../../domain/format.js';
 import '../../css/CardSlot.css';
@@ -13,7 +13,7 @@ import '../../css/CardSlot.css';
  *   isFavorite  mostra a estrela
  *   note        texto extra embaixo (ex.: "Usou · cap. 160" na página do time)
  */
-export default function CardSlot({ card, onOpen, isFavorite = false, note }) {
+function CardSlot({ card, onOpen, isFavorite = false, note }) {
   const number = formatNumber(card);
   const [imageFailed, setImageFailed] = useState(false); // arquivo não carregou → bolso vazio
 
@@ -51,3 +51,11 @@ export default function CardSlot({ card, onOpen, isFavorite = false, note }) {
     </button>
   );
 }
+
+/**
+ * React.memo: o bolso só re-renderiza se alguma prop mudar (comparação rasa).
+ * Funciona porque as props são estáveis: a carta é um objeto congelado do
+ * catálogo, `onOpen` vem de um useCallback e `isFavorite`/`note` são valores
+ * simples. Favoritar uma carta redesenha 1 bolso, não os 20 da página.
+ */
+export default memo(CardSlot);
