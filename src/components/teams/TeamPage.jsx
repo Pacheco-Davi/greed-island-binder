@@ -1,6 +1,7 @@
 import CardGrid from '../cards/CardGrid.jsx';
 import EmptyState from '../feedback/EmptyState.jsx';
 import { KIND_LABELS, formatSlots, plural } from '../../domain/format.js';
+import { buildHash } from '../../domain/routes.js';
 import '../../css/TeamPage.css';
 
 /**
@@ -8,16 +9,16 @@ import '../../css/TeamPage.css';
  *
  * Props:
  *   team, members, cards (cartas normalizadas do time), notes (Map id → "Usou · Gon Freecss")
- *   favoriteIds, onBack, onOpenMember, onOpenCard, onShowInBinder
+ *   favoriteIds, onOpenCard, onShowInBinder
  */
-export default function TeamPage({ team, members, cards, notes, favoriteIds, onBack, onOpenMember, onOpenCard, onShowInBinder }) {
+export default function TeamPage({ team, members, cards, notes, favoriteIds, onOpenCard, onShowInBinder }) {
   const slots = formatSlots(team.specifiedSlots);
 
   return (
     <article className="team-page" aria-labelledby="team-page-title">
-      <button type="button" className="link-button team-page__back" onClick={onBack}>
+      <a className="team-page__back" href={buildHash({ tab: 'times' })}>
         ← Todos os times
-      </button>
+      </a>
 
       <header className="team-page__header">
         <p className="team-page__kind">{KIND_LABELS[team.kind]}</p>
@@ -59,9 +60,7 @@ export default function TeamPage({ team, members, cards, notes, favoriteIds, onB
         <ul className="team-page__members">
           {members.map((member) => (
             <li key={member.id}>
-              <button type="button" className="link-button" onClick={() => onOpenMember(member.id)}>
-                {member.name}
-              </button>
+              <a href={buildHash({ tab: 'times', teamId: team.id, playerId: member.id })}>{member.name}</a>
               {member.role && <span className="team-page__role"> — {member.role}</span>}
             </li>
           ))}

@@ -1,3 +1,4 @@
+import { useCallback, useMemo } from 'react';
 import CardSlot from './CardSlot.jsx';
 import '../../css/CardGrid.css';
 
@@ -7,14 +8,20 @@ import '../../css/CardGrid.css';
  * única: o id da carta serve, o índice do array não (ao filtrar, o índice 0
  * passaria a ser outra carta e o React reaproveitaria o elemento errado).
  *
- * Props: cards, onOpen, favoriteIds (Set), notes (Map id → texto), label
+ * Props: cards, onOpen ((id, ids) => void), favoriteIds (Set), notes (Map id → texto), label
+ *
+ * Ao abrir uma carta, a grade manda junto a lista de ids que está na tela:
+ * é ela que o "anterior/próximo" do detalhe vai percorrer.
  */
 export default function CardGrid({ cards, onOpen, favoriteIds, notes, label }) {
+  const ids = useMemo(() => cards.map((card) => card.id), [cards]);
+  const handleOpen = useCallback((id) => onOpen(id, ids), [onOpen, ids]);
+
   return (
     <ul className="card-grid" aria-label={label}>
       {cards.map((card) => (
         <li key={card.id} className="card-grid__item">
-          <CardSlot card={card} onOpen={onOpen} isFavorite={favoriteIds?.has(card.id)} note={notes?.get(card.id)} />
+          <CardSlot card={card} onOpen={handleOpen} isFavorite={favoriteIds?.has(card.id)} note={notes?.get(card.id)} />
         </li>
       ))}
     </ul>

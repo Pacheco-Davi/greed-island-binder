@@ -16,7 +16,7 @@ const TEAM_CARD_COUNTS = new Map([...TEAM_CARD_IDS].map(([teamId, ids]) => [team
  * Aba "Fichário": controles de busca/filtro/ordem + grade de cartas.
  * Não guarda estado: recebe tudo do App por props e avisa as mudanças por callbacks.
  */
-export default function BinderView({ filters, onFilterChange, sort, onSortChange, onClear, hasFilters, cards, categoryCounts, total, favoriteIds, onOpenCard }) {
+export default function BinderView({ filters, onFilterChange, sort, onSortChange, onClear, hasFilters, cards, categoryCounts, total, favoriteIds, onOpenCard, onRandom }) {
   const activeTeam = filters.teamId ? TEAMS_BY_ID.get(filters.teamId) : null;
 
   return (
@@ -37,11 +37,16 @@ export default function BinderView({ filters, onFilterChange, sort, onSortChange
           {cards.length} de {plural(total, 'carta')}
           {activeTeam && ` · cartas de ${activeTeam.name}`}
         </p>
-        {hasFilters && (
-          <button type="button" className="link-button" onClick={onClear}>
-            Limpar busca e filtros
+        <div className="binder-view__actions">
+          {hasFilters && (
+            <button type="button" className="link-button" onClick={onClear}>
+              Limpar busca e filtros
+            </button>
+          )}
+          <button type="button" className="binder-view__random" onClick={onRandom} disabled={cards.length === 0}>
+            <span aria-hidden="true">🎲</span> Sortear carta
           </button>
-        )}
+        </div>
       </div>
 
       {cards.length > 0 ? (

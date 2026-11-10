@@ -12,6 +12,7 @@ import {
   sortCards,
   countByCategory,
   getRarityPosition,
+  pickRandomId,
 } from './cards.js';
 
 const data = JSON.parse(readFileSync(new URL('../data/greed-island-cards.json', import.meta.url), 'utf8'));
@@ -183,5 +184,23 @@ describe('getRarityPosition', () => {
     assert.equal(getRarityPosition(byId('607'), cards), null);
     assert.equal(getRarityPosition(byId('7018'), cards), null);
     assert.equal(getRarityPosition(byId('-000'), cards), null);
+  });
+});
+
+describe('pickRandomId', () => {
+  test('nunca repete a carta aberta', () => {
+    for (const r of [0, 0.25, 0.5, 0.99]) {
+      assert.notEqual(pickRandomId(['000', '001', '002'], '001', () => r), '001');
+    }
+  });
+
+  test('usa o número sorteado para escolher a posição', () => {
+    assert.equal(pickRandomId(['a', 'b', 'c'], null, () => 0), 'a');
+    assert.equal(pickRandomId(['a', 'b', 'c'], null, () => 0.99), 'c');
+  });
+
+  test('lista com uma carta só devolve ela; lista vazia devolve null', () => {
+    assert.equal(pickRandomId(['000'], '000'), '000');
+    assert.equal(pickRandomId([], null), null);
   });
 });

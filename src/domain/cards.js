@@ -172,6 +172,22 @@ export function sortCards(cards, { field = 'number', direction = 'asc' } = {}) {
 }
 
 // ---------------------------------------------------------------------------
+// Sorteio
+// ---------------------------------------------------------------------------
+
+/**
+ * Sorteia um id da lista sem repetir `excludeId` (a carta que já está aberta).
+ * Se a lista só tiver a própria carta aberta, devolve ela mesma; lista vazia → null.
+ * `random` vem por parâmetro para os testes poderem usar um valor fixo
+ * (Math.random é impuro: cada chamada dá um resultado diferente).
+ */
+export function pickRandomId(ids, excludeId = null, random = Math.random) {
+  const candidates = ids.length > 1 ? ids.filter((id) => id !== excludeId) : ids;
+  if (candidates.length === 0) return null;
+  return candidates[Math.floor(random() * candidates.length)];
+}
+
+// ---------------------------------------------------------------------------
 // Raridade
 // ---------------------------------------------------------------------------
 

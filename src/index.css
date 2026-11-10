@@ -14,10 +14,30 @@
   --radius: 8px;
   --space: 1rem;
 
+  color-scheme: light;
   font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   line-height: 1.5;
   color: var(--text);
   background: var(--bg);
+}
+
+/* Modo noturno provisório (a Etapa 5 cria a "luz de lampião"). O useTheme
+   escreve data-theme="dark" no <html>; aqui só as variáveis mudam. */
+:root[data-theme='dark'] {
+  --bg: #17151a;
+  --surface: #23202a;
+  --text: #ece7dc;
+  --muted: #b3ab9c;
+  --border: #4a4453;
+  --accent: #6fc3a5;
+  --focus: #93b4ff;
+  --overlay: rgb(0 0 0 / 0.75);
+
+  color-scheme: dark;
+}
+
+a {
+  color: var(--accent);
 }
 
 *,

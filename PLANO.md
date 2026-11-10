@@ -66,8 +66,9 @@ greed-island-binder/
 │   │   ├── teams.js             # integrantes, cartas do time e suas fontes (+ teams.test.js)
 │   │   ├── images.js            # mapa id → URL da imagem (import.meta.glob)
 │   │   ├── catalog.js           # único lugar que lê os JSON; entrega tudo normalizado
-│   │   └── format.js            # textos formatados: número, limite, raridade, fonte (+ format.test.js)
-│   ├── hooks/                   # useCardFilters, useFavorites, useTheme, useBookState, useHashRoute
+│   │   ├── format.js            # textos formatados: número, limite, raridade, fonte (+ format.test.js)
+│   │   └── routes.js            # parseHash/buildHash das URLs #/times/gon (+ routes.test.js)
+│   ├── hooks/                   # useCardFilters, useFavorites, useTheme, useHashRoute, useCardDetail, useBookState
 │   ├── App.jsx
 │   ├── main.jsx
 │   └── index.css                # tokens de design (variáveis CSS)
@@ -199,10 +200,11 @@ Componentes com props bem definidas, renderizando dados reais:
 
 - `useCardFilters(cards)`: busca, categoria, rank e ordem. O resultado vem de `useMemo` (estado derivado).
 - `useFavorites()`: `Set` de ids salvo no `localStorage` (`gi:favorites`), lido com `try/catch` e sincronizado com `useEffect`.
-- `useTheme()`: claro ou noturno, salvo em `gi:theme`, respeitando `prefers-color-scheme` na primeira visita.
-- Navegação do detalhe: guardar `{ ids, index }` da **lista que estava na tela**, para "anterior/próximo" seguir a busca e os filtros atuais.
-- "Sortear carta": não repetir a carta que já está aberta.
-- `useHashRoute()`: navegação entre páginas sem biblioteca, lendo `window.location.hash` e ouvindo o evento `hashchange` (`#/times`, `#/times/gon`, `#/jogadores/killua-zoldyck`). O botão Voltar do navegador funciona.
+- `useTheme()`: claro ou noturno, respeitando `prefers-color-scheme` (inclusive ao vivo) até a pessoa escolher; só a escolha explícita é salva em `gi:theme`. O tema é estado derivado: `escolha salva ?? tema do sistema`.
+- `useFavorites()` também acompanha mudanças feitas em outra aba do navegador (evento `storage`) e descarta ids que não existem no catálogo.
+- `useCardDetail()`: guarda `{ ids, index }` da **lista que estava na tela** (fichário filtrado, favoritos, cartas de um time ou de um integrante), para "anterior/próximo" (botões e setas ←/→) seguir a busca e os filtros atuais.
+- "Sortear carta" (no fichário) e "Sortear outra" (no detalhe): não repetir a carta que já está aberta. O sorteio é a função pura `pickRandomId(ids, excludeId, random)`.
+- `useHashRoute()`: navegação entre páginas sem biblioteca, lendo `window.location.hash` e ouvindo o evento `hashchange` (`#/fichario`, `#/favoritos`, `#/times`, `#/times/gon`, `#/times/gon/killua-zoldyck` — o integrante fica dentro do time para o link "voltar" saber para onde ir). Navegação entre páginas usa links (`<a href>`). O botão Voltar do navegador funciona.
 
 **Conceitos:** `useState`, `useEffect`, `useMemo`, `useCallback`, hooks customizados.
 **Aceite:**

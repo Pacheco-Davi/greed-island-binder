@@ -1,17 +1,26 @@
 import { formatLimit, formatNumber, formatRank, formatRarity } from '../../domain/format.js';
+import { buildHash } from '../../domain/routes.js';
 import '../../css/CardDetails.css';
 
 /**
- * Carta ampliada com todos os dados. Versão simples: a Etapa 7 transforma
- * isto num modal completo (foco preso, fundo inerte, carta que vira).
+ * Carta ampliada com todos os dados. A Etapa 7 transforma isto num modal
+ * completo (foco preso, fundo inerte, carta que vira).
  *
  * Props:
  *   card, rarity (resultado de getRarityPosition), spellClasses ([{ id, label, description }])
  *   teams (times que tiveram a carta), placeholder (imagem reserva)
- *   isFavorite, onToggleFavorite, onClose, onOpenTeam
+ *   isFavorite, onToggleFavorite, onClose
+ *   navigation: { position, total, hasPrevious, hasNext, onPrevious, onNext, onRandom }
  */
-export default function CardDetails({ card, rarity, spellClasses, teams, placeholder, isFavorite, onToggleFavorite, onClose, onOpenTeam }) {
+export default function CardDetails({ card, rarity, spellClasses, teams, placeholder, isFavorite, onToggleFavorite, onClose, navigation }) {
   const number = formatNumber(card);
+  const { position, total, hasPrevious, hasNext, onPrevious, onNext, onRandom } = navigation;
+
+  function handleKeyDown(event) {
+    if (event.key === 'Escape') onClose();
+    else if (event.key === 'ArrowLeft' && hasPrevious) onPrevious();
+    else if (event.key === 'ArrowRight' && hasNext) onNext();
+  }
 
   return (
     // Clicar no fundo escuro fecha; o stopPropagation no painel impede que um
@@ -22,13 +31,27 @@ export default function CardDetails({ card, rarity, spellClasses, teams, placeho
         role="dialog"
         aria-labelledby="card-details-title"
         onClick={(event) => event.stopPropagation()}
-        onKeyDown={(event) => {
-          if (event.key === 'Escape') onClose();
-        }}
+        onKeyDown={handleKeyDown}
       >
-        <button type="button" className="card-details__close" onClick={onClose} autoFocus>
-          Fechar
-        </button>
+        <div className="card-details__toolbar">
+          <div className="card-details__nav" role="group" aria-label="Navegar entre as cartas da lista">
+            <button type="button" onClick={onPrevious} disabled={!hasPrevious}>
+              ← Anterior
+            </button>
+            <span className="card-details__position" aria-live="polite">
+              {position} de {total}
+            </span>
+            <button type="button" onClick={onNext} disabled={!hasNext}>
+              Próxima →
+            </button>
+          </div>
+          <button type="button" onClick={onRandom} disabled={total < 2}>
+            <span aria-hidden="true">🎲</span> Sortear outra
+          </button>
+          <button type="button" className="card-details__close" onClick={onClose} autoFocus>
+            Fechar
+          </button>
+        </div>
 
         <img className="card-details__image" src={card.image ?? placeholder} alt={`Arte da carta ${card.name} (${number})`} />
 
@@ -85,9 +108,10 @@ export default function CardDetails({ card, rarity, spellClasses, teams, placeho
             <ul className="card-details__teams">
               {teams.map((team) => (
                 <li key={team.id}>
-                  <button type="button" className="link-button" onClick={() => onOpenTeam(team.id)}>
+                  {/* O link muda o endereço (e a aba); o onClick fecha o detalhe junto. */}
+                  <a href={buildHash({ tab: 'times', teamId: team.id })} onClick={onClose}>
                     {team.name}
-                  </button>
+                  </a>
                 </li>
               ))}
             </ul>

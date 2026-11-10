@@ -4,6 +4,14 @@
   padding: var(--space);
 }
 
+.app__heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  justify-content: space-between;
+  gap: var(--space);
+}
+
 .app__title {
   margin: 0;
   font-size: clamp(1.5rem, 4vw, 2.25rem);

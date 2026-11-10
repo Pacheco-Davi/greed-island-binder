@@ -6,8 +6,8 @@ const SECTIONS = [
   { kind: 'alianca', title: 'Alianças', hint: 'Grupos maiores, formados por várias equipes ou jogadores.' },
 ];
 
-/** Lista de times, separada em Times e Alianças. Props: items ([{ team, members, cardCount }]), onOpenTeam */
-export default function TeamList({ items, onOpenTeam }) {
+/** Lista de times, separada em Times e Alianças. Props: items ([{ team, members, cardCount }]) */
+export default function TeamList({ items }) {
   return (
     <div className="team-list">
       {SECTIONS.map((section) => (
@@ -20,7 +20,7 @@ export default function TeamList({ items, onOpenTeam }) {
             {items
               .filter(({ team }) => team.kind === section.kind)
               .map(({ team, members, cardCount }) => (
-                <TeamCard key={team.id} team={team} members={members} cardCount={cardCount} onOpen={onOpenTeam} />
+                <TeamCard key={team.id} team={team} members={members} cardCount={cardCount} />
               ))}
           </div>
         </section>

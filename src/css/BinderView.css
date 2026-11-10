@@ -35,3 +35,17 @@
 .binder-view__status p {
   margin: 0;
 }
+
+.binder-view__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space);
+}
+
+.binder-view__random {
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  background: var(--surface);
+}

@@ -1,6 +1,7 @@
 import CardSlot from '../cards/CardSlot.jsx';
 import EmptyState from '../feedback/EmptyState.jsx';
 import { formatSource } from '../../domain/format.js';
+import { buildHash } from '../../domain/routes.js';
 import '../../css/MemberPage.css';
 
 /**
@@ -9,15 +10,17 @@ import '../../css/MemberPage.css';
  *
  * Props:
  *   player, teams (times do jogador), entries ([{ card, entry }])
- *   backTeam (time de onde a pessoa veio, ou null), favoriteIds
- *   onBack, onOpenTeam, onOpenCard
+ *   backTeam (time de onde a pessoa veio), favoriteIds, onOpenCard ((id, ids) => void)
  */
-export default function MemberPage({ player, teams, entries, backTeam, favoriteIds, onBack, onOpenTeam, onOpenCard }) {
+export default function MemberPage({ player, teams, entries, backTeam, favoriteIds, onOpenCard }) {
+  const cardIds = entries.map(({ card }) => card.id);
+  const openCard = (id) => onOpenCard(id, cardIds);
+
   return (
     <article className="member-page" aria-labelledby="member-page-title">
-      <button type="button" className="link-button member-page__back" onClick={onBack}>
-        ← {backTeam ? backTeam.name : 'Todos os times'}
-      </button>
+      <a className="member-page__back" href={buildHash({ tab: 'times', teamId: backTeam.id })}>
+        ← {backTeam.name}
+      </a>
 
       <header className="member-page__header">
         <h2 id="member-page-title" className="member-page__name">
@@ -32,9 +35,7 @@ export default function MemberPage({ player, teams, entries, backTeam, favoriteI
           <ul className="member-page__teams">
             {teams.map((team) => (
               <li key={team.id}>
-                <button type="button" className="link-button" onClick={() => onOpenTeam(team.id)}>
-                  {team.name}
-                </button>
+                <a href={buildHash({ tab: 'times', teamId: team.id })}>{team.name}</a>
               </li>
             ))}
           </ul>
@@ -67,7 +68,7 @@ export default function MemberPage({ player, teams, entries, backTeam, favoriteI
           <ul className="member-page__cards">
             {entries.map(({ card, entry }) => (
               <li key={card.id} className="member-page__card">
-                <CardSlot card={card} onOpen={onOpenCard} isFavorite={favoriteIds.has(card.id)} />
+                <CardSlot card={card} onOpen={openCard} isFavorite={favoriteIds.has(card.id)} />
                 <figure className="member-page__evidence">
                   <figcaption>{formatSource(entry)}</figcaption>
                   <blockquote lang="en">{entry.evidence}</blockquote>
