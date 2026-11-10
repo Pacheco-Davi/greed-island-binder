@@ -98,11 +98,14 @@ src/
 - O modal tem `role="dialog"`, `aria-modal`, fundo `inert` e armadilha de foco, e devolve o foco a quem o abriu.
 - Também há `aria-live` nos contadores, `aria-pressed` nos filtros e `prefers-reduced-motion`, que troca as animações por fades.
 
-## Deploy
+## Deploy (GitHub Pages)
 
-O projeto é um site estático. Na Vercel, importe o repositório (*Add New → Project*). Ela detecta o Vite sozinha: o build é `npm run build` e a pasta de saída é `dist`.
+**Link:** https://pacheco-davi.github.io/greed-island-binder/
 
-**Link:** _(adicionar depois do deploy)_
+O workflow `.github/workflows/deploy.yml` roda os testes, gera o build e publica o site a cada push na `main`. Para ativar, uma vez só: *Settings → Pages → Source: **GitHub Actions***.
+
+- O `base: '/greed-island-binder/'` no `vite.config.js` existe porque o site fica numa subpasta do domínio.
+- A navegação usa hash (`#/times/gon`). Por isso, recarregar qualquer página funciona mesmo num servidor só de arquivos estáticos, sem erro 404.
 
 ## Créditos
 
