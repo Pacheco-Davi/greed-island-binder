@@ -1,0 +1,23 @@
+.empty-state {
+  padding: calc(var(--space) * 2) var(--space);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.empty-state__title {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.empty-state__message {
+  color: var(--muted);
+}
+
+.empty-state__action {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  background: var(--surface);
+}

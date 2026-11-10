@@ -1,0 +1,19 @@
+.sort-control {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 0.5rem;
+}
+
+.sort-control__label {
+  flex-basis: 100%;
+  font-weight: 600;
+}
+
+.sort-control__select,
+.sort-control__direction {
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}

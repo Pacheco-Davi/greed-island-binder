@@ -52,9 +52,10 @@ greed-island-binder/
 │   ├── components/
 │   │   ├── book/                # Book, BookCover, BookSpine, BookPage
 │   │   ├── cards/               # Card, CardSlot, CardGrid, CardDetails, RankBadge, LimitMeter
-│   │   ├── controls/            # Tabs, SearchBar, CategoryFilter, RankFilter, TeamFilter, SortControl
+│   │   ├── controls/            # Tabs, SearchBar, FilterChips (base de CategoryFilter e RankFilter), TeamFilter, SortControl
 │   │   ├── teams/               # TeamList, TeamCard, TeamPage, MemberPage
-│   │   └── feedback/            # EmptyState, Icon
+│   │   ├── feedback/            # EmptyState, Icon
+│   │   └── views/               # BinderView, FavoritesView, TeamsView (leem o catálogo e montam cada aba)
 │   ├── css/                     # um .css por componente (sugestão do enunciado)
 │   ├── data/
 │   │   ├── greed-island-cards.json
@@ -64,7 +65,8 @@ greed-island-binder/
 │   │   ├── cards.js             # normalização, busca, filtro, ordenação, ranks (+ cards.test.js)
 │   │   ├── teams.js             # integrantes, cartas do time e suas fontes (+ teams.test.js)
 │   │   ├── images.js            # mapa id → URL da imagem (import.meta.glob)
-│   │   └── catalog.js           # único lugar que lê os JSON; entrega tudo normalizado
+│   │   ├── catalog.js           # único lugar que lê os JSON; entrega tudo normalizado
+│   │   └── format.js            # textos formatados: número, limite, raridade, fonte (+ format.test.js)
 │   ├── hooks/                   # useCardFilters, useFavorites, useTheme, useBookState, useHashRoute
 │   ├── App.jsx
 │   ├── main.jsx
@@ -179,7 +181,8 @@ Em `src/domain/catalog.js`: lê os três JSON uma vez, normaliza as cartas e exp
 Componentes com props bem definidas, renderizando dados reais:
 
 - `App`, com 3 abas: **Fichário**, **Favoritos** e **Times** (`Tabs` com teclado: setas, Home e End).
-- `SearchBar` (input controlado, Esc limpa), `CategoryFilter` (chips com contagem por categoria), `RankFilter`, `TeamFilter` ("cartas do time") e `SortControl`.
+- `SearchBar` (input controlado, Esc limpa), `FilterChips` (componente reutilizável) usado por `CategoryFilter` (chips com contagem por categoria) e `RankFilter`, `TeamFilter` ("cartas do time") e `SortControl`.
+- Estado com `useState` no `App` ("elevar o estado"); as Views recebem tudo por props. Os hooks customizados vêm na Etapa 4.
 - `CardGrid` → `CardSlot` com `map()` e `key` estável (`card.id`).
 - `CardDetails`: visualização ampliada com número, nome, categoria, classe, rank, limite e descrição.
 - `TeamList` → `TeamCard`: nome do time, integrantes, slots designados (x/100) e quantas cartas o time teve.

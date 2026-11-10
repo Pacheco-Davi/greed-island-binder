@@ -1,0 +1,116 @@
+.card-details__backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  padding: var(--space);
+  background: var(--overlay);
+  overflow-y: auto;
+}
+
+.card-details {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 280px) minmax(0, 1fr);
+  gap: calc(var(--space) * 1.5);
+  width: min(900px, 100%);
+  max-height: calc(100dvh - 2 * var(--space));
+  overflow-y: auto;
+  padding: calc(var(--space) * 1.5);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.card-details__close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  padding: 0.3rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.card-details__image {
+  width: 100%;
+  border-radius: var(--radius);
+}
+
+.card-details__number {
+  margin: 0;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.card-details__name {
+  margin: 0;
+  padding-right: 5rem;
+}
+
+.card-details__alt,
+.card-details__muted {
+  color: var(--muted);
+}
+
+.card-details__favorite {
+  margin-block: 0.5rem;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  background: var(--surface);
+}
+
+.card-details__favorite[aria-pressed='true'] {
+  background: var(--accent);
+  color: var(--surface);
+}
+
+.card-details__facts {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.4rem 1rem;
+}
+
+.card-details__facts dt {
+  font-weight: 600;
+}
+
+.card-details__facts dd {
+  margin: 0;
+}
+
+.card-details__swatch {
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-right: 0.4rem;
+  border-radius: 50%;
+  background: var(--category-color);
+}
+
+.card-details__classes,
+.card-details__teams {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.card-details__heading {
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+}
+
+.card-details__description {
+  margin-top: 0;
+}
+
+@media (max-width: 640px) {
+  .card-details {
+    grid-template-columns: 1fr;
+  }
+
+  .card-details__image {
+    max-width: 220px;
+    margin-inline: auto;
+  }
+}

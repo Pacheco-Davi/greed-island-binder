@@ -1,0 +1,47 @@
+.team-page__kind {
+  margin: var(--space) 0 0;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+
+.team-page__name {
+  margin: 0;
+}
+
+.team-page__summary {
+  max-width: 70ch;
+}
+
+.team-page__facts {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.4rem 1rem;
+  max-width: 80ch;
+}
+
+.team-page__facts dt {
+  font-weight: 600;
+}
+
+.team-page__facts dd {
+  margin: 0;
+}
+
+.team-page__members {
+  display: grid;
+  gap: 0.25rem;
+  padding-left: 1.1rem;
+}
+
+.team-page__role,
+.team-page__hint {
+  color: var(--muted);
+}
+
+@media (max-width: 480px) {
+  .team-page__facts {
+    grid-template-columns: 1fr;
+  }
+}

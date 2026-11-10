@@ -2,7 +2,7 @@
 import { test, describe } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { indexById, getTeamMembers, getPlayerTeams, getTeamCardIds, getTeamCardSources } from './teams.js';
+import { indexById, getTeamMembers, getPlayerTeams, getTeamCardIds, getTeamCardSources, getTeamsWithCard } from './teams.js';
 
 const read = (file) => JSON.parse(readFileSync(new URL(`../data/${file}`, import.meta.url), 'utf8'));
 const { teams } = read('teams.json');
@@ -47,6 +47,15 @@ describe('getTeamCardIds', () => {
 
   test('time sem nenhuma carta comprovada devolve Set vazio', () => {
     assert.equal(getTeamCardIds(teamsById.get('trupe'), playersById).size, 0);
+  });
+});
+
+describe('getTeamsWithCard', () => {
+  test('encontra os times que tiveram a carta', () => {
+    const teamCardIds = new Map(teams.map((team) => [team.id, getTeamCardIds(team, playersById)]));
+    const ids = getTeamsWithCard('000', teams, teamCardIds).map((team) => team.id);
+    assert.ok(ids.includes('gon'));
+    assert.ok(!ids.includes('trupe'));
   });
 });
 

@@ -37,6 +37,11 @@ export function getTeamCardIds(team, playersById) {
   return ids;
 }
 
+/** Os times que tiveram a carta. `teamCardIds` é um Map teamId → Set de ids. */
+export function getTeamsWithCard(cardId, teams, teamCardIds) {
+  return teams.filter((team) => teamCardIds.get(team.id)?.has(cardId));
+}
+
 /**
  * Para a página do time: de onde vem cada carta, com a prova.
  * Devolve Map cardId → { relation, holders }, em que `relation` é a relação

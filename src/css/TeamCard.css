@@ -1,0 +1,50 @@
+.team-card {
+  position: relative;
+  padding: var(--space);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.team-card__kind {
+  margin: 0;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+
+.team-card__name {
+  margin: 0.25rem 0;
+  font-size: 1.2rem;
+}
+
+.team-card__open {
+  padding: 0;
+  border: 0;
+  background: none;
+  font-weight: inherit;
+  text-align: left;
+}
+
+/* O botão "estica" um ::after por cima do cartão: o cartão inteiro fica clicável. */
+.team-card__open::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.team-card__members {
+  margin: 0.25rem 0;
+  color: var(--muted);
+}
+
+.team-card__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.875rem;
+}

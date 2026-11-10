@@ -8,7 +8,7 @@ import cardsData from '../data/greed-island-cards.json';
 import teamsData from '../data/teams.json';
 import playersData from '../data/players.json';
 import { normalizeCard } from './cards.js';
-import { indexById } from './teams.js';
+import { indexById, getTeamCardIds } from './teams.js';
 import { getCardImage, PLACEHOLDER_IMAGE } from './images.js';
 
 export const CATEGORIES = Object.freeze(cardsData.categories);
@@ -24,6 +24,12 @@ export const TEAMS = Object.freeze(teamsData.teams);
 export const TEAMS_BY_ID = indexById(TEAMS);
 export const PLAYERS = Object.freeze(playersData.players);
 export const PLAYERS_BY_ID = indexById(PLAYERS);
+
+/**
+ * Cartas de cada time (Map teamId → Set de ids), calculadas uma vez só: os dados
+ * são fixos, então não há motivo para recalcular a cada render.
+ */
+export const TEAM_CARD_IDS = new Map(TEAMS.map((team) => [team.id, getTeamCardIds(team, PLAYERS_BY_ID)]));
 
 /** Fonte e licença dos dados (para os créditos). */
 export const SOURCES = Object.freeze({ cards: cardsData.meta, teams: teamsData.meta });

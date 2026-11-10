@@ -1,0 +1,37 @@
+.binder-view__controls {
+  display: grid;
+  /* minmax(0, 1fr): a coluna pode ficar MENOR que o conteúdo. Sem isso, o
+     <select> (que mede a opção mais longa) alargaria tudo além da tela. */
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space);
+  padding: var(--space);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.binder-view__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space);
+  justify-content: space-between;
+}
+
+.binder-view__row > * {
+  flex: 1 1 16rem;
+  min-width: 0;
+}
+
+.binder-view__status {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-block: var(--space);
+  color: var(--muted);
+}
+
+.binder-view__status p {
+  margin: 0;
+}

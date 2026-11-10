@@ -1,0 +1,31 @@
+.search-bar__label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.search-bar__field {
+  position: relative;
+}
+
+.search-bar__input {
+  width: 100%;
+  padding: 0.6rem 2.5rem 0.6rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+/* Esconde o "x" nativo do type=search: já temos o nosso botão. */
+.search-bar__input::-webkit-search-cancel-button {
+  appearance: none;
+}
+
+.search-bar__clear {
+  position: absolute;
+  inset: 0 0 0 auto;
+  width: 2.5rem;
+  border: 0;
+  background: none;
+  font-size: 1.25rem;
+}
