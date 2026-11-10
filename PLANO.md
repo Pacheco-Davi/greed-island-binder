@@ -318,18 +318,18 @@ Fazer o deploy na Vercel e colocar o link no README.
 
 Checklist do enunciado, apontando **onde** cada item está implementado:
 
-- [ ] React + Vite
-- [ ] Exibe todas as cartas do JSON
-- [ ] Busca por nome ou número, atualizando enquanto digita
-- [ ] Filtro por categoria (equivalente ao filtro por tipo) e por rank
-- [ ] Detalhe com número, nome, categoria e atributos
-- [ ] Área de Times (equivalente aos Treinadores), com página de cada time e de cada integrante, e filtro "cartas do time"
-- [ ] Tratamento de "nenhuma carta encontrada"
-- [ ] Responsivo (desktop, tablet e celular)
-- [ ] Identidade visual própria
-- [ ] Componentes, props, `useState`, `useEffect`, `map()`, eventos, filtragem e hooks customizados
-- [ ] Extras: favoritos, ordenação, sortear e modo noturno
-- [ ] `package.json` com todas as dependências, README completo e build sem erros
+- [x] React + Vite — `package.json`, `vite.config.js`
+- [x] Exibe todas as cartas do JSON — `src/domain/catalog.js` → `BinderView` / `PocketPage` (164 cartas, 20 por página)
+- [x] Busca por nome ou número, atualizando enquanto digita — `SearchBar` + `searchCards` (`src/domain/cards.js`)
+- [x] Filtro por categoria (equivalente ao filtro por tipo) e por rank — `CategoryFilter`, `RankFilter`, `filterCards`
+- [x] Detalhe com número, nome, categoria e atributos — `CardDetails` (modal) + `CardBack`, `RankMeter`, `LimitMeter`
+- [x] Área de Times (equivalente aos Treinadores), com página de cada time e de cada integrante, e filtro "cartas do time" — `TeamsView`, `TeamPage`, `MemberPage`, `TeamFilter`
+- [x] Tratamento de "nenhuma carta encontrada" — `EmptyState` em `BinderView` (com "Limpar busca e filtros")
+- [x] Responsivo (desktop, tablet e celular) — `Book.css`, `BookSpread.css`, `PocketPage.css`; testado em 375, 768 e 1440 px sem rolagem horizontal
+- [x] Identidade visual própria — design system em `src/index.css`, livro 3D (`BookCover`), bolsos plásticos (`CardSlot`)
+- [x] Componentes, props, `useState`, `useEffect`, `map()`, eventos, filtragem e hooks customizados — tabela no `README.md`; hooks em `src/hooks`
+- [x] Extras: favoritos (`useFavorites`), ordenação (`SortControl`), sortear (`pickRandomId`, "Sortear carta") e modo noturno (`useTheme`)
+- [x] `package.json` com todas as dependências, README completo e build sem erros — `npm run build`, `npm test` (64 testes), `npm run lint`
 
 ---
 
