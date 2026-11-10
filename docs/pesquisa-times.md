@@ -27,7 +27,7 @@ As cartas de um time no app = cartas do grupo (`teams[].cards`) + cartas de cada
 | Aliança de Kazsule *(aliança)* | 15 jogadores | Uma página fala em "Goreinu e mais quinze"; as outras, em 15 |
 | Aliança de Nickes *(aliança)* | 15 com nome | A aliança tinha 63 membros; só esses têm página na wiki |
 
-Os 36 jogadores restantes (Goreinu, Hisoka, Binolt, Latarza…) ficam sem time e continuam em `players.json`.
+`players.json` guarda só quem é integrante de algum time ou aliança (48 jogadores). Os outros 27 jogadores da categoria da wiki (Hisoka, Binolt, Latarza…) não pertencem a nenhum grupo e foram retirados, porque o app não tem página para jogadores sem time.
 
 ## O que a wiki não informa (limites conhecidos)
 

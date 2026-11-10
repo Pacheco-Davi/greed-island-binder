@@ -10,7 +10,6 @@
 
 - Executar **uma etapa por vez**. No fim de cada etapa: rodar `npm run dev` e `npm run build`, conferir os critérios de aceite, fazer commit e **parar para revisão**.
 - Ao terminar cada etapa, explicar em português o que foi feito, quais conceitos de React aparecem ali e por que cada decisão foi tomada (o Davi quer aprender, não só receber o código).
-- **Pair programming:** dupla **Davi** ([Pacheco-Davi](https://github.com/Pacheco-Davi)) e **Kelvin Mendes** ([md1o1](https://github.com/md1o1)). Trocar quem pilota (driver) a cada etapa e registrar isso nas mensagens de commit (`etapa 3 — <resumo> — driver: Kelvin`).
 - Nomes de componentes em inglês (como no enunciado) e textos da interface em português.
 
 ---
@@ -132,7 +131,7 @@ Regras de parsing (casos difíceis, explicar cada um ao Davi):
 Criar também os dados dos **Times** (decisão do Davi: a aba Jogadores virou Times), pesquisados na Hunter x Hunter Wiki. **Não inventar dados de personagens:** cada carta atribuída a um time ou jogador guarda o trecho da wiki e o capítulo que provam a informação; o que a wiki não diz fica `null`.
 
 - `src/data/teams.json`: times (equipes pequenas) e alianças, com resumo do arco, objetivo, desfecho, integrantes, maior contagem de slots designados conhecida (com o momento) e cartas do grupo.
-- `src/data/players.json`: todos os jogadores da categoria da wiki, com times, função, resumo só do arco Greed Island, Nen relevante, desfecho e cartas.
+- `src/data/players.json`: os integrantes dos times e alianças (jogadores sem time ficam de fora), com times, função, resumo só do arco Greed Island, Nen relevante, desfecho e cartas.
 
 ```json
 { "teams": [ { "id": "gon", "name": "Time do Gon", "kind": "time", "memberIds": ["gon-freecss"], "specifiedSlots": { "count": 99, "moment": "…", "chapter": 183 }, "cards": [ { "id": "1035", "relation": "usou", "evidence": "…", "chapter": 160 } ] } ] }
