@@ -1,0 +1,23 @@
+.book-spread {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgb(var(--shadow-rgb) / 0.35);
+}
+
+.book-spread > .page-switch {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 900px) {
+  .book-spread {
+    grid-template-columns: minmax(0, 1fr);
+    box-shadow: none;
+  }
+
+  .book-spread[data-mobile-page='left'] > .book-page--right,
+  .book-spread[data-mobile-page='right'] > .book-page--left {
+    display: none;
+  }
+}

@@ -1,3 +1,4 @@
+import BookSpread from '../book/BookSpread.jsx';
 import TeamList from '../teams/TeamList.jsx';
 import TeamPage from '../teams/TeamPage.jsx';
 import MemberPage from '../teams/MemberPage.jsx';
@@ -26,11 +27,35 @@ function buildNotes(team) {
 }
 
 /**
- * Aba "Times". A tela depende da rota (vinda da URL):
- *   #/times/:teamId/:playerId → integrante · #/times/:teamId → time · #/times → lista
- * Um endereço com id que não existe (link antigo, erro de digitação) mostra "não encontrado".
+ * Aba "Times" no livro aberto:
+ *   página esquerda = lista de times (o índice)
+ *   página direita  = o time ou o integrante escolhido (vem da URL)
+ * Em telas estreitas, a página exibida também vem da URL: sem time escolhido,
+ * a lista; com time, o detalhe (que tem o link "voltar").
  */
 export default function TeamsView({ route, favoriteIds, onOpenCard, onShowInBinder }) {
+  const left = (
+    <>
+      <header className="book-page__header">
+        <p className="book-page__eyebrow">Times</p>
+        <h2 className="book-page__title">Índice de times</h2>
+      </header>
+      <TeamList items={TEAM_ITEMS} currentTeamId={route.teamId} />
+    </>
+  );
+
+  return (
+    <BookSpread
+      left={left}
+      right={<TeamsDetail route={route} favoriteIds={favoriteIds} onOpenCard={onOpenCard} onShowInBinder={onShowInBinder} />}
+      labels={['Índice de times', 'Detalhe']}
+      mobilePage={route.teamId ? 'right' : 'left'}
+    />
+  );
+}
+
+/** Página direita: integrante, time, "não encontrado" ou um convite para escolher. */
+function TeamsDetail({ route, favoriteIds, onOpenCard, onShowInBinder }) {
   const team = route.teamId ? TEAMS_BY_ID.get(route.teamId) : null;
   const player = route.playerId ? PLAYERS_BY_ID.get(route.playerId) : null;
 
@@ -69,5 +94,16 @@ export default function TeamsView({ route, favoriteIds, onOpenCard, onShowInBind
     );
   }
 
-  return <TeamList items={TEAM_ITEMS} />;
+  return (
+    <div className="teams-intro">
+      <header className="book-page__header">
+        <p className="book-page__eyebrow">Times</p>
+        <h2 className="book-page__title">Jogadores de Greed Island</h2>
+      </header>
+      <p>
+        {TEAMS.filter((t) => t.kind === 'time').length} times e {TEAMS.filter((t) => t.kind === 'alianca').length} alianças que disputaram o jogo. Escolha um no índice para ver o
+        resumo do arco, os integrantes e as cartas que o grupo teve — cada carta com o trecho da Hunter x Hunter Wiki que comprova.
+      </p>
+    </div>
+  );
 }

@@ -1,0 +1,73 @@
+.collection-progress {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.collection-progress__title {
+  margin: 0 0 0.25rem;
+  font-size: 1.05rem;
+}
+
+.collection-progress__headline {
+  margin: 0 0 0.5rem;
+}
+
+.collection-progress__bar {
+  width: 100%;
+  height: 0.8rem;
+  appearance: none;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-pill);
+  background: var(--surface-sunken);
+  overflow: hidden;
+}
+
+.collection-progress__bar::-webkit-progress-bar {
+  background: var(--surface-sunken);
+}
+
+.collection-progress__bar::-webkit-progress-value {
+  background: linear-gradient(90deg, var(--panel-lo), var(--panel));
+}
+
+.collection-progress__bar::-moz-progress-bar {
+  background: linear-gradient(90deg, var(--panel-lo), var(--panel));
+}
+
+.collection-progress__list {
+  display: grid;
+  gap: 0.3rem;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.collection-progress__item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--text-sm);
+}
+
+.collection-progress__swatch {
+  width: 0.7rem;
+  height: 0.7rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 50%;
+  background: var(--category-color);
+}
+
+.collection-progress__value {
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+}
+
+.collection-progress__hint {
+  margin: 0.75rem 0 0;
+  font-size: var(--text-sm);
+  color: var(--muted);
+}

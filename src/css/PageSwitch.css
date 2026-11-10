@@ -1,0 +1,28 @@
+.page-switch {
+  display: none;
+  gap: 0.4rem;
+  margin-bottom: 0.6rem;
+}
+
+.page-switch__button {
+  flex: 1;
+  padding: 0.45rem 0.75rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.page-switch__button[aria-pressed='true'] {
+  border-color: var(--accent);
+  color: var(--on-accent);
+  background: var(--accent);
+}
+
+@media (max-width: 900px) {
+  .page-switch {
+    display: flex;
+  }
+}

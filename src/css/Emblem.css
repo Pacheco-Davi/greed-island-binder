@@ -1,0 +1,34 @@
+.emblem {
+  display: block;
+}
+
+.emblem__facet--hi {
+  fill: var(--panel-hi);
+}
+
+.emblem__facet--mid {
+  fill: var(--panel);
+}
+
+.emblem__facet--lo {
+  fill: var(--panel-lo);
+}
+
+.emblem__arrow,
+.emblem__ring--dark {
+  fill: var(--emblem-dark);
+}
+
+.emblem__ring--light {
+  fill: var(--emblem-light);
+}
+
+.emblem__ring--green {
+  fill: var(--panel-lo);
+}
+
+.emblem__frame {
+  fill: none;
+  stroke: var(--logo);
+  stroke-width: 4;
+}

@@ -55,3 +55,10 @@
   list-style: none;
   font-size: 0.875rem;
 }
+
+/* Time aberto na página ao lado. */
+.team-card--current {
+  border-color: var(--accent);
+  background: var(--surface-sunken);
+  box-shadow: inset 4px 0 0 var(--accent);
+}

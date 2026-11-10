@@ -1,0 +1,113 @@
+/* Livro aberto: as capas de couro por baixo das páginas. */
+.book {
+  position: relative;
+  padding: clamp(10px, 1.6vw, 18px);
+  border-radius: 10px;
+  box-shadow: var(--shadow-lg);
+  outline: 1.5px dashed var(--stitch);
+  outline-offset: -6px;
+  animation: book-enter 380ms ease-out;
+}
+
+@keyframes book-enter {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+}
+
+.book__tabs {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: clamp(0.5rem, 2vw, 1.5rem);
+}
+
+/* cantoneiras de metal nas quatro pontas */
+.book__corner {
+  position: absolute;
+  z-index: 2;
+  width: clamp(22px, 3vw, 36px);
+  aspect-ratio: 1;
+  pointer-events: none;
+  background: linear-gradient(135deg, var(--metal-hi), var(--metal) 45%, var(--metal-lo));
+}
+
+.book__corner--tl {
+  top: 0;
+  left: 0;
+  border-top-left-radius: 10px;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.book__corner--tr {
+  top: 0;
+  right: 0;
+  border-top-right-radius: 10px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+
+.book__corner--bl {
+  bottom: 0;
+  left: 0;
+  border-bottom-left-radius: 10px;
+  clip-path: polygon(0 0, 100% 100%, 0 100%);
+}
+
+.book__corner--br {
+  bottom: 0;
+  right: 0;
+  border-bottom-right-radius: 10px;
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+
+/* Até 900px: uma página por vez, com a lombada virando uma faixa à esquerda. */
+@media (max-width: 900px) {
+  .book {
+    padding-left: 30px;
+  }
+
+  .book::before {
+    content: '';
+    position: absolute;
+    top: 14px;
+    bottom: 14px;
+    left: 8px;
+    width: 14px;
+    border-radius: 3px;
+    background:
+      repeating-linear-gradient(to bottom, transparent 0 46px, var(--leather-hi) 46px 50px, var(--leather-lo) 50px 54px),
+      linear-gradient(to right, var(--leather-lo), var(--leather-hi), var(--leather-lo));
+  }
+
+  .book__tabs {
+    justify-content: stretch;
+    padding-right: 0;
+  }
+
+  .book__tabs .tabs {
+    flex: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .book {
+    padding: 8px 8px 8px 18px;
+  }
+
+  .book::before {
+    left: 5px;
+    width: 7px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .book {
+    animation: book-fade-in 180ms ease-out;
+  }
+}
+
+@keyframes book-fade-in {
+  from {
+    opacity: 0;
+  }
+}

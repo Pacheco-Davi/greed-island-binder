@@ -50,8 +50,8 @@ greed-island-binder/
 │   │   ├── cards/               # 000.webp, 001.webp, 1001.webp, -000.webp …
 │   │   └── ui/                  # sem-imagem.svg, verso padrão da carta, texturas
 │   ├── components/
-│   │   ├── book/                # Book, BookCover, BookSpine, BookPage
-│   │   ├── cards/               # CardSlot, CardGrid, CardDetails, RankBadge, CategoryBadge, LimitMeter
+│   │   ├── book/                # Book, BookCover, BookSpine, BookSpread, BookPage, PageSwitch, Emblem, Sword
+│   │   ├── cards/               # CardSlot, CardGrid, PocketPage, CardDetails, RankBadge, CategoryBadge, CollectionProgress, LimitMeter
 │   │   ├── controls/            # Tabs, SearchBar, FilterChips (base de CategoryFilter e RankFilter), TeamFilter, SortControl
 │   │   ├── teams/               # TeamList, TeamCard, TeamPage, MemberPage
 │   │   ├── feedback/            # EmptyState, Icon
@@ -69,8 +69,10 @@ greed-island-binder/
 │   │   ├── color.js             # contraste WCAG: contrastRatio, inkFor (+ color.test.js)
 │   │   ├── palette.js           # cores dos ranks (SS/S metálicos) e estilos por categoria
 │   │   ├── format.js            # textos formatados: número, limite, raridade, fonte (+ format.test.js)
-│   │   └── routes.js            # parseHash/buildHash das URLs #/times/gon (+ routes.test.js)
-│   ├── hooks/                   # useCardFilters, useFavorites, useTheme, useHashRoute, useCardDetail, useBookState
+│   │   ├── routes.js            # parseHash/buildHash das URLs #/times/gon (+ routes.test.js)
+│   │   ├── book.js              # máquina de estados do livro (reducer puro) (+ book.test.js)
+│   │   └── pagination.js        # paginate(itens, página, tamanho)
+│   ├── hooks/                   # useCardFilters, useFavorites, useTheme, useHashRoute, useCardDetail, useBookState, usePagination, useMediaQuery
 │   ├── App.jsx
 │   ├── main.jsx
 │   └── index.css                # tokens de design (variáveis CSS)
@@ -247,13 +249,16 @@ Peças:
 - **`BookCover` (fechado):** capa de couro com cantoneiras metálicas, título gravado em dourado (`text-shadow` interno simulando relevo), costura nas bordas (`outline` tracejado) e uma dica "Clique para abrir (ou Enter)".
 - **`BookSpine` (lateral):** lombada em 3D com 4 a 5 nervuras (gradientes), visível quando o livro está fechado e durante a abertura.
 - **Abertura 3D:** o contêiner tem `perspective`, o livro usa `transform-style: preserve-3d` e a capa gira `rotateY(-180deg)` com `transform-origin` na lombada.
-- **`useBookState`:** máquina de estados `fechado → abrindo → aberto → fechando`, com tempos curtos e foco gerenciado.
-- **Interior com duas páginas:**
+- **`useBookState`:** máquina de estados `fechado → abrindo → aberto → fechando` como reducer puro (`bookReducer`, usado com `useReducer`); ações fora de hora são ignoradas. A duração das animações vem do JS (`--book-ms`), uma fonte só. Foco gerenciado: ao abrir vai para a aba ativa; ao fechar volta para a capa. Um endereço específico (`#/times/gon`) já abre o livro.
+- **Interior com duas páginas** (todas as abas vivem dentro do livro):
+  - **Fichário:** índice (busca, filtros, ordem, progresso) | bolsos.
+  - **Favoritos:** progresso da coleção | bolsos.
+  - **Times:** índice de times | time ou integrante escolhido (a página exibida no celular vem da URL).
   - **Página esquerda (índice):** busca, filtros, ordenação e o progresso da coleção ("x de 100 slots designados" com base nos favoritos, ou o total por categoria).
   - **Página direita (fichário):** grade de bolsos plásticos (`CardSlot`). Cada bolso tem brilho diagonal (`linear-gradient` translúcido) e o número impresso embaixo.
   - **Bolso sem imagem:** mostra só o número, como um slot vazio, o que reforça a ideia de coleção.
   - **Calha no meio:** sombra no vinco entre as páginas (`box-shadow` interno).
-- **Paginação (opcional, avançado):** dividir as cartas em páginas de 20 e virar com uma animação de `rotateY`.
+- **Paginação (feita):** páginas de 20 bolsos (`usePagination` + `paginate`), virando com `rotateY`; a folha recebe `key={página}` para a animação reiniciar. Mudar busca/filtro/ordem volta para a página 1 (ajuste de estado durante o render). O "anterior/próximo" do detalhe percorre a lista inteira.
 - **Responsivo:**
   - até 900px, o livro mostra uma página por vez, com as abas "Índice" e "Fichário" no topo;
   - até 480px, a lombada vira uma faixa lateral fina e a grade passa a ter 2 colunas.

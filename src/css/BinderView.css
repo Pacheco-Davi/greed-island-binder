@@ -1,3 +1,18 @@
+.binder-view__see-cards {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .binder-view__see-cards {
+    display: inline-flex;
+    padding: 0.4rem 0.9rem;
+    border: 1px solid var(--accent);
+    border-radius: var(--radius-pill);
+    color: var(--on-accent);
+    background: var(--accent);
+  }
+}
+
 .binder-view__controls {
   display: grid;
   /* minmax(0, 1fr): a coluna pode ficar MENOR que o conteúdo. Sem isso, o
@@ -18,10 +33,7 @@
   justify-content: space-between;
 }
 
-.binder-view__row > * {
-  flex: 1 1 16rem;
-  min-width: 0;
-}
+
 
 .binder-view__status {
   display: flex;

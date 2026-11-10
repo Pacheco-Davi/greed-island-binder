@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
+import { useMediaQuery } from './useMediaQuery.js';
 
 const STORAGE_KEY = 'gi:theme';
 const DARK_QUERY = '(prefers-color-scheme: dark)';
@@ -14,17 +15,7 @@ function readStoredTheme() {
 
 /** Tema do sistema operacional, atualizado ao vivo se a pessoa trocar lá. */
 function useSystemTheme() {
-  const [isDark, setIsDark] = useState(() => window.matchMedia?.(DARK_QUERY).matches ?? false);
-
-  useEffect(() => {
-    const media = window.matchMedia?.(DARK_QUERY);
-    if (!media) return undefined;
-    const handleChange = (event) => setIsDark(event.matches);
-    media.addEventListener('change', handleChange);
-    return () => media.removeEventListener('change', handleChange);
-  }, []);
-
-  return isDark ? 'dark' : 'light';
+  return useMediaQuery(DARK_QUERY) ? 'dark' : 'light';
 }
 
 /**

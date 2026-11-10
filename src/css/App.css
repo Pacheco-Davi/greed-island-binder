@@ -1,68 +1,44 @@
 .app {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: var(--space);
 }
 
-/* Faixa de couro com o título gravado em dourado e costura nas bordas. */
-.app__masthead {
+/* Barra no alto, sobre a mesa. */
+.app__topbar {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: var(--space);
-  padding: 1rem 1.25rem;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-md);
-  outline: 1.5px dashed var(--stitch);
-  outline-offset: -7px;
+  gap: 0.75rem;
+  padding-bottom: var(--space);
 }
 
-/* Emblema do livro (alvo concêntrico sobre o painel verde), só com gradientes. */
 .app__emblem {
   flex: none;
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 2.25rem;
+  height: 2.25rem;
   border-radius: 4px;
-  background:
-    radial-gradient(
-      circle,
-      var(--emblem-dark) 0 15%,
-      var(--emblem-light) 15.5% 27%,
-      var(--panel-lo) 27.5% 36%,
-      var(--emblem-light) 36.5% 46%,
-      var(--emblem-dark) 46.5% 52%,
-      transparent 52.5%
-    ),
-    linear-gradient(135deg, var(--panel-hi), var(--panel) 50%, var(--panel-lo));
-  box-shadow:
-    inset 0 0 0 2px var(--logo),
-    0 0 0 1px var(--leather-lo);
-}
-
-.app__heading {
-  flex: 1 1 14rem;
+  box-shadow: 0 0 0 1px var(--border-strong);
 }
 
 .app__title {
+  flex: 1 1 12rem;
   margin: 0;
-  font-size: clamp(1.35rem, 4vw, 2.2rem);
-  letter-spacing: 0.06em;
-  color: var(--gilt);
-  text-shadow: var(--engrave);
+  font-size: clamp(1.05rem, 2.6vw, 1.5rem);
+  letter-spacing: 0.05em;
 }
 
-.app__subtitle {
-  margin: 0;
-  color: var(--muted);
+.app__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
-/* A "folha" de papel onde ficam as abas. */
-.app__main {
-  position: relative;
-  padding: clamp(1rem, 3vw, 2rem);
-  border: 1px solid var(--border);
-  border-radius: 0 var(--radius) var(--radius) var(--radius);
-  box-shadow: var(--shadow-md);
+.app__close-book {
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
 }
 
 .app__footer {

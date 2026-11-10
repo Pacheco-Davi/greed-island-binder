@@ -47,7 +47,7 @@
   --ink: #2b231c;
   --ink-soft: #5c5045;
 
-  --sleeve: rgb(255 255 255 / 0.28); /* plástico dos bolsos */
+  --sleeve: rgb(255 255 255 / 0.1); /* plástico dos bolsos */
   --sleeve-edge: rgb(255 255 255 / 0.7);
   --sleeve-glare: linear-gradient(115deg, transparent 30%, rgb(255 255 255 / 0.4) 45%, transparent 60%);
 
