@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import RankBadge from './RankBadge.jsx';
 import { formatNumber } from '../../domain/format.js';
 import '../../css/CardSlot.css';
@@ -14,19 +15,21 @@ import '../../css/CardSlot.css';
  */
 export default function CardSlot({ card, onOpen, isFavorite = false, note }) {
   const number = formatNumber(card);
+  const [imageFailed, setImageFailed] = useState(false); // arquivo não carregou → bolso vazio
 
   return (
     <button
       type="button"
       className="card-slot"
+      data-card-id={card.id}
       style={{ '--category-color': card.categoryInfo.color }}
       onClick={() => onOpen(card.id)}
     >
       <span className="card-slot__pocket">
-        {card.image ? (
+        {card.image && !imageFailed ? (
           // alt vazio: o nome da carta já está escrito no botão; repetir no alt
           // faria o leitor de tela falar o nome duas vezes.
-          <img className="card-slot__image" src={card.image} alt="" loading="lazy" decoding="async" />
+          <img className="card-slot__image" src={card.image} alt="" loading="lazy" decoding="async" onError={() => setImageFailed(true)} />
         ) : (
           <span className="card-slot__empty" aria-hidden="true">
             {number}

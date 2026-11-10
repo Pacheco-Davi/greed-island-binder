@@ -8,7 +8,7 @@ import Emblem from './components/book/Emblem.jsx';
 import BinderView from './components/views/BinderView.jsx';
 import FavoritesView from './components/views/FavoritesView.jsx';
 import TeamsView from './components/views/TeamsView.jsx';
-import { CARDS, CARDS_BY_ID, PLACEHOLDER_IMAGE, PLAYERS_BY_ID, SPELL_CLASSES, TEAMS, TEAMS_BY_ID, TEAM_CARD_IDS } from './domain/catalog.js';
+import { CARDS, CARDS_BY_ID, MAX_LIMIT, PLACEHOLDER_IMAGE, PLAYERS_BY_ID, SPELL_CLASSES, TEAMS, TEAMS_BY_ID, TEAM_CARD_IDS } from './domain/catalog.js';
 import { countByCategory, filterCards, getRarityPosition } from './domain/cards.js';
 import { getTeamsWithCard } from './domain/teams.js';
 import { useHashRoute } from './hooks/useHashRoute.js';
@@ -76,7 +76,46 @@ export default function App() {
     window.scrollTo({ top: 0 });
   }, [route.tab, route.teamId, route.playerId]);
 
+  // ---- Abrir o detalhe lembrando para onde o foco deve voltar ----
+  // Ao fechar o modal, o foco volta ao elemento que o abriu (o bolso, ou o botão
+  // "Sortear"). Se ele não existir mais (a lista mudou), tenta o bolso da carta
+  // pelo data-card-id; em último caso, o painel da aba.
+  const returnFocus = useRef(null);
+  const panelRef = useRef(null);
+  const { open: openDetail, openRandom: openRandomDetail, close: closeDetail } = detail;
+  const openCardFrom = useCallback(
+    (id, ids) => {
+      returnFocus.current = { element: document.activeElement, cardId: id };
+      openDetail(id, ids);
+    },
+    [openDetail],
+  );
+  const openRandomFrom = useCallback(
+    (ids) => {
+      returnFocus.current = { element: document.activeElement, cardId: null };
+      openRandomDetail(ids);
+    },
+    [openRandomDetail],
+  );
+  useEffect(() => {
+    if (detail.openId || !returnFocus.current) return;
+    const { element, cardId } = returnFocus.current;
+    returnFocus.current = null;
+    const pocket = cardId ? document.querySelector(`[data-card-id="${CSS.escape(cardId)}"]`) : null;
+    const target = element?.isConnected && element !== document.body ? element : (pocket ?? panelRef.current);
+    target?.focus();
+  }, [detail.openId]);
+
   const { applyFilters } = binder;
+  const showCategory = useCallback(
+    (category) => {
+      applyFilters({ category });
+      navigate({ tab: 'fichario' });
+      closeDetail();
+    },
+    [applyFilters, navigate, closeDetail],
+  );
+
   const showTeamInBinder = useCallback(
     (teamId) => {
       applyFilters({ teamId });
@@ -92,7 +131,8 @@ export default function App() {
   ];
 
   return (
-    <div className="app" data-book={book.state}>
+    // inert: com o modal aberto, nada do app recebe foco nem é lido pelo leitor de tela.
+    <div className="app" data-book={book.state} inert={Boolean(openCard)}>
       <header className="app__topbar">
         <Emblem className="app__emblem" framed={false} />
         <h1 className="app__title">{APP_TITLE}</h1>
@@ -109,7 +149,7 @@ export default function App() {
       <main className="app__main">
         {book.state === 'open' ? (
           <Book ref={bookRef} tabs={<Tabs tabs={tabs} selected={route.tab} onChange={(tab) => navigate({ tab })} label="Seções do fichário" />}>
-            <section className="app__panel" role="tabpanel" id={`painel-${route.tab}`} aria-labelledby={`aba-${route.tab}`}>
+            <section ref={panelRef} tabIndex={-1} className="app__panel" role="tabpanel" id={`painel-${route.tab}`} aria-labelledby={`aba-${route.tab}`}>
               {route.tab === 'fichario' && (
                 <BinderView
                   filters={binder.filters}
@@ -122,15 +162,15 @@ export default function App() {
                   categoryCounts={binder.categoryCounts}
                   total={CARDS.length}
                   favoriteIds={favoriteIds}
-                  onOpenCard={detail.open}
-                  onRandom={() => detail.openRandom(visibleIds)}
+                  onOpenCard={openCardFrom}
+                  onRandom={() => openRandomFrom(visibleIds)}
                   collection={collection}
                 />
               )}
               {route.tab === 'favoritos' && (
-                <FavoritesView cards={favoriteCards} favoriteIds={favoriteIds} onOpenCard={detail.open} onGoToBinder={() => navigate({ tab: 'fichario' })} collection={collection} />
+                <FavoritesView cards={favoriteCards} favoriteIds={favoriteIds} onOpenCard={openCardFrom} onGoToBinder={() => navigate({ tab: 'fichario' })} collection={collection} />
               )}
-              {route.tab === 'times' && <TeamsView route={route} favoriteIds={favoriteIds} onOpenCard={detail.open} onShowInBinder={showTeamInBinder} />}
+              {route.tab === 'times' && <TeamsView route={route} favoriteIds={favoriteIds} onOpenCard={openCardFrom} onShowInBinder={showTeamInBinder} />}
             </section>
           </Book>
         ) : (
@@ -155,10 +195,12 @@ export default function App() {
           rarity={getRarityPosition(openCard, CARDS)}
           spellClasses={(openCard.spellClass ?? []).map((id) => SPELL_CLASSES.get(id)).filter(Boolean)}
           teams={getTeamsWithCard(openCard.id, TEAMS, TEAM_CARD_IDS)}
+          maxLimit={MAX_LIMIT}
           placeholder={PLACEHOLDER_IMAGE}
           isFavorite={favoriteIds.has(openCard.id)}
           onToggleFavorite={toggleFavorite}
           onClose={detail.close}
+          onShowCategory={showCategory}
           navigation={{
             position: detail.position,
             total: detail.total,

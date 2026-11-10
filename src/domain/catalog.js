@@ -31,6 +31,9 @@ export const PLAYERS_BY_ID = indexById(PLAYERS);
  */
 export const TEAM_CARD_IDS = new Map(TEAMS.map((team) => [team.id, getTeamCardIds(team, PLAYERS_BY_ID)]));
 
+/** Maior limite de conversão numérico (800): o fim da régua do LimitMeter. */
+export const MAX_LIMIT = Math.max(...CARDS.filter((card) => typeof card.limit === 'number').map((card) => card.limit));
+
 /** Fonte e licença dos dados (para os créditos). */
 export const SOURCES = Object.freeze({ cards: cardsData.meta, teams: teamsData.meta });
 

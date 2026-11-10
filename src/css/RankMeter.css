@@ -1,0 +1,30 @@
+.rank-meter__steps {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 3px;
+}
+
+.rank-meter__step {
+  height: 0.7rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 2px;
+  background: var(--surface-sunken);
+}
+
+.rank-meter__step--on {
+  border-color: var(--edge-dark);
+  background-color: var(--rank-bg);
+  background-image: var(--rank-gradient);
+}
+
+.rank-meter__scale {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--text-xs);
+  color: var(--muted);
+}
+
+.rank-meter__none {
+  margin: 0;
+  color: var(--muted);
+}

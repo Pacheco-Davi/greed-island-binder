@@ -1,0 +1,45 @@
+.limit-meter__track {
+  position: relative;
+  height: 0.7rem;
+  overflow: hidden;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-pill);
+  background: var(--surface-sunken);
+}
+
+/* --fill vai de 0 a 1 (posição na escala log); calc transforma em largura. */
+.limit-meter__fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: calc(var(--fill) * 100%);
+  min-width: 0.6rem; /* limite 1 (posição 0) ainda mostra um tiquinho */
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--panel-lo), var(--panel));
+}
+
+/* ∞: barra listrada inteira, fora da escala */
+.limit-meter--unlimited .limit-meter__track {
+  background: repeating-linear-gradient(45deg, var(--panel) 0 6px, var(--panel-lo) 6px 12px);
+}
+
+.limit-meter__scale {
+  position: relative;
+  height: 1.1rem;
+  font-size: var(--text-xs);
+  color: var(--muted);
+}
+
+.limit-meter__scale span {
+  position: absolute;
+  left: calc(var(--at) * 100%);
+  transform: translateX(calc(var(--at) * -100%)); /* 0 alinha à esquerda, 1 à direita */
+}
+
+.limit-meter__text {
+  margin: 0.1rem 0 0;
+}
+
+.limit-meter__text--muted,
+.limit-meter__hint {
+  color: var(--muted);
+}

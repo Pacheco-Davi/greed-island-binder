@@ -51,7 +51,7 @@ greed-island-binder/
 │   │   └── ui/                  # sem-imagem.svg, verso padrão da carta, texturas
 │   ├── components/
 │   │   ├── book/                # Book, BookCover, BookSpine, BookSpread, BookPage, PageSwitch, Emblem, Sword
-│   │   ├── cards/               # CardSlot, CardGrid, PocketPage, CardDetails, RankBadge, CategoryBadge, CollectionProgress, LimitMeter
+│   │   ├── cards/               # CardSlot, CardGrid, PocketPage, CardDetails (modal), CardBack, CardImage, RankBadge, RankMeter, LimitMeter, CategoryBadge, CollectionProgress
 │   │   ├── controls/            # Tabs, SearchBar, FilterChips (base de CategoryFilter e RankFilter), TeamFilter, SortControl
 │   │   ├── teams/               # TeamList, TeamCard, TeamPage, MemberPage
 │   │   ├── feedback/            # EmptyState, Icon
@@ -71,8 +71,9 @@ greed-island-binder/
 │   │   ├── format.js            # textos formatados: número, limite, raridade, fonte (+ format.test.js)
 │   │   ├── routes.js            # parseHash/buildHash das URLs #/times/gon (+ routes.test.js)
 │   │   ├── book.js              # máquina de estados do livro (reducer puro) (+ book.test.js)
-│   │   └── pagination.js        # paginate(itens, página, tamanho)
-│   ├── hooks/                   # useCardFilters, useFavorites, useTheme, useHashRoute, useCardDetail, useBookState, usePagination, useMediaQuery
+│   │   ├── pagination.js        # paginate(itens, página, tamanho)
+│   │   └── meters.js            # escala log do limite e níveis do rank (+ meters.test.js)
+│   ├── hooks/                   # useCardFilters, useFavorites, useTheme, useHashRoute, useCardDetail, useBookState, usePagination, useMediaQuery, useDialog
 │   ├── App.jsx
 │   ├── main.jsx
 │   └── index.css                # tokens de design (variáveis CSS)
@@ -271,11 +272,11 @@ Peças:
 
 ### Etapa 7 — Carta ampliada (detalhe)
 
-- Modal com `role="dialog"`, `aria-modal` e fundo `inert`. Esc fecha e o foco volta para o bolso de origem.
-- A carta aparece grande e **vira** (`rotateY(180deg)`) ao clicar: na frente fica a imagem, no verso ficam os dados.
+- Modal com `role="dialog"`, `aria-modal` e fundo `inert`, desenhado com `createPortal` no `<body>`. Esc fecha e o foco volta para o bolso de origem (ou, se ele sumiu, o bolso da carta pelo `data-card-id`, ou o painel da aba). O hook `useDialog` cuida do Esc, da armadilha de foco (Tab não escapa do modal) e da trava de rolagem.
+- A carta aparece grande e **vira** (`rotateY(180deg)`) ao clicar na arte ou no botão "Virar" (que nunca muda de lugar, para o foco não se perder): na frente fica a imagem, no verso ficam os dados. A face escondida fica `inert`.
 - **"Atributos" no verso:**
   - `RankBadge` com um medidor de 10 degraus (SS a H);
-  - `LimitMeter`: barra em escala logarítmica do limite (1 a 400, com ∞ tratado à parte);
+  - `LimitMeter`: barra em escala logarítmica do limite (1 ao maior limite do catálogo, 800, com ∞ e "?" tratados à parte);
   - "Raridade: 3ª mais rara entre as 165 cartas";
   - categoria e classe (feitiços);
   - descrição.

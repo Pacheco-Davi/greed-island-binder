@@ -1,0 +1,82 @@
+/* Verso da carta: papel com moldura na cor da categoria, como as bordas das cartas do jogo. */
+.card-back {
+  min-height: 100%;
+  padding: 1rem 1.1rem 1.25rem;
+  border: 6px solid var(--category-color);
+  border-radius: 14px;
+  background-color: var(--paper-raised);
+  background-image: var(--noise);
+  font-size: var(--text-sm);
+}
+
+.card-back__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-back__number {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.card-back__name {
+  margin: 0.25rem 0 0;
+  font-size: 1.25rem;
+}
+
+.card-back__alt,
+.card-back__muted {
+  margin: 0.15rem 0 0;
+  color: var(--muted);
+}
+
+.card-back__section {
+  margin-top: 0.9rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--border);
+}
+
+.card-back__heading {
+  margin: 0 0 0.4rem;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+}
+
+.card-back__facts {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 0.5rem 0.75rem;
+  margin: 0;
+}
+
+.card-back__facts dt {
+  font-weight: 700;
+}
+
+.card-back__facts dd {
+  margin: 0;
+}
+
+.card-back__classes,
+.card-back__teams {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.card-back__description {
+  margin: 0;
+}
+
+@media (max-width: 420px) {
+  .card-back__facts {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.15rem;
+  }
+
+  .card-back__facts dd {
+    margin-bottom: 0.4rem;
+  }
+}
