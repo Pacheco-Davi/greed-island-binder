@@ -74,8 +74,9 @@ export default function App() {
   return (
     <div className="app">
       <header className="app__header">
-        <div className="app__heading">
-          <div>
+        <div className="app__masthead leather">
+          <span className="app__emblem" aria-hidden="true" />
+          <div className="app__heading">
             <h1 className="app__title">{APP_TITLE}</h1>
             <p className="app__subtitle">As cartas do jogo de Hunter x Hunter</p>
           </div>
@@ -84,7 +85,7 @@ export default function App() {
         <Tabs tabs={tabs} selected={route.tab} onChange={(tab) => navigate({ tab })} label="Seções do fichário" />
       </header>
 
-      <main className="app__main">
+      <main className="app__main paper">
         <section className="app__panel" role="tabpanel" id={`painel-${route.tab}`} aria-labelledby={`aba-${route.tab}`}>
           {route.tab === 'fichario' && (
             <BinderView

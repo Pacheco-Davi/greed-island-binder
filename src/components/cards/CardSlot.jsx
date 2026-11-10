@@ -1,3 +1,4 @@
+import RankBadge from './RankBadge.jsx';
 import { formatNumber } from '../../domain/format.js';
 import '../../css/CardSlot.css';
 
@@ -32,7 +33,10 @@ export default function CardSlot({ card, onOpen, isFavorite = false, note }) {
           </span>
         )}
       </span>
-      <span className="card-slot__number">{number}</span>
+      <span className="card-slot__meta">
+        <span className="card-slot__number">{number}</span>
+        <RankBadge rank={card.rank} />
+      </span>
       <span className="card-slot__name">{card.name}</span>
       {isFavorite && (
         <span className="card-slot__favorite">

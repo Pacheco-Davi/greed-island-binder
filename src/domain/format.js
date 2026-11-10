@@ -41,6 +41,15 @@ export function formatSource({ relation, chapter }) {
   return chapter ? `${RELATION_LABELS[relation]} · cap. ${chapter}` : RELATION_LABELS[relation];
 }
 
+/**
+ * Momento da contagem com o capítulo no fim, sem duplicar:
+ *   "Antes da troca com Genthru." + 152 → "Antes da troca com Genthru (cap. 152)."
+ */
+export function formatSlotsMoment({ moment, chapter }) {
+  const text = moment.replace(/\s*\(cap\. \d+\)/g, '').replace(/[.\s]+$/, '');
+  return chapter ? `${text} (cap. ${chapter}).` : `${text}.`;
+}
+
 /** "99/100 slots designados" ou null quando a wiki não informa. */
 export function formatSlots(specifiedSlots) {
   return specifiedSlots ? `${specifiedSlots.count}/100 slots designados` : null;

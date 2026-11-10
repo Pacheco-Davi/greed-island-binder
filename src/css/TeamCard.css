@@ -2,8 +2,10 @@
   position: relative;
   padding: var(--space);
   border: 1px solid var(--border);
+  border-top: 4px solid var(--accent);
   border-radius: var(--radius);
   background: var(--surface);
+  box-shadow: var(--shadow-sm);
 }
 
 .team-card__kind {
@@ -20,11 +22,16 @@
 }
 
 .team-card__open {
-  padding: 0;
-  border: 0;
-  background: none;
-  font-weight: inherit;
-  text-align: left;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.team-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.team-card:hover .team-card__open {
+  text-decoration: underline;
 }
 
 /* O botão "estica" um ::after por cima do cartão: o cartão inteiro fica clicável. */

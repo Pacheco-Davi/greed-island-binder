@@ -1,0 +1,30 @@
+.rank-badge {
+  display: inline-grid;
+  place-items: center;
+  min-width: 2.1em;
+  padding: 0.1em 0.45em;
+  border: 1px solid var(--edge-dark);
+  border-radius: var(--radius);
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0.04em;
+  color: var(--rank-ink);
+  background-color: var(--rank-bg);
+  background-image: var(--rank-gradient);
+}
+
+.rank-badge--sm {
+  font-size: var(--text-xs);
+}
+
+.rank-badge--md {
+  font-size: 1rem;
+}
+
+/* Acabamento metálico: brilho no alto e sombra embaixo, como metal estampado. */
+.rank-badge--metallic {
+  box-shadow:
+    inset 0 1px 0 var(--edge-light),
+    inset 0 -1px 0 var(--edge-dark);
+}

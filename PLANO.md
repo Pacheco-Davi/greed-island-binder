@@ -51,7 +51,7 @@ greed-island-binder/
 │   │   └── ui/                  # sem-imagem.svg, verso padrão da carta, texturas
 │   ├── components/
 │   │   ├── book/                # Book, BookCover, BookSpine, BookPage
-│   │   ├── cards/               # Card, CardSlot, CardGrid, CardDetails, RankBadge, LimitMeter
+│   │   ├── cards/               # CardSlot, CardGrid, CardDetails, RankBadge, CategoryBadge, LimitMeter
 │   │   ├── controls/            # Tabs, SearchBar, FilterChips (base de CategoryFilter e RankFilter), TeamFilter, SortControl
 │   │   ├── teams/               # TeamList, TeamCard, TeamPage, MemberPage
 │   │   ├── feedback/            # EmptyState, Icon
@@ -66,6 +66,8 @@ greed-island-binder/
 │   │   ├── teams.js             # integrantes, cartas do time e suas fontes (+ teams.test.js)
 │   │   ├── images.js            # mapa id → URL da imagem (import.meta.glob)
 │   │   ├── catalog.js           # único lugar que lê os JSON; entrega tudo normalizado
+│   │   ├── color.js             # contraste WCAG: contrastRatio, inkFor (+ color.test.js)
+│   │   ├── palette.js           # cores dos ranks (SS/S metálicos) e estilos por categoria
 │   │   ├── format.js            # textos formatados: número, limite, raridade, fonte (+ format.test.js)
 │   │   └── routes.js            # parseHash/buildHash das URLs #/times/gon (+ routes.test.js)
 │   ├── hooks/                   # useCardFilters, useFavorites, useTheme, useHashRoute, useCardDetail, useBookState
@@ -217,6 +219,8 @@ Componentes com props bem definidas, renderizando dados reais:
 
 Em `index.css`, definir variáveis em `:root` e redefini-las em `:root[data-theme="dark"]`. Nenhum componente usa cor fixa, só variáveis.
 
+- **Contextos de superfície:** `mesa` (padrão), `.paper` e `.leather` redefinem as mesmas variáveis semânticas (`--text`, `--muted`, `--surface`, `--accent`, `--border-strong`…). Os componentes só usam as semânticas e ficam legíveis em qualquer superfície (a variável é herdada do pai).
+
 - **Materiais:**
   - couro (`--leather`, `--leather-hi`, `--leather-lo`);
   - papel (`--paper`, `--paper-line`);
@@ -224,13 +228,13 @@ Em `index.css`, definir variáveis em `:root` e redefini-las em `:root[data-them
   - plástico dos bolsos (`--sleeve`);
   - dourado da gravação (`--gilt`).
 - **Cores de categoria**, usando a cor de borda que a wiki descreve: vermelho para slot designado, azul para feitiço, preto para Game Master e amarelo para as demais.
-- **Ranks:** SS e S com acabamento metálico (gradiente), os demais em tons sóbrios. O texto sobre cada cor é escolhido por contraste WCAG (função `inkFor(color)`).
-- **Tipografia** (Google Fonts): uma serifada de display para títulos e gravações, e uma sem serifa bem legível para o texto.
+- **Ranks:** SS e S com acabamento metálico (gradiente), os demais em tons sóbrios. O texto sobre cada cor é escolhido por contraste WCAG (função `inkFor(color)`), considerando todas as paradas do gradiente. Cores que dependem de dados ficam em `src/domain/palette.js`; os testes garantem ≥ 4,5:1.
+- **Tipografia** (Google Fonts): **Cinzel** (serifada de gravação) para títulos e gravações, e **Atkinson Hyperlegible** (desenhada para legibilidade) para o texto.
 - **Textura:** ruído em SVG inline (`feTurbulence`) como `background-image`, sem baixar imagem.
 - **Script anti-flash no `index.html`:** aplica `data-theme` antes de o React carregar.
 - **Modo noturno** = "luz de lampião": a mesa escurece, aparece um brilho quente vindo de cima e o papel fica levemente amarelado.
 
-**Aceite:** alternar o tema não deixa nenhum texto com contraste ruim.
+**Aceite:** alternar o tema não deixa nenhum texto com contraste ruim — verificado por uma auditoria automática que mede o contraste de todo texto visível em 10 telas, nos dois temas.
 
 ---
 

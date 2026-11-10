@@ -1,6 +1,6 @@
 import CardGrid from '../cards/CardGrid.jsx';
 import EmptyState from '../feedback/EmptyState.jsx';
-import { KIND_LABELS, formatSlots, plural } from '../../domain/format.js';
+import { KIND_LABELS, formatSlots, formatSlotsMoment, plural } from '../../domain/format.js';
 import { buildHash } from '../../domain/routes.js';
 import '../../css/TeamPage.css';
 
@@ -46,8 +46,7 @@ export default function TeamPage({ team, members, cards, notes, favoriteIds, onO
         <dd>
           {slots ? (
             <>
-              {slots} — {team.specifiedSlots.moment}
-              {team.specifiedSlots.chapter && ` (cap. ${team.specifiedSlots.chapter})`}
+              {slots} — {formatSlotsMoment(team.specifiedSlots)}
             </>
           ) : (
             'A wiki não informa.'

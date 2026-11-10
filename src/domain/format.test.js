@@ -1,7 +1,7 @@
 // Testes dos textos formatados. Rodar com: npm test
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { plural, formatNumber, formatLimit, formatRank, formatRarity, formatSource, formatSlots } from './format.js';
+import { plural, formatNumber, formatLimit, formatRank, formatRarity, formatSource, formatSlots, formatSlotsMoment } from './format.js';
 
 test('plural', () => {
   assert.equal(plural(1, 'carta'), '1 carta');
@@ -31,4 +31,10 @@ test('fonte e slots', () => {
   assert.equal(formatSource({ relation: 'possuía', chapter: null }), 'Possuía');
   assert.equal(formatSlots({ count: 99 }), '99/100 slots designados');
   assert.equal(formatSlots(null), null);
+});
+
+test('momento da contagem com capítulo, sem duplicar', () => {
+  assert.equal(formatSlotsMoment({ moment: 'Antes da troca com Genthru.', chapter: 152 }), 'Antes da troca com Genthru (cap. 152).');
+  assert.equal(formatSlotsMoment({ moment: 'Depois do quiz (cap. 182).', chapter: 182 }), 'Depois do quiz (cap. 182).');
+  assert.equal(formatSlotsMoment({ moment: 'Sem capítulo', chapter: null }), 'Sem capítulo.');
 });

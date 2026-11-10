@@ -1,44 +1,186 @@
-/*
- * Base provisória (Etapa 3). A Etapa 5 troca estas variáveis pelo design system
- * (couro, papel, metal, modo noturno). Os componentes já usam só variáveis.
- */
+/* ==========================================================================
+   Design system do Fichário de Greed Island (Etapa 5)
+
+   1. MATERIAIS — as cores "físicas" do livro: couro, papel, metal, plástico,
+      ouro. Paleta tirada das referências (couro roxo, painel verde do emblema,
+      logotipo rosa, espadas prateadas).
+   2. CONTEXTOS DE SUPERFÍCIE — mesa (padrão), papel e couro. Cada contexto
+      define as MESMAS variáveis semânticas (--text, --surface, --accent…).
+      Os componentes só usam as semânticas: um botão fica legível sobre o
+      papel ou sobre o couro sem saber onde está, porque a variável é herdada
+      do elemento pai.
+   3. MODO NOTURNO — "luz de lampião": a mesa escurece, um brilho quente vem
+      de cima e o papel amarela. Só os valores mudam; nenhum componente muda.
+
+   Regra: nenhum componente usa cor fixa. Cores que dependem de dados (rank e
+   categoria) vêm de src/domain/palette.js, com o texto escolhido por contraste.
+   ========================================================================== */
+
 :root {
-  --bg: #f4f1ea;
-  --surface: #ffffff;
-  --text: #1f1d1a;
-  --muted: #5e5a52;
-  --border: #c9c2b3;
-  --accent: #2e6b57;
-  --focus: #1d4ed8;
-  --overlay: rgb(0 0 0 / 0.6);
-  --radius: 8px;
+  /* ---------- 1. Materiais ---------- */
+  --leather: #3a2b5e;
+  --leather-hi: #56428a;
+  --leather-lo: #22193a;
+  --leather-ink: #f1ebff;
+  --leather-ink-soft: #d2c7ee;
+
+  --panel: #2f8a70; /* painel verde da capa, atrás do emblema */
+  --panel-hi: #4fb594;
+  --panel-lo: #1c5a48;
+  --emblem-light: #f4f1e6;
+  --emblem-dark: #1f3229;
+  --logo: #c4507f; /* rosa do logotipo */
+  --logo-hi: #ee9cbd;
+
+  --gilt: #dcb95e; /* gravação dourada */
+  --gilt-hi: #f6e2a0;
+  --gilt-lo: #8f6d24;
+
+  --metal: #bab3cc; /* cantoneiras, prata lavanda como as espadas */
+  --metal-hi: #f0ecf7;
+  --metal-lo: #6f6886;
+
+  --paper: #f6f0e1;
+  --paper-raised: #fdf9ef;
+  --paper-sunken: #ebe2cc;
+  --paper-line: #d3c5a6;
+  --ink: #2b231c;
+  --ink-soft: #5c5045;
+
+  --sleeve: rgb(255 255 255 / 0.28); /* plástico dos bolsos */
+  --sleeve-edge: rgb(255 255 255 / 0.7);
+  --sleeve-glare: linear-gradient(115deg, transparent 30%, rgb(255 255 255 / 0.4) 45%, transparent 60%);
+
+  --table: #e2d9c6;
+  --table-raised: #f1ebdd;
+  --table-line: #a99b80;
+  --table-ink: #2a231e;
+  --table-ink-soft: #5b5046;
+  --table-glow: none;
+
+  --edge-dark: rgb(0 0 0 / 0.25); /* contornos e sombras de relevo */
+  --edge-light: rgb(255 255 255 / 0.7);
+  --engrave: 0 -1px 0 rgb(0 0 0 / 0.55), 0 1px 0 rgb(255 255 255 / 0.18); /* letra gravada no couro */
+  --stitch: rgb(220 185 94 / 0.55); /* costura dourada */
+
+  --focus-on-light: #1f56c9;
+  --focus-on-dark: #a9c1ff;
+  --shadow-rgb: 40 28 18;
+  --overlay: rgb(24 16 34 / 0.62);
+  --art-filter: none;
+  --paper-vignette: none;
+
+  /* Texturas: ruído gerado por SVG (feTurbulence). Nada é baixado: o desenho
+     está codificado no próprio endereço (data URI). */
+  --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.35 0 0 0 0 0.3 0 0 0 0 0.25 0.35 0 0 0 -0.12'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.55' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.6 0 0 0 -0.18'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+
+  /* ---------- Tipografia ---------- */
+  --font-display: 'Cinzel', 'Trajan Pro', 'Times New Roman', serif;
+  --font-body: 'Atkinson Hyperlegible', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --text-sm: 0.875rem;
+  --text-xs: 0.78rem;
+
+  /* ---------- Forma, espaço e sombra ---------- */
+  --radius: 6px;
+  --radius-pill: 999px;
   --space: 1rem;
+  --shadow-sm: 0 1px 2px rgb(var(--shadow-rgb) / 0.18);
+  --shadow-md: 0 4px 14px rgb(var(--shadow-rgb) / 0.22);
+  --shadow-lg: 0 18px 50px rgb(var(--shadow-rgb) / 0.38);
+
+  /* ---------- 2. Contexto padrão: a MESA ---------- */
+  --text: var(--table-ink);
+  --muted: var(--table-ink-soft);
+  --border: var(--table-line);
+  --border-strong: #6f624d; /* contorno de campos e botões: ≥ 3:1 (WCAG 1.4.11) */
+  --surface: var(--table-raised);
+  --surface-sunken: var(--paper-sunken);
+  --accent: var(--leather);
+  --on-accent: var(--leather-ink);
+  --link: var(--leather);
+  --focus: var(--focus-on-light);
 
   color-scheme: light;
-  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-family: var(--font-body);
   line-height: 1.5;
   color: var(--text);
-  background: var(--bg);
+  background-color: var(--table);
 }
 
-/* Modo noturno provisório (a Etapa 5 cria a "luz de lampião"). O useTheme
-   escreve data-theme="dark" no <html>; aqui só as variáveis mudam. */
+/* ---------- 3. Modo noturno: luz de lampião ---------- */
 :root[data-theme='dark'] {
-  --bg: #17151a;
-  --surface: #23202a;
-  --text: #ece7dc;
-  --muted: #b3ab9c;
-  --border: #4a4453;
-  --accent: #6fc3a5;
-  --focus: #93b4ff;
-  --overlay: rgb(0 0 0 / 0.75);
+  --leather: #34275a;
+  --leather-lo: #1c1530;
+
+  --paper: #e2d3b0; /* papel amarelado pela luz quente */
+  --paper-raised: #eadcbb;
+  --paper-sunken: #d4c29b;
+  --paper-line: #a8946a;
+  --ink: #261d14;
+  --ink-soft: #4d4033;
+
+  --table: #16121b;
+  --table-raised: #262030;
+  --table-line: #6a5d70;
+  --table-ink: #eee3cd;
+  --table-ink-soft: #c4b79f;
+  --table-glow: radial-gradient(ellipse 85% 60% at 50% -10%, rgb(255 186 105 / 0.26), transparent 70%);
+
+  --shadow-rgb: 0 0 0;
+  --overlay: rgb(8 5 12 / 0.76);
+  --art-filter: sepia(0.12) brightness(0.94);
+  --paper-vignette: radial-gradient(ellipse at 50% 0%, transparent 65%, rgb(70 40 10 / 0.14));
+
+  /* a mesa agora é escura: o destaque vira lavanda e o foco, azul-claro */
+  --border-strong: #9a8ca3;
+  --accent: #cdb8f5;
+  --on-accent: #1d1530;
+  --link: #d6c4ff;
+  --focus: var(--focus-on-dark);
 
   color-scheme: dark;
 }
 
-a {
-  color: var(--accent);
+/* Contexto PAPEL: folhas, painéis e o detalhe da carta. O papel é claro nos
+   dois temas (à noite, só amarela), então a tinta é sempre escura. */
+.paper {
+  --text: var(--ink);
+  --muted: var(--ink-soft);
+  --border: var(--paper-line);
+  --border-strong: #85745b;
+  --surface: var(--paper-raised);
+  --surface-sunken: var(--paper-sunken);
+  --accent: var(--leather);
+  --on-accent: var(--leather-ink);
+  --link: var(--leather);
+  --focus: var(--focus-on-light);
+
+  color: var(--text);
+  background-color: var(--paper);
+  background-image: var(--paper-vignette), var(--noise);
 }
+
+/* Contexto COURO: capa e faixas de couro, com detalhes dourados. */
+.leather {
+  --text: var(--leather-ink);
+  --muted: var(--leather-ink-soft);
+  --border: rgb(255 255 255 / 0.3);
+  --border-strong: rgb(255 255 255 / 0.6);
+  --surface: rgb(255 255 255 / 0.08);
+  --accent: var(--gilt);
+  --on-accent: var(--leather-lo);
+  --link: var(--gilt-hi);
+  --focus: var(--gilt-hi);
+
+  color: var(--text);
+  background-color: var(--leather);
+  background-image: var(--grain), linear-gradient(160deg, var(--leather-hi), var(--leather) 45%, var(--leather-lo));
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
 
 *,
 *::before,
@@ -49,7 +191,20 @@ a {
 body {
   margin: 0;
   min-width: 320px;
-  background: var(--bg);
+  min-height: 100vh;
+  color: var(--text);
+  background-color: var(--table);
+  background-image: var(--table-glow), var(--noise);
+  background-attachment: fixed;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
 }
 
 img {
@@ -71,6 +226,24 @@ button {
 button:disabled {
   cursor: not-allowed;
   opacity: 0.5;
+}
+
+::placeholder {
+  color: var(--muted);
+  opacity: 1;
+}
+
+a,
+.link-button {
+  color: var(--link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a:hover,
+.link-button:hover {
+  text-decoration-thickness: 2px;
 }
 
 /* Foco visível em tudo que é clicável (só aparece na navegação por teclado). */
@@ -97,7 +270,5 @@ button:disabled {
   padding: 0;
   border: 0;
   background: none;
-  color: var(--accent);
-  text-decoration: underline;
-  text-underline-offset: 2px;
+  font: inherit;
 }

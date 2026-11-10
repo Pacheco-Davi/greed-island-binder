@@ -46,7 +46,7 @@ export default function Tabs({ tabs, selected, onChange, label }) {
             aria-selected={isSelected}
             aria-controls={`painel-${tab.id}`}
             tabIndex={isSelected ? 0 : -1}
-            className="tabs__tab"
+            className={isSelected ? 'tabs__tab paper' : 'tabs__tab'}
             onClick={() => onChange(tab.id)}
             onKeyDown={(event) => handleKeyDown(event, index)}
           >

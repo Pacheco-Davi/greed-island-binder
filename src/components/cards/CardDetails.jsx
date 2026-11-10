@@ -1,4 +1,6 @@
-import { formatLimit, formatNumber, formatRank, formatRarity } from '../../domain/format.js';
+import RankBadge from './RankBadge.jsx';
+import CategoryBadge from './CategoryBadge.jsx';
+import { formatLimit, formatNumber, formatRarity } from '../../domain/format.js';
 import { buildHash } from '../../domain/routes.js';
 import '../../css/CardDetails.css';
 
@@ -27,7 +29,7 @@ export default function CardDetails({ card, rarity, spellClasses, teams, placeho
     // clique DENTRO dele "suba" até o fundo e feche sem querer.
     <div className="card-details__backdrop" onClick={onClose}>
       <section
-        className="card-details"
+        className="card-details paper"
         role="dialog"
         aria-labelledby="card-details-title"
         onClick={(event) => event.stopPropagation()}
@@ -69,12 +71,13 @@ export default function CardDetails({ card, rarity, spellClasses, teams, placeho
           <dl className="card-details__facts">
             <dt>Categoria</dt>
             <dd>
-              <span className="card-details__swatch" style={{ '--category-color': card.categoryInfo.color }} aria-hidden="true" />
-              {card.categoryInfo.label}
+              <CategoryBadge category={card.categoryInfo} />
             </dd>
 
             <dt>Rank</dt>
-            <dd>{formatRank(card)}</dd>
+            <dd>
+              <RankBadge rank={card.rank} size="md" />
+            </dd>
 
             <dt>Limite de conversão</dt>
             <dd>{formatLimit(card)}</dd>
